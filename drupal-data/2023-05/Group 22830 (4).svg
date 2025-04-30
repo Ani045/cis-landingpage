@@ -1,0 +1,24 @@
+<svg id="Group_22830" data-name="Group 22830" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40.001" height="40" viewBox="0 0 40.001 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_8281" data-name="Rectangle 8281" width="40.001" height="40" fill="#d9d8f0"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_8280" data-name="Rectangle 8280" width="40.001" height="40" fill="#d1d2e9"/>
+    </clipPath>
+  </defs>
+  <g id="Group_8986" data-name="Group 8986" clip-path="url(#clip-path)">
+    <g id="Group_8985" data-name="Group 8985">
+      <g id="Group_8984" data-name="Group 8984" clip-path="url(#clip-path-2)">
+        <g id="Group_8983" data-name="Group 8983" style="mix-blend-mode: multiply;isolation: isolate">
+          <g id="Group_8982" data-name="Group 8982">
+            <g id="Group_8981" data-name="Group 8981" clip-path="url(#clip-path-2)">
+              <path id="Path_10545" data-name="Path 10545" d="M39.731,20.5A13.566,13.566,0,0,1,37.323,31,20.569,20.569,0,0,1,34.8,34.053C30.03,38.9,22.875,41.36,16.213,39.226A24.39,24.39,0,0,1,2.017,26.6,25.434,25.434,0,0,1,.586,22.975C-3.2,10.253,12.183,2.866,22.3.239c5.593-1.477,9.458,4.186,12.169,8.51.818,1.341,1.565,2.729,2.258,4.108S38.058,15.6,38.66,16.9A19.851,19.851,0,0,1,39.731,20.5" transform="translate(0 0)" fill="#d1d2e9"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <path id="star-2" d="M15.309,20.232a.83.83,0,0,1-.426-.116l-4.357-2.841L6.169,20.116A.792.792,0,0,1,5.3,20.1a.805.805,0,0,1-.29-.831l1.375-4.831L2.277,10.976a.778.778,0,0,1-.232-.831A.793.793,0,0,1,2.723,9.6l4.9-.348L9.829,4.444a.769.769,0,0,1,1.394,0l2.207,4.812,4.9.348a.765.765,0,0,1,.678.541.8.8,0,0,1-.232.831l-4.086,3.44,1.375,4.831a.742.742,0,0,1-.29.831.789.789,0,0,1-.465.155Zm-4.783-4.638a.83.83,0,0,1,.426.116l3.059,1.99-.949-3.343a.771.771,0,0,1,.252-.792l3-2.531-3.447-.271a.807.807,0,0,1-.658-.444L10.526,6.628,8.841,10.319a.78.78,0,0,1-.658.444l-3.447.251,3,2.531a.771.771,0,0,1,.252.792L7.041,17.7,10.1,15.73A.7.7,0,0,1,10.526,15.594Z" transform="translate(9.475 7.882)"/>
+  </g>
+</svg>

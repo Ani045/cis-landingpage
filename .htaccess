@@ -1,0 +1,16 @@
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME}\.php -f 
+RewriteRule ^(.*)$ $1.php
+
+RewriteCond %{HTTP_HOST} ^www.retrofusion.in$ [NC]
+RewriteRule ^(.*)$ https://retrofusion.in/$1 [L,R=301]
+
+# To externally redirect /dir/foo.php to /dir/foo
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^ %1 [R=302,L,NE]
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit
+

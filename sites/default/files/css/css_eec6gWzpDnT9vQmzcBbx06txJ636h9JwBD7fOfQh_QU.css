@@ -1,0 +1,253 @@
+.autocomplete-search-form>.form-item {
+    margin-bottom: 0
+}
+
+form.autocomplete-search-form .global-search-field {
+    border-radius: 8px;
+    background: #fff;
+    width: 100%;
+    height: 36px;
+    padding: 0 20px !important;
+    line-height: 18px;
+    color: #1c1c1c;
+    font-weight: 500
+}
+
+form.autocomplete-search-form .global-search-field::placeholder {
+    color: #707070
+}
+
+.global-search-icon {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 19px;
+    height: 19px;
+    background: #fff url('https://www.fortishealthcare.com/drupal-data/images/search/search-icon.svg') no-repeat center;
+    background-size: 18px
+}
+
+#ui-id-3.ui-menu.ui-autocomplete.global-search-block {
+    max-height: 300px !important
+}
+
+.ui-menu.ui-autocomplete.global-search-block {
+    box-shadow: 0px 5px 15px #00000012 !important;
+    border-radius: 8px !important;
+    border: none !important;
+    max-height: 400px !important
+}
+
+.ui-menu.ui-autocomplete.global-search-block::-webkit-scrollbar {
+    width: 6px;
+    background-color: #f2f2f2;
+    border-radius: 5px
+}
+
+.ui-menu.ui-autocomplete.global-search-block::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #dbd2e2
+}
+
+.global-search-block .ui-menu-item .ui-menu-item-wrapper {
+    padding: 0 24px !important;
+    height: 44px !important;
+    line-height: 44px !important;
+    display: block !important;
+    color: #7c83b5 !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    border: none !important
+}
+
+.global-search-block .ui-state-disabled.ui-menu-item {
+    opacity: 1 !important
+}
+
+.global-search-block .ui-state-disabled.ui-menu-item .ui-menu-item-wrapper {
+    box-shadow: 0px 5px 15px #00000012 !important
+}
+
+.global-search-block .ui-state-disabled.ui-menu-item .ui-menu-item-wrapper img {
+    margin-right: 8px;
+    position: relative;
+    top: -2px
+}
+
+.global-search-block .ui-menu-item .ui-menu-item-wrapper a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 44px
+}
+
+.global-search-block .ui-menu-item .ui-menu-item-wrapper a span {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden
+}
+
+.global-search-block .ui-menu-item .ui-menu-item-wrapper a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    display: inline-block;
+    border-radius: 100%
+}
+
+.global-search-block li.ui-state-disabled.view-all-hide.ui-menu-item {
+    display: none !important
+}
+
+.global-search-block .ui-menu-item .view-all-btn.ui-menu-item-wrapper {
+    width: 100%;
+    text-align: center;
+    display: block;
+    height: 100%;
+    line-height: 44px;
+    color: #000;
+    background: #f4d7d0;
+    font-size: 12px;
+    font-weight: 500
+}
+
+.global-search-block .ui-menu-item .view-all-btn.ui-menu-item-wrapper a {
+    color: #000;
+    justify-content: center
+}
+
+.global-search-block .ui-menu-item .view-all-btn.ui-menu-item-wrapper:hover {
+    background: #db7c65 !important
+}
+
+.ui-menu.ui-autocomplete.global-search-block li.ui-menu-item .view-all-btn.ui-menu-item-wrapper:hover a {
+    color: #fff !important
+}
+
+.global-search-block .ui-menu-item .view-all-btn.ui-menu-item-wrapper a img {
+    width: 8px;
+    height: 9px;
+    border-radius: unset;
+    margin: 0 0 0 6px !important
+}
+
+.global-search-block .ui-menu-item .view-all-btn.ui-menu-item-wrapper:hover a img {
+    filter: invert(1)
+}
+
+.header-site-search-wrapper {
+    display: none
+}
+
+.home-banner-content .autocomplete-search-form .global-search-field {
+    height: 71px
+}
+
+.home-banner-content .autocomplete-search-form .form-item-search {
+    position: relative
+}
+
+#global-search-auto+span.ui-autocomplete-clear {
+    right: 14px !important
+}
+
+span.ui-autocomplete-clear {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+    right: 24px !important;
+    left: auto !important;
+    cursor: pointer
+}
+
+.autocomplete-search-form {
+    position: relative
+}
+
+.header-outer .header-top-nav {
+    position: relative
+}
+
+.header-search-block .autocomplete-search-form .global-search-icon {
+    right: 10px
+}
+
+.header-search-block {
+    display: none;
+    position: absolute;
+    right: 50px;
+    transition: .3s;
+    top: -3px;
+    width: 624px
+}
+
+.header-search-block .site-search {
+    display: none
+}
+
+@media screen and (min-width:768px) and (max-width:1199px) {
+    .header-search-block {
+        right: 64px;
+        top: -5px;
+        width: 520px
+    }
+}
+
+@media screen and (max-width:767px) {
+    .home-banner-content .autocomplete-search-form .global-search-field {
+        height: 60px
+    }
+    .header-search-block {
+        width: auto;
+        position: fixed;
+        top: 12px;
+        left: 16px;
+        right: 16px
+    }
+    .header-search-block .autocomplete-search-form .global-search-field {
+        height: 60px;
+        padding-right: 40px !important
+    }
+    body.header-search-open {
+        overflow: hidden
+    }
+    body.header-search-open header.header-outer {
+        z-index: 1001
+    }
+    body.header-search-open header.header-outer:before {
+        content: '';
+        background: rgba(0, 0, 0, .36);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%
+    }
+    body.header-search-open .header-top-nav-wrapper {
+        position: static
+    }
+    .ui-menu.ui-autocomplete.global-search-block {
+        max-height: 420px !important
+    }
+    .header-search-block .autocomplete-search-form .global-search-icon {
+        right: 18px
+    }
+    .global-search-block .ui-menu-item .ui-menu-item-wrapper {
+        padding: 0 16px !important
+    }
+    form.autocomplete-search-form .global-search-field::placeholder {
+        width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 20px
+    }
+}

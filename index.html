@@ -1,0 +1,3701 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <link
+      rel="icon"
+      href="assets/TruHealer.png"
+      type="image/vnd.microsoft.icon"
+    />
+
+    <title>TruHealer Healthcare</title>
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="sites/default/files/css/css_T7giGYAou_d3sTRfxY7Y5e0dDDUZt1yyeM7j5Rb4314.css"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="sites/default/files/css/css_i9_HzAxfI5IS3LCOrwh2P2n0K3puCQGz7pVOxd9hxUk.css"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="sites/default/files/css/css_7n5LVK7atgc0xzX05Em3V1j3bP-3O4Vk6LfbDH2IhcM.css"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="sites/default/files/css/css_eec6gWzpDnT9vQmzcBbx06txJ636h9JwBD7fOfQh_QU.css"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="sites/default/files/css/css_BbyBArMIxMrIsXBRyExjpC_SSis3qvsGeSw6b371YXc.css"
+    />
+
+    <script src="themes/custom/fortis/libs/defer.js"></script>
+
+
+
+    <style>
+      /* ----- Base Variables ----- */
+      :root {
+        --primary-purple: #1a56db;       /* Deep blue instead of purple */
+--light-purple: #3b82f6;         /* Light blue instead of light purple */
+--dark-purple: #1e40af;          /* Dark blue instead of dark purple */
+--primary-brown: #0ea5e9;        /* Sky blue instead of brown */
+--light-brown: #38bdf8;          /* Lighter sky blue instead of light brown */
+--dark-brown: #0369a1;           /* Darker sky blue instead of dark brown */
+--bg-cream: #f0f9ff;             /* Very light blue background instead of cream */
+--text-dark: #1e293b;            /* Dark slate blue for text instead of dark gray */
+--yellow: #60a5fa;               /* Medium blue instead of yellow */
+--primary: #2563eb;              /* Royal blue instead of orange */
+--secondary: #1d4ed8;            /* Slightly darker blue for secondary */
+--teal: #0891b2;                 /* Blue-teal instead of teal */
+--background: #ffffff;           /* Keeping white background */
+--text-light: #64748b;           /* Slate blue for light text */
+--white: #ffffff;                /* Keeping white */
+--border-radius: 10px;           /* Keeping same border radius */
+--box-shadow: 0 4px 12px rgba(3, 105, 161, 0.1); /* Blue-tinted shadow */
+--transition: all 0.3s ease;     /* Keeping same transition */
+      } 
+     
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: var(--bg-cream);
+          color: var(--text-dark);
+      }
+      
+      /* ----- Layout Components ----- */
+      .international-page .international-header .international-main-header {
+          height: auto !important;
+      }
+      .int-number-view .international-number-list li {
+    width: calc(25% - 22px);
+      }
+      .patient-services .patient-services-list li .icon {
+    padding: 20px 50px 40px;
+    display: flex
+;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #f0f9ff;
+    border-radius: 50% 50% 0 0;
+    min-height: 120px;
+}
+      
+      .about-convicare-div {
+          background: #fff;
+          box-shadow: 0px 3px 26px #0000001C;
+          border-radius: 8px;
+          padding: 26px 32px 26px 32px;
+          margin-top: 16px;
+      }
+      
+      .about-convicare-div h1 {
+          font-size: 24px;
+      }
+      
+      .about-convicare-div-parent {
+          margin-top: 30px;
+      }
+      
+      .international-page .international-header .international-main-header > div {
+          align-items: center;
+      }
+      
+      .mob-banner-text {
+          display: none;
+      }
+      
+      .mob-banner {
+          display: none;
+      }
+      
+      .fixed-bottom-bar {
+          display: none;
+      }
+      
+      .section-bg {
+          padding: 3rem;
+      }
+      
+      .healthcare-section {
+          padding: 5rem 0;
+          position: relative;
+          overflow: hidden;
+      }
+      
+      .submit-btn {
+          gap: 20px;
+      }
+      .logo-showcase {
+            /* padding: 80px 0; */
+            /* background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%); */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-showcase::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+            pointer-events: none;
+        }
+
+        .logo-showcase__heading {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+            position: relative;
+        }
+
+        .logo-showcase__heading h2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #2a2a2a;
+        }
+
+        .logo-showcase__heading p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        .logo-showcase__heading::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+
+        .logo-slider {
+            position: relative;
+            overflow: hidden;
+            /* padding: 20px 0; */
+            /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); */
+            border-radius: 15px;
+            background-color: white;
+        }
+
+        .logo-slider__container {
+            display: flex;
+            animation: scroll 30s linear infinite;
+            width: calc(220px * 12);
+        }
+
+        .logo-slider__item { 
+            width: 250px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .logo-slider__item:hover {
+            transform: scale(1.1);
+            filter: none !important;
+        }
+
+        .logo-slider__image {
+            max-width: 100%;
+            max-height: 80px;
+            /* filter: grayscale(100%) opacity(0.7); */
+            transition: all 0.3s ease;
+        }
+
+        .logo-slider__item:hover .logo-slider__image {
+            filter: grayscale(0%) opacity(1);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-250px * 6));
+            }
+        }
+
+        /* Overlay gradients to create fade effect */
+        .logo-slider::before,
+        .logo-slider::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 150px;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .logo-slider::before {
+            left: 0;
+            background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+        }
+
+        .logo-slider::after {
+            right: 0;
+            background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .logo-showcase {
+                padding: 50px 0;
+            }
+            
+            .logo-showcase__heading h2 {
+                font-size: 1.8rem;
+            }
+            
+            .logo-slider__container {
+                width: calc(200px * 12);
+            }
+            
+            .logo-slider__item {
+                width: 200px;
+                height: 120px;
+            }
+            
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-200px * 6));
+                }
+            }
+        }
+
+      
+      /* ----- Section Titles ----- */
+      .section-title {
+          color: #000;
+          font-weight: 700;
+          position: relative;
+          text-align: center;
+          margin-bottom: 25px;
+          padding-top: 20px;
+      }
+      
+      .section-title h2 {
+          font-size: 2rem;
+          font-weight: 700;
+          position: relative;
+          display: inline-block;
+          margin-bottom: 10px;
+          z-index: 1;
+      }
+      
+      .section-title h2:after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          width: 60px;
+          height: 3px;
+          background: linear-gradient(to right, var(--primary), var(--yellow));
+          transform: translateX(-50%);
+          border-radius: 2px;
+      }
+      
+      .section-title p {
+          max-width: 700px;
+          margin: 0 auto;
+          color: var(--text-light);
+          font-size: 0.95rem;
+          line-height: 1.5;
+          position: relative;
+      }
+      
+      .section-title:before {
+          content: '';
+          position: absolute;
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(255,194,14,0.07) 0%, rgba(255,255,255,0) 70%);
+          top: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 0;
+          animation: pulse 8s infinite alternate;
+      }
+      
+      .subtitle {
+          color: var(--primary-brown);
+          font-weight: 600;
+          margin-bottom: 1.5rem;
+      }
+      
+      /* ----- Buttons ----- */
+      .button {
+          background: #EFEAF2;
+      }
+      
+      .button:hover, 
+      .button:focus {
+          background-color: #B9A3C4 !important;
+      }
+      
+      .btn-primary {
+          background: linear-gradient(135deg, var(--yellow), var(--primary));
+          color: white;
+          border: none;
+          border-radius: 50px;
+          padding: 7px 14px;
+          font-weight: 600;
+          font-size: 0.8rem;
+          box-shadow: 0 4px 8px rgba(244, 121, 32, 0.2);
+          transition: all 0.3s ease;
+          margin-right: 6px;
+          position: relative;
+          overflow: hidden;
+          z-index: 1;
+      }
+      
+      .btn-primary:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background: linear-gradient(135deg, var(--primary), var(--yellow));
+          transition: all 0.3s ease;
+          z-index: -1;
+          border-radius: 50px;
+      }
+      
+      .btn-primary:hover:before {
+          width: 100%;
+      }
+      
+      .btn-primary:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 6px 12px rgba(244, 121, 32, 0.3);
+          background-color: #e6b00d;
+      }
+      
+      .btn-secondary {
+          background: rgba(255, 255, 255, 0.9);
+          color: var(--text-dark);
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 50px;
+          padding: 7px 14px;
+          font-weight: 600;
+          font-size: 0.8rem;
+          transition: all 0.3s ease;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+      
+      .btn-secondary:hover {
+          background: #f8f8f8;
+          transform: translateY(-3px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          background-color: #e5e5e5;
+      }
+      
+      .cta-button {
+          background: linear-gradient(135deg, var(--primary-purple) 0%, var(--dark-purple) 100%);
+          color: white;
+          border: none;
+          padding: 0.75rem 2rem;
+          border-radius: 50px;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          box-shadow: 0 5px 15px rgba(74, 29, 102, 0.3);
+      }
+      
+      .cta-button:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(74, 29, 102, 0.4);
+          background: linear-gradient(135deg, var(--light-purple) 0%, var(--primary-purple) 100%);
+          color: white;
+      }
+      
+      .cta-secondary {
+          background: linear-gradient(135deg, var(--primary-brown) 0%, var(--dark-brown) 100%);
+          box-shadow: 0 5px 15px rgba(97, 76, 58, 0.3);
+      }
+      
+      .cta-secondary:hover {
+          background: linear-gradient(135deg, var(--light-brown) 0%, var(--primary-brown) 100%);
+          box-shadow: 0 8px 20px rgba(97, 76, 58, 0.4);
+      }
+      
+      /* ----- Timeline Styles ----- */
+      .timeline-container {
+          position: relative;
+          max-width: 1000px;
+          margin: 15px auto;
+          padding: 15px 0;
+          background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(247,242,255,0.3) 49%, rgba(247,242,255,0.3) 51%, rgba(255,255,255,0) 100%);
+      }
+      
+      .timeline-container::after {
+          content: '';
+          position: absolute;
+          width: 1px;
+          background: linear-gradient(135deg, var(--primary), var(--secondary), var(--yellow));
+          top: 0;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 1;
+          box-shadow: 0 0 8px rgba(102, 45, 145, 0.2);
+      }
+      
+      .timeline-item {
+          position: relative;
+          margin-bottom: 20px;
+          animation: fadeIn 0.8s ease-out forwards;
+          opacity: 0;
+      }
+      
+      .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+      .timeline-item:nth-child(2) { animation-delay: 0.3s; }
+      .timeline-item:nth-child(3) { animation-delay: 0.5s; }
+      .timeline-item:nth-child(4) { animation-delay: 0.7s; }
+      .timeline-item:nth-child(5) { animation-delay: 0.9s; }
+      
+      .timeline-item:last-child {
+          margin-bottom: 0;
+      }
+      
+      .timeline-content {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+      }
+      
+      .timeline-left, 
+      .timeline-right {
+          width: 47%;
+      }
+      
+      .timeline-center {
+          position: relative;
+          width: 6%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 2;
+      }
+      
+      .diamond {
+          width: 50px;
+          height: 50px;
+          background-color: white;
+          transform: rotate(45deg);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 3px;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          position: relative;
+          transition: var(--transition);
+          border: none;
+          background: linear-gradient(135deg, #fff, #f7f7f7);
+          z-index: 3;
+      }
+      
+      .timeline-item:nth-child(odd) .diamond:before {
+          content: '';
+          position: absolute;
+          top: -2px;
+          left: -2px;
+          right: -2px;
+          bottom: -2px;
+          background: linear-gradient(135deg, var(--yellow), var(--primary));
+          z-index: -1;
+          transform: rotate(0deg);
+          border-radius: 5px;
+          opacity: 0.7;
+      }
+      
+      .timeline-item:nth-child(even) .diamond:before {
+          content: '';
+          position: absolute;
+          top: -2px;
+          left: -2px;
+          right: -2px;
+          bottom: -2px;
+          background: linear-gradient(135deg, var(--teal), var(--secondary));
+          z-index: -1;
+          transform: rotate(0deg);
+          border-radius: 5px;
+          opacity: 0.7;
+      }
+      
+      .diamond:hover {
+          transform: rotate(45deg) scale(1.08);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      }
+      
+      .diamond-content {
+          transform: rotate(-45deg);
+          width: 35px;
+          height: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      
+      .diamond-content img {
+          max-width: 22px;
+          max-height: 22px;
+          filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+      }
+      
+      .top-dot, 
+      .bottom-dot {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 2;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          animation: glow 3s infinite alternate;
+      }
+      
+      .top-dot {
+          top: 0;
+          background: linear-gradient(135deg, var(--primary), #f47920);
+      }
+      
+      .bottom-dot {
+          bottom: 0;
+          background: linear-gradient(135deg, var(--yellow), #ffc20e);
+      }
+      
+      .timeline-item:nth-child(odd) .diamond {
+          background-color: var(--yellow);
+          border: 4px solid rgba(255, 194, 14, 0.3);
+      }
+      
+      .timeline-item:nth-child(even) .diamond {
+          background-color: var(--teal);
+          border: 4px solid rgba(30, 138, 159, 0.3);
+      }
+      
+      .timeline-text {
+          padding: 15px;
+          position: relative;
+          background: white;
+          border-radius: 8px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+          transition: all 0.3s ease;
+          border-left: 3px solid var(--yellow);
+          overflow: hidden;
+      }
+      
+      .timeline-item:nth-child(even) .timeline-text {
+          border-left: none;
+          border-right: 3px solid var(--teal);
+      }
+      
+      .timeline-text:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: linear-gradient(to right, var(--yellow), var(--primary));
+          opacity: 0.7;
+      }
+      
+      .timeline-item:nth-child(even) .timeline-text:before {
+          background: linear-gradient(to right, var(--teal), var(--secondary));
+      }
+      
+      .timeline-text:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      }
+      
+      .timeline-number {
+          color: var(--yellow);
+          font-size: 1.1rem;
+          font-weight: 700;
+          margin-bottom: 1px;
+          display: block;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      
+      .timeline-item:nth-child(even) .timeline-number {
+          color: var(--teal);
+      }
+      
+      .timeline-title {
+          color: var(--secondary);
+          font-size: 1.1rem;
+          font-weight: 600;
+          margin-bottom: 5px;
+          position: relative;
+          display: inline-block;
+      }
+      
+      .timeline-description {
+          color: var(--text-light);
+          font-size: 0.85rem;
+          line-height: 1.4;
+          margin-bottom: 12px;
+      }
+      
+      .timeline-image {
+          max-width: 95%;
+          max-height: 220px;
+          object-fit: contain;
+          border-radius: 8px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease;
+          transform: perspective(800px) rotateY(0deg);
+          filter: brightness(1);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          margin: 0 auto;
+          display: block;
+      }
+      
+      .timeline-image:hover {
+          transform: perspective(800px) rotateY(2deg) translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+          filter: brightness(1.05);
+      }
+      
+      .timeline-item:nth-child(even) .btn-primary {
+          background: linear-gradient(135deg, var(--teal), var(--secondary));
+          box-shadow: 0 4px 8px rgba(102, 45, 145, 0.2);
+          background-color: var(--teal);
+          box-shadow: 0 4px 10px rgba(30, 138, 159, 0.3);
+      }
+      
+      .timeline-item:nth-child(even) .btn-primary:before {
+          background: linear-gradient(135deg, var(--secondary), var(--teal));
+      }
+      
+      .timeline-item:nth-child(even) .btn-primary:hover {
+          box-shadow: 0 6px 12px rgba(102, 45, 145, 0.3);
+          background-color: #17798f;
+          box-shadow: 0 6px 15px rgba(30, 138, 159, 0.4);
+      }
+      
+      /* ----- Cards and Elements ----- */
+      .cost-card {
+          border-radius: 10px;
+          border: none;
+          transition: all 0.3s ease;
+          height: 100%;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+          overflow: hidden;
+      }
+      
+      .cost-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      
+      .card-header {
+          background-color: var(--primary-purple);
+          color: white;
+          text-align: center;
+          font-weight: 600;
+          padding: 1rem;
+          border: none;
+      }
+      
+      .treatment-name {
+          font-weight: 600;
+          color: var(--dark-purple);
+      }
+      
+      .price-tag {
+          font-weight: 700;
+          font-size: 1.5rem;
+          color: var(--primary-purple);
+      }
+      
+      .price-tag.foreign {
+          color: var(--primary-brown);
+      }
+      
+      .savings {
+          background-color: rgba(107, 44, 145, 0.1);
+          border-radius: 8px;
+          padding: 0.5rem 1rem;
+          font-weight: 600;
+          color: var(--dark-purple);
+      }
+      
+      .benefit-item {
+          background: white;
+          border-radius: 10px;
+          padding: 1.5rem;
+          margin-bottom: 1.5rem;
+          display: flex;
+          align-items: flex-start;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+          transition: all 0.3s ease;
+      }
+      
+      .benefit-item:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      
+      .benefit-icon {
+          background: var(--light-purple);
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          margin-right: 1rem;
+          color: white;
+          flex-shrink: 0;
+      }
+      
+      .benefit-title {
+          font-weight: 600;
+          color: var(--primary-purple);
+          margin-bottom: 0.5rem;
+      }
+      
+      .accent-circle {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          z-index: -1;
+          opacity: 0.1;
+      }
+      
+      .accent-circle-2 {
+          background-color: var(--primary-brown);
+          bottom: -100px;
+          left: -100px;
+      }
+      
+      .testimonial {
+          background: white;
+          border-radius: 10px;
+          padding: 2rem;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+          border-left: 4px solid var(--primary-purple);
+          position: relative;
+      }
+      
+      .testimonial::before {
+          content: '\201C';
+          font-size: 4rem;
+          color: var(--light-purple);
+          opacity: 0.3;
+          position: absolute;
+          top: 10px;
+          left: 15px;
+          font-family: Georgia, serif;
+      }
+      
+      .testimonial-author {
+          display: flex;
+          align-items: center;
+          margin-top: 1.5rem;
+      }
+      
+      .author-image {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 1rem;
+          background-color: var(--light-brown);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-weight: 600;
+      }
+      
+      .author-name {
+          font-weight: 600;
+          color: var(--dark-purple);
+      }
+      
+      .author-title {
+          font-size: 0.875rem;
+          color: var(--primary-brown);
+      }
+      
+      /* Plan Trip View */
+      .plan-trip-view .plan-trip-list li .icon {
+          background: linear-gradient(135deg, var(--yellow), var(--primary)) !important;
+      }
+      
+      .plan-trip-view .plan-trip-list li .icon:after {
+          content: '';
+          position: absolute;
+          width: 2px;
+          height: 100%;
+          border-right: 1px dashed #ffc20e !important;
+          border-left: 1px dashed #ffc20e !important;
+          left: 50%;
+          transform: translateY(-50%);
+          bottom: 0;
+      }
+      
+      .plan-trip-view .plan-trip-list li .icon:before {
+          position: absolute;
+          width: 2px;
+          height: 100%;
+          border-right: 1px dashed #ffc20e !important;
+          border-left: 1px dashed #ffc20e !important;
+          left: 50%;
+          transform: translateY(-50%);
+          bottom: 0;
+      }
+      
+      /* International Number List */
+      .int-number-view .international-number-list li:nth-child(5n+2) {
+          background: #fdfff4 !important;
+          border: 2px solid #fdfff4;
+      }
+      
+      .int-number-view .international-number-list li:nth-child(5n+3) {
+          background: #f8f7ff !important;
+          border: 2px solid #f8f7ff;
+      }
+      
+      .int-number-view .international-number-list li:nth-child(5n+4) {
+          background: #fdfff4 !important;
+          border: 2px solid #fdfff4;
+      }
+      
+      .int-number-view .international-number-list li:nth-child(5n+5) {
+          background: #f8f7ff !important;
+          border: 2px solid #f8f7ff;
+      }
+      
+      /* ----- Banner Section ----- */
+      .banner-section .banner-left .banner-text {
+          backdrop-filter: blur(10px);
+      }
+      
+      .banner-section .banner-img > img, 
+      .banner-section .banner-img picture img {
+          min-height: 350px;
+      }
+      
+      /* ----- Fixed Bottom Bar ----- */
+      .fixed-bottom-bar {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          background-color: white;
+          padding: 10px 0;
+          box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+          z-index: 999;
+      }
+      
+      .help-button, 
+      .chat-button {
+          width: 47%;
+          padding: 10px 0;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: bold;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      
+      .help-button {
+          background-color: red;
+          color: white;
+          margin-left: 10px;
+      }
+      
+      .chat-button {
+          background-color: green;
+          color: white;
+          margin-right: 10px;
+      }
+      
+      /* ----- Animations ----- */
+      @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes pulse {
+          0% { transform: translateX(-50%) scale(1); opacity: 0.5; }
+          50% { transform: translateX(-50%) scale(1.2); opacity: 0.3; }
+          100% { transform: translateX(-50%) scale(1); opacity: 0.5; }
+      }
+      
+      @keyframes glow {
+          0% { box-shadow: 0 0 5px rgba(255, 194, 14, 0.5); }
+          100% { box-shadow: 0 0 12px rgba(255, 194, 14, 0.8), 0 0 20px rgba(255, 194, 14, 0.3); }
+      }
+      
+      /* ----- Responsive Media Queries ----- */
+      @media only screen and (min-width: 600px) {
+          .international-page .international-header .international-top-header {
+              display: none;
+          }
+      }
+      
+      @media only screen and (max-width: 600px) {
+          .desktop-banner {
+              display: none;
+          }
+          
+          .mob-banner {
+              display: block;
+          }
+          
+          .fixed-bottom-bar {
+              display: block;
+          }
+          
+          .submit-btn {
+              flex-direction: column;
+              gap: 0;
+          }
+          
+          .banner-section .banner-left .banner-text {
+              backdrop-filter: blur(20px) !important;
+              margin-top: 150px;
+              display: none !important;
+          }
+          
+          .international-main-header {
+              display: none;
+          }
+          
+          .phone-wrap {
+              margin-right: 10px;
+          }
+          
+          .mob-banner-text {
+              backdrop-filter: blur(20px) !important;
+              background: rgba(255, 255, 255, 0.5);
+              margin-top: 20px;
+              display: inline-block;
+              border-radius: 8px;
+              padding: 8px 42px 8px 11px;
+          }
+          
+          .help-button, 
+          .chat-button {
+              font-size: 14px;
+          }
+      }
+      
+      @media only screen and (max-width: 767px) {
+          .int-number-view .international-number-list li:nth-child(5n+3),
+          .int-number-view .international-number-list li:nth-child(5n+4) {
+              width: calc(50% - 6px) !important;
+              margin: 0 3px 6px;
+          }
+          
+          .int-number-view .international-number-list li:nth-child(5n+5) {
+              width: calc(100% - 6px);
+              margin: 0 3px 6px;
+          }
+      }
+      
+      @media (max-width: 768px) {
+          .section-bg {
+              padding: 2rem 1.5rem;
+          }
+          
+          .cost-card {
+              margin-bottom: 1.5rem;
+          }
+          
+          .section-title h2 {
+              font-size: 2rem;
+          }
+          
+          .timeline-title {
+              font-size: 1.2rem;
+          }
+          
+          .btn-primary, 
+          .btn-secondary {
+              display: block;
+              width: 100%;
+              margin-bottom: 10px;
+              margin-right: 0;
+          }
+      }
+      
+      @media (max-width: 992px) {
+          .timeline-container::after {
+              display: none;
+          }
+          
+          .top-dot, 
+          .bottom-dot {
+              display: none;
+          }
+          
+          .timeline-content {
+              flex-direction: column;
+              gap: 15px;
+          }
+          
+          .timeline-left, 
+          .timeline-right {
+              width: 100%;
+              order: 2;
+              margin-top: 10px;
+          }
+          
+          .timeline-center {
+              width: 100%;
+              order: 1;
+              justify-content: flex-start;
+              padding-left: 0;
+              margin-bottom: 5px;
+              margin-left: 0;
+          }
+          
+          .diamond {
+              margin: 0 auto 15px auto;
+              transform: rotate(45deg);
+          }
+          
+          .timeline-item:nth-child(even) .timeline-content .timeline-left,
+          .timeline-item:nth-child(even) .timeline-content .timeline-right {
+              order: 2;
+          }
+          
+          .timeline-item {
+              margin-bottom: 25px;
+              padding-left: 0;
+              border-radius: 10px;
+              background: white;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+              padding: 15px;
+              position: relative;
+              overflow: hidden;
+          }
+          
+          .timeline-item:nth-child(even) .timeline-text {
+              border-right: none;
+              border-left: 3px solid var(--teal);
+          }
+          
+          .timeline-text {
+              box-shadow: none;
+              padding: 10px 0 0 0;
+              border-left: none !important;
+              border-right: none !important;
+          }
+          
+          .timeline-text:before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              height: 4px;
+              opacity: 0.8;
+          }
+          
+          .timeline-item:nth-child(odd) .timeline-text:before {
+              background: linear-gradient(to right, var(--yellow), var(--primary));
+          }
+          
+          .timeline-item:nth-child(even) .timeline-text:before {
+              background: linear-gradient(to right, var(--teal), var(--secondary));
+          }
+      }
+      </style>
+
+  </head>
+
+  <body class="international-page fortis-path-node">
+    <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+      <header class="international-header" style="padding:0px !important;height:auto !important;">
+        <div class="international-top-header header-top-nav">
+          <div>
+            <div id="block-sitebranding-2" class="page-logo int-mobile-logo">
+              <a rel="home">
+                <img style="margin-top:10px" src="assets/TruHealer.png" alt="Home" class="img-fluid"  /> 
+              </a>
+              
+            </div>
+              <!--<a href="/" rel="home">-->
+              <!--  <img style="max-width: 65px;" src="https://www.fortishealthcare.com/themes/custom/fortis/logo.png" alt="Home" />-->
+              <!--</a>-->
+            
+            <div class="site-search-main" id="block-autocompletesearchform-2">
+              <!--<div class="site-search">-->
+              <!--  <img src="drupal-data/images/search-icon.svg" alt="search" />-->
+              <!--</div>-->
+              <div class="header-search-block">
+                <form
+                  class="autocomplete-search-form"
+                  data-drupal-selector="autocomplete-search-form"
+                  action="/search"
+                  method="post"
+                  id="autocomplete-search-form"
+                  accept-charset="UTF-8"
+                >
+                  <div
+                    class="js-form-item form-item js-form-type-textfield form-item-search js-form-item-search form-no-label"
+                  >
+                    <input
+                      placeholder="Search for Doctors, Specialities and Hospitals"
+                      class="global-search-field form-text"
+                      autocomplete="off"
+                      data-drupal-selector="global-search-auto"
+                      type="text"
+                      id="global-search-auto"
+                      name="search"
+                      value=""
+                      size="50"
+                      maxlength="128"
+                    />
+                  </div>
+                  <div class="global-search-icon"></div>
+                  <div class="global-search-close"></div>
+                  <input
+                    autocomplete="off"
+                    data-drupal-selector="form-pobqfloqvhh85ofilfbozjlhcpavb7pi1r2scjeheku"
+                    type="hidden"
+                    name="form_build_id"
+                    value="form-pObqflOqVHH85OFILfBOzJlHcpAvb7Pi1R2ScJEHEKU"
+                  />
+                  <input
+                    data-drupal-selector="edit-autocomplete-search-form"
+                    type="hidden"
+                    name="form_id"
+                    value="autocomplete_search_form"
+                  />
+                  <div
+                    data-drupal-selector="edit-actions"
+                    class="form-actions js-form-wrapper form-wrapper"
+                    id="edit-actions--2"
+                  >
+                    <input
+                      style="display: none"
+                      data-drupal-selector="edit-submit"
+                      type="submit"
+                      id="edit-submit--2"
+                      name="op"
+                      value="Submit"
+                      class="button js-form-submit form-submit"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div
+              class="views-element-container header_phone-int"
+              id="block-views-block-international-faq-int-phone-num"
+            >
+              <div>
+                <div
+                  class="js-view-dom-id-7cac97a43bd0379f9f53e768f7a95111dbe70da15dc950fa91b49402851fbbdf"
+                >
+                  <div>
+                    <div class="phone-wrap">
+                      <!-- <div class="img">
+                        <img
+                          src="https://fhltothenewwebuat.blob.core.windows.netdrupal-data/inline-images/Icon%20simple-whatsapp.png"
+                        />
+                      </div> -->
+                      <div class="text">
+                          <img style="max-width:22px;margin-right: 10px;" src="assets/whatsapp-icon.png" alt="search" />
+                        <a href="https://wa.me/+91 99582 90364">+91 99582 90364</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="international-main-header">
+          <div>
+            <div id="block-sitebranding" class="page-logo">
+              <a rel="home">
+                <img src="assets/TruHealer.png" alt="Home" class="img-fluid" />
+              </a>
+              <!--<a href="/" rel="home">-->
+              <!--  <img style="margin-top: -7px;" src="https://www.fortishealthcare.com/themes/custom/fortis/logo.png" alt="Home" />-->
+              <!--</a>-->
+            </div>
+            <div class="text" style="display:flex">
+                    <div>
+                        <img style="max-width:22px;margin-right: 10px;" src="assets/whatsapp-icon.png" alt="search" />
+                        
+                    </div>
+                        <a style="color: #db7c65;font-size:18px;font-weight:bold;font-family: sans-serif;text-decoration: underline;" href="https://wa.me/+91 99582 90364">+91 99582 90364</a>
+                      </div>
+            
+          </div>
+        </div>
+      </header>
+      <!-- International Header ENDS -->
+
+      <main>
+        <!-- Banner STARTS -->
+        <div class="banner-outer">
+          <div>
+            <div
+              class="views-element-container"
+              id="block-views-block-banner-content-block-1"
+            >
+              <div>
+                <div
+                  class="js-view-dom-id-aabf09984bd922a587580ad8a3e7b6da397dc01222b8d8056569c36b7f791591"
+                >
+                  <div class="views-row">
+                    <div
+                      class="views-field views-field-banner-responsive-image"
+                    >
+                      <span class="field-content"
+                        ><div class="banner-section">
+                          <div class="banner-img">
+                            <picture>
+                              <source media="(max-width:767px)" srcset="" />
+                              <img
+                                class="desktop-banner"
+                                src="assets/banner.png"
+                              />
+                              <img
+                                class="mob-banner"
+                                src="assets/Artemis-Hospital-image-mob.webp"
+                              />
+                            </picture>
+                          </div>
+                          <div class="banner-content">
+                            <div class="wrapper">
+                              <div class="banner-left">
+                                <div class="banner-text">
+                                  <h1>
+                                    TruHealers Healthcare - International Patients Department
+                                  </h1>
+                                  <p>
+                                    At TruHealers Healthcare, we are committed to delivering exceptional medical care and making our international patients feel at home during their stay. Whether you're seeking a consultation, second opinion, or specialized medical treatment, our International Patients Department is here to ensure a seamless and supportive experience.
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="banner-right"></div>
+                            </div>
+                          </div></div
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Banner ENDS -->
+
+        <!-- Breadcrumbs STARTS -->
+        <!-- Breadcrumbs ENDS -->
+
+        <!-- Page Top STARTS -->
+        <!-- Page Top ENDS -->
+
+        <!-- Content STARTS -->
+        
+        <div class="mob-banner-text">
+          <h1>
+            TruHealers Healthcare - International Patients Department
+          </h1>
+          <p>At TruHealers Healthcare, we are committed to delivering exceptional medical care and making our international patients feel at home during their stay. Whether you're seeking a consultation, second opinion, or specialized medical treatment, our International Patients Department is here to ensure a seamless and supportive experience.</p>
+        </div>
+        
+        <div class="wrapper about-convicare-div-parent">
+            <div class="about-convicare-div">
+                <h1>Welcome to TruHealers Healthcare</h1>
+          <p>
+            At TruHealers Healthcare, we excel in providing comprehensive medical tourism services tailored to meet the needs of international patients seeking surgical and medical treatments in India. Based in the thriving healthcare cities of Delhi and Gurgaon, we connect patients from Africa, Southeast Asia, and the Middle East with some of India’s premier medical institutions.
+          </p>
+            </div>
+        </div>
+
+        <section class="logo-showcase pt-5 pb-0">
+          <div class="container" style="max-width: 1270px;">
+              
+              <div class="logo-slider">
+                  <div class="logo-slider__container">
+                      <!-- Logos (first set) -->
+                      <div class="logo-slider__item">
+                          <img src="assets/id34Pe80Sc_1745824651374.png" alt="Company Logo 1" class="logo-slider__image">
+                      </div>
+                      <div class="logo-slider__item">
+                          <img src="assets/idaSZ5BXu2_1745824480710.jpeg" alt="Company Logo 2" class="logo-slider__image">
+                      </div>
+                      <div class="logo-slider__item">
+                          <img src="assets/idmbb-Q7Z0_logos.png" alt="Company Logo 3" class="logo-slider__image">
+                      </div>
+                      <div class="logo-slider__item">
+                          <img src="assets/idwUX6mmSi_logos.jpeg" alt="Company Logo 4" class="logo-slider__image">
+                      </div>
+                      <div class="logo-slider__item">
+                        <img src="assets/id34Pe80Sc_1745824651374.png" alt="Company Logo 1" class="logo-slider__image">
+                    </div>
+                    <div class="logo-slider__item">
+                        <img src="assets/idaSZ5BXu2_1745824480710.jpeg" alt="Company Logo 2" class="logo-slider__image">
+                    </div>
+                    <div class="logo-slider__item">
+                        <img src="assets/idmbb-Q7Z0_logos.png" alt="Company Logo 3" class="logo-slider__image">
+                    </div>
+                    <div class="logo-slider__item">
+                        <img src="assets/idwUX6mmSi_logos.jpeg" alt="Company Logo 4" class="logo-slider__image">
+                    </div>
+                    <div class="logo-slider__item">
+                      <img src="assets/id34Pe80Sc_1745824651374.png" alt="Company Logo 1" class="logo-slider__image">
+                  </div>
+                  <div class="logo-slider__item">
+                      <img src="assets/idaSZ5BXu2_1745824480710.jpeg" alt="Company Logo 2" class="logo-slider__image">
+                  </div>
+                  <div class="logo-slider__item">
+                      <img src="assets/idmbb-Q7Z0_logos.png" alt="Company Logo 3" class="logo-slider__image">
+                  </div>
+                  <div class="logo-slider__item">
+                      <img src="assets/idwUX6mmSi_logos.jpeg" alt="Company Logo 4" class="logo-slider__image">
+                  </div>
+                      
+                     
+                  </div>
+              </div>
+          </div>
+      </section>
+                                
+                                
+        <div>
+          <div data-drupal-messages-fallback class="hidden"></div>
+          <div id="block-hotfixes">
+            <div class="layout layout--onecol">
+              <div class="layout__region layout__region--content">
+                <div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="block-fortis-content">
+            <div class="international-outer">
+              <div class="wrapper">
+                <div class="views-element-container">
+                  <div
+                    class="int-number-view section-empty js-view-dom-id-255f21e20c04314559b5729c3c034cbc22599101fbe4a03730d643b723eccdfd"
+                  >
+                    <div class="item-list">
+                      <ul class="international-number-list">
+                        <li>
+                          <div class="icon">
+                            <img
+                              src="drupal-data/2023-05/Group%2022830%20%284%29.svg"
+                              alt="img"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div class="text-wrap">
+                            <div class="title">50+</div>
+                            <div class="des">Health Care Facilities Network across India</div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="icon">
+                            <img
+                              src="drupal-data/2023-05/Group%2022832%20%284%29.svg"
+                              alt="img"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div class="text-wrap">
+                            <div class="title">1400+</div>
+                            <div class="des">Expert Doctor Network</div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="icon">
+                            <img
+                              src="drupal-data/2023-05/Group%2022467%20%286%29.svg"
+                              alt="img"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div class="text-wrap">
+                            <div class="title">200,000+</div>
+                            <div class="des">
+                              International Patients Treated
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="icon">
+                            <img
+                              src="drupal-data/2023-05/Group%2022897%20%285%29.svg"
+                              alt="img"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div class="text-wrap">
+                            <div class="title">175+</div>
+                            <div class="des">
+                              Countries covered across the globe
+                            </div>
+                          </div>
+                        </li>
+                        <!-- <li>
+                          <div class="icon">
+                            <img
+                              src="drupal-data/2023-05/Group%2022475%20%285%29.svg"
+                              alt="img"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div class="text-wrap">
+                            <div class="title">20+</div>
+                            <div class="des">International Govt. Tie-ups</div>
+                          </div>
+                        </li> -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                
+
+                <div class="get-an-estimate" id=form>
+                  <form id="contact-form" class="get-an-estimate-form" accept-charset='UTF-8' action='#' method='POST'>
+                    <h2 class="heading2">
+                      Get a personalised treatment plan and estimate
+                    </h2>
+                    <div class="first-wrap">
+                      <div
+                        class="js-form-item form-item js-form-type-textfield form-item-int-name js-form-item-int-name"
+                      >
+                        <label class="form-required" for="edit-int-name"
+                          >Name of the Patient</label
+                        >
+                        <input
+                          data-drupal-selector="edit-int-name"
+                          type="text"
+                          id="edit-int-name"
+                          name="patientName"
+                          value=""
+                          size="60"
+                          maxlength="40"
+                          class="form-text"
+                          required
+                        />
+                      </div>
+                      <div
+                        class="js-form-item form-item js-form-type-tel form-item-age js-form-item-age"
+                      >
+                        <label
+                          for="edit-age"
+                          >Age</label
+                        >
+                        <input
+                          data-drupal-selector="edit-age"
+                          type="tel"
+                          id="edit-age"
+                          name="PatientAge"
+                          value=""
+                          size="30"
+                          maxlength="3"
+                          class="form-tel required"
+                        />
+                      </div>
+                      <div
+                        class="js-form-item form-item js-form-type-select form-item-gender js-form-item-gender"
+                      >
+                        <label for="edit-gender"
+                          >Gender</label
+                        >
+                        <select
+                          data-drupal-selector="edit-gender"
+                          id="edit-gender"
+                          name="gender"
+                          class="form-select"
+                        >
+                          <option value="0">Select Gender</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="second-wrap">
+                      <div
+                        class="js-form-item form-item js-form-type-tel form-item-int-country-code js-form-item-int-country-code"
+                      >
+                        <label class="form-required" for="edit-int-country-code"
+                          >Country Code</label
+                        >
+                        <input
+                          data-drupal-selector="edit-int-country-code"
+                          type="tel"
+                          id="edit-int-country-code"
+                          name="countryCode"
+                          value=""
+                          size="30"
+                          maxlength="5"
+                          class="form-tel"
+                          required
+                        />
+                      </div>
+                      <div
+                        class="js-form-item form-item js-form-type-tel form-item-int-mobile-number js-form-item-int-mobile-number"
+                      >
+                        <label
+                          class="form-required"
+                          for="edit-int-mobile-number"
+                          >Contact No</label
+                        >
+                        <input
+                          data-drupal-selector="edit-int-mobile-number"
+                          type="tel"
+                          id="edit-int-mobile-number"
+                          name="patientNumber"
+                          value=""
+                          size="30"
+                          maxlength="128"
+                          class="form-tel"
+                          oninput="limitNumberLength(this, 9+1)"
+                          required
+                        />
+                      </div>
+                      <div
+                        class="js-form-item form-item js-form-type-select form-item-country js-form-item-country"
+                      >
+                        <label class="form-required" for="edit-country"
+                          >Country</label
+                        >
+                        <select
+                          data-drupal-selector="edit-country"
+                          id="edit-country"
+                          name="country"
+                          class="form-select"
+                        >
+                          <option value="0">Please select Country</option>
+                          <option value="AF">Afghanistan</option>
+                          <option value="AL">Albania</option>
+                          <option value="DZ">Algeria</option>
+                          <option value="AS">American Samoa</option>
+                          <option value="AD">Andorra</option>
+                          <option value="AO">Angola</option>
+                          <option value="AI">Anguilla</option>
+                          <option value="AQ">Antarctica</option>
+                          <option value="AG">Antigua & Barbuda</option>
+                          <option value="AR">Argentina</option>
+                          <option value="AM">Armenia</option>
+                          <option value="AW">Aruba</option>
+                          <option value="AC">Ascension Island</option>
+                          <option value="AU">Australia</option>
+                          <option value="AT">Austria</option>
+                          <option value="AZ">Azerbaijan</option>
+                          <option value="BS">Bahamas</option>
+                          <option value="BH">Bahrain</option>
+                          <option value="BD">Bangladesh</option>
+                          <option value="BB">Barbados</option>
+                          <option value="BY">Belarus</option>
+                          <option value="BE">Belgium</option>
+                          <option value="BZ">Belize</option>
+                          <option value="BJ">Benin</option>
+                          <option value="BM">Bermuda</option>
+                          <option value="BT">Bhutan</option>
+                          <option value="BO">Bolivia</option>
+                          <option value="BA">Bosnia & Herzegovina</option>
+                          <option value="BW">Botswana</option>
+                          <option value="BV">Bouvet Island</option>
+                          <option value="BR">Brazil</option>
+                          <option value="IO">
+                            British Indian Ocean Territory
+                          </option>
+                          <option value="VG">British Virgin Islands</option>
+                          <option value="BN">Brunei</option>
+                          <option value="BG">Bulgaria</option>
+                          <option value="BF">Burkina Faso</option>
+                          <option value="BI">Burundi</option>
+                          <option value="KH">Cambodia</option>
+                          <option value="CM">Cameroon</option>
+                          <option value="CA">Canada</option>
+                          <option value="IC">Canary Islands</option>
+                          <option value="CV">Cape Verde</option>
+                          <option value="BQ">Caribbean Netherlands</option>
+                          <option value="KY">Cayman Islands</option>
+                          <option value="CF">Central African Republic</option>
+                          <option value="EA">Ceuta & Melilla</option>
+                          <option value="TD">Chad</option>
+                          <option value="CL">Chile</option>
+                          <option value="CN">China</option>
+                          <option value="CX">Christmas Island</option>
+                          <option value="CP">Clipperton Island</option>
+                          <option value="CC">Cocos (Keeling) Islands</option>
+                          <option value="CO">Colombia</option>
+                          <option value="KM">Comoros</option>
+                          <option value="CG">Congo - Brazzaville</option>
+                          <option value="CD">Congo - Kinshasa</option>
+                          <option value="CK">Cook Islands</option>
+                          <option value="CR">Costa Rica</option>
+                          <option value="HR">Croatia</option>
+                          <option value="CU">Cuba</option>
+                          <option value="CW">Curaçao</option>
+                          <option value="CY">Cyprus</option>
+                          <option value="CZ">Czechia</option>
+                          <option value="CI">Côte d’Ivoire</option>
+                          <option value="DK">Denmark</option>
+                          <option value="DG">Diego Garcia</option>
+                          <option value="DJ">Djibouti</option>
+                          <option value="DM">Dominica</option>
+                          <option value="DO">Dominican Republic</option>
+                          <option value="EC">Ecuador</option>
+                          <option value="EG">Egypt</option>
+                          <option value="SV">El Salvador</option>
+                          <option value="GQ">Equatorial Guinea</option>
+                          <option value="ER">Eritrea</option>
+                          <option value="EE">Estonia</option>
+                          <option value="SZ">Eswatini</option>
+                          <option value="ET">Ethiopia</option>
+                          <option value="FK">Falkland Islands</option>
+                          <option value="FO">Faroe Islands</option>
+                          <option value="FJ">Fiji</option>
+                          <option value="FI">Finland</option>
+                          <option value="FR">France</option>
+                          <option value="GF">French Guiana</option>
+                          <option value="PF">French Polynesia</option>
+                          <option value="TF">
+                            French Southern Territories
+                          </option>
+                          <option value="GA">Gabon</option>
+                          <option value="GM">Gambia</option>
+                          <option value="GE">Georgia</option>
+                          <option value="DE">Germany</option>
+                          <option value="GH">Ghana</option>
+                          <option value="GI">Gibraltar</option>
+                          <option value="GR">Greece</option>
+                          <option value="GL">Greenland</option>
+                          <option value="GD">Grenada</option>
+                          <option value="GP">Guadeloupe</option>
+                          <option value="GU">Guam</option>
+                          <option value="GT">Guatemala</option>
+                          <option value="GG">Guernsey</option>
+                          <option value="GN">Guinea</option>
+                          <option value="GW">Guinea-Bissau</option>
+                          <option value="GY">Guyana</option>
+                          <option value="HT">Haiti</option>
+                          <option value="HM">Heard & McDonald Islands</option>
+                          <option value="HN">Honduras</option>
+                          <option value="HK">Hong Kong SAR China</option>
+                          <option value="HU">Hungary</option>
+                          <option value="IS">Iceland</option>
+                          <option value="IN">India</option>
+                          <option value="ID">Indonesia</option>
+                          <option value="IR">Iran</option>
+                          <option value="IQ">Iraq</option>
+                          <option value="IE">Ireland</option>
+                          <option value="IM">Isle of Man</option>
+                          <option value="IL">Israel</option>
+                          <option value="IT">Italy</option>
+                          <option value="JM">Jamaica</option>
+                          <option value="JP">Japan</option>
+                          <option value="JE">Jersey</option>
+                          <option value="JO">Jordan</option>
+                          <option value="KZ">Kazakhstan</option>
+                          <option value="KE">Kenya</option>
+                          <option value="KI">Kiribati</option>
+                          <option value="XK">Kosovo</option>
+                          <option value="KW">Kuwait</option>
+                          <option value="KG">Kyrgyzstan</option>
+                          <option value="LA">Laos</option>
+                          <option value="LV">Latvia</option>
+                          <option value="LB">Lebanon</option>
+                          <option value="LS">Lesotho</option>
+                          <option value="LR">Liberia</option>
+                          <option value="LY">Libya</option>
+                          <option value="LI">Liechtenstein</option>
+                          <option value="LT">Lithuania</option>
+                          <option value="LU">Luxembourg</option>
+                          <option value="MO">Macao SAR China</option>
+                          <option value="MG">Madagascar</option>
+                          <option value="MW">Malawi</option>
+                          <option value="MY">Malaysia</option>
+                          <option value="MV">Maldives</option>
+                          <option value="ML">Mali</option>
+                          <option value="MT">Malta</option>
+                          <option value="MH">Marshall Islands</option>
+                          <option value="MQ">Martinique</option>
+                          <option value="MR">Mauritania</option>
+                          <option value="MU">Mauritius</option>
+                          <option value="YT">Mayotte</option>
+                          <option value="MX">Mexico</option>
+                          <option value="FM">Micronesia</option>
+                          <option value="MD">Moldova</option>
+                          <option value="MC">Monaco</option>
+                          <option value="MN">Mongolia</option>
+                          <option value="ME">Montenegro</option>
+                          <option value="MS">Montserrat</option>
+                          <option value="MA">Morocco</option>
+                          <option value="MZ">Mozambique</option>
+                          <option value="MM">Myanmar (Burma)</option>
+                          <option value="NA">Namibia</option>
+                          <option value="NR">Nauru</option>
+                          <option value="NP">Nepal</option>
+                          <option value="NL">Netherlands</option>
+                          <option value="AN">Netherlands Antilles</option>
+                          <option value="NC">New Caledonia</option>
+                          <option value="NZ">New Zealand</option>
+                          <option value="NI">Nicaragua</option>
+                          <option value="NE">Niger</option>
+                          <option value="NG">Nigeria</option>
+                          <option value="NU">Niue</option>
+                          <option value="NF">Norfolk Island</option>
+                          <option value="MP">Northern Mariana Islands</option>
+                          <option value="KP">North Korea</option>
+                          <option value="MK">North Macedonia</option>
+                          <option value="NO">Norway</option>
+                          <option value="OM">Oman</option>
+                          <option value="QO">Outlying Oceania</option>
+                          <option value="PK">Pakistan</option>
+                          <option value="PW">Palau</option>
+                          <option value="PS">Palestinian Territories</option>
+                          <option value="PA">Panama</option>
+                          <option value="PG">Papua New Guinea</option>
+                          <option value="PY">Paraguay</option>
+                          <option value="PE">Peru</option>
+                          <option value="PH">Philippines</option>
+                          <option value="PN">Pitcairn Islands</option>
+                          <option value="PL">Poland</option>
+                          <option value="PT">Portugal</option>
+                          <option value="PR">Puerto Rico</option>
+                          <option value="QA">Qatar</option>
+                          <option value="RO">Romania</option>
+                          <option value="RU">Russia</option>
+                          <option value="RW">Rwanda</option>
+                          <option value="RE">Réunion</option>
+                          <option value="WS">Samoa</option>
+                          <option value="SM">San Marino</option>
+                          <option value="SA">Saudi Arabia</option>
+                          <option value="SN">Senegal</option>
+                          <option value="RS">Serbia</option>
+                          <option value="SC">Seychelles</option>
+                          <option value="SL">Sierra Leone</option>
+                          <option value="SG">Singapore</option>
+                          <option value="SX">Sint Maarten</option>
+                          <option value="SK">Slovakia</option>
+                          <option value="SI">Slovenia</option>
+                          <option value="SB">Solomon Islands</option>
+                          <option value="SO">Somalia</option>
+                          <option value="ZA">South Africa</option>
+                          <option value="GS">
+                            South Georgia & South Sandwich Islands
+                          </option>
+                          <option value="KR">South Korea</option>
+                          <option value="SS">South Sudan</option>
+                          <option value="ES">Spain</option>
+                          <option value="LK">Sri Lanka</option>
+                          <option value="BL">St. Barthélemy</option>
+                          <option value="SH">St. Helena</option>
+                          <option value="KN">St. Kitts & Nevis</option>
+                          <option value="LC">St. Lucia</option>
+                          <option value="MF">St. Martin</option>
+                          <option value="PM">St. Pierre & Miquelon</option>
+                          <option value="VC">St. Vincent & Grenadines</option>
+                          <option value="SD">Sudan</option>
+                          <option value="SR">Suriname</option>
+                          <option value="SJ">Svalbard & Jan Mayen</option>
+                          <option value="SE">Sweden</option>
+                          <option value="CH">Switzerland</option>
+                          <option value="SY">Syria</option>
+                          <option value="ST">São Tomé & Príncipe</option>
+                          <option value="TW">Taiwan</option>
+                          <option value="TJ">Tajikistan</option>
+                          <option value="TZ">Tanzania</option>
+                          <option value="TH">Thailand</option>
+                          <option value="TL">Timor-Leste</option>
+                          <option value="TG">Togo</option>
+                          <option value="TK">Tokelau</option>
+                          <option value="TO">Tonga</option>
+                          <option value="TT">Trinidad & Tobago</option>
+                          <option value="TA">Tristan da Cunha</option>
+                          <option value="TN">Tunisia</option>
+                          <option value="TR">Turkey</option>
+                          <option value="TM">Turkmenistan</option>
+                          <option value="TC">Turks & Caicos Islands</option>
+                          <option value="TV">Tuvalu</option>
+                          <option value="UM">U.S. Outlying Islands</option>
+                          <option value="VI">U.S. Virgin Islands</option>
+                          <option value="UG">Uganda</option>
+                          <option value="UA">Ukraine</option>
+                          <option value="AE">United Arab Emirates</option>
+                          <option value="GB">United Kingdom</option>
+                          <option value="US">United States</option>
+                          <option value="UY">Uruguay</option>
+                          <option value="UZ">Uzbekistan</option>
+                          <option value="VU">Vanuatu</option>
+                          <option value="VA">Vatican City</option>
+                          <option value="VE">Venezuela</option>
+                          <option value="VN">Vietnam</option>
+                          <option value="WF">Wallis & Futuna</option>
+                          <option value="EH">Western Sahara</option>
+                          <option value="YE">Yemen</option>
+                          <option value="ZM">Zambia</option>
+                          <option value="ZW">Zimbabwe</option>
+                          <option value="AX">Åland Islands</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                    
+                    <fieldset
+                      data-drupal-selector="edit-feedback-wrapper"
+                      id="edit-feedback-wrapper"
+                      class="js-form-item form-item js-form-wrapper form-wrapper"
+                    >
+                      <legend>
+                        <span class="fieldset-legend"></span>
+                      </legend>
+                      <div class="fieldset-wrapper">
+                        <div class="wrap-feedback">
+                          <div
+                            class="js-form-item form-item js-form-type-textarea form-item-feedback js-form-item-feedback"
+                          >
+                            <label for="edit-feedback--2">Your Message</label>
+                            <div>
+                              <textarea
+                                data-drupal-selector="edit-feedback"
+                                id="edit-feedback--2"
+                                name="message"
+                                rows="5"
+                                cols="60"
+                                class="form-textarea"
+                              ></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <div class="submit-btn">
+                        <button class="button" type="submit">Get An Estimate</button>
+                      <!--<input-->
+                      <!--  data-drupal-selector="edit-submit"-->
+                      <!--  type="submit"-->
+                      <!--  id="edit-submit"-->
+                      <!--  name="op"-->
+                      <!--  value="Get An Estimate"-->
+                      <!--  class="button js-form-submit form-submit"-->
+                      <!--/>-->
+                      <div class="submit-btn-text">
+                        
+                        
+                        <div class="dis">
+                          <strong>Disclaimer:</strong> This is an indicative
+                          cost based on the reports/ information shared with us.
+                          Final estimate will be shared once patient is
+                          physically evaluated.
+                        </div>
+                      </div>
+                      
+                      <input
+                        data-drupal-selector="edit-get-an-estimate-form"
+                        type="hidden"
+                        name="form_id"
+                        value="get_an_estimate_form"
+                      />
+                      <div class="messages-status"></div>
+                    </div>
+                  </form>
+                </div>
+                
+                 <div class="views-element-container">
+                  <div
+                    class="speciality-block int-speciality-block section-empty js-view-dom-id-954a3005fb8901d98b54d5438c0761bf0e4595d22d87b7459a395b41b25b9a8f"
+                  >
+                    <header>
+                      <h3 class="heading2">
+                        TruHealers Healthcare International Patient Care Services
+                      </h3>
+                    </header>
+
+                    <div class="item-list">
+                      <ul class="speciality-card-slider">
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img
+                                  src="assets/heart.png"
+                                />
+                                <span class="spec-name"
+                                  >Cardiac Sciences</span
+                                ></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img
+                                  src="assets/cancer.png"
+                                />
+                                <span class="spec-name"
+                                  >Medical Oncology</span
+                                ></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img
+                                  src="assets/therapy.png"
+                                />
+                                <span class="spec-name"
+                                  >Radiation Oncology</span
+                                ></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img
+                                  src="assets/surgery-robot.png"
+                                />
+                                <span class="spec-name"
+                                  >Surgical Oncology</span
+                                ></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img src="assets/head.png" />
+                                <span class="spec-name">ENT</span></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img
+                                  src="assets/gastroenterology.png"
+                                />
+                                <span class="spec-name"
+                                  >Gastroenterology</span
+                                ></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img
+                                  src="assets/donation.png"
+                                />
+                                <span class="spec-name"
+                                  >Bowel Transplant</span
+                                ></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img
+                                  src="assets/medical.png"
+                                />
+                                <span class="spec-name"
+                                  >Haematology and BMT</span
+                                ></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img
+                                  src="assets/organ-donation.png"
+                                />
+                                <span class="spec-name"
+                                  >Heart Transplant</span
+                                ></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img
+                                  src="assets/kidneys.png"
+                                />
+                                <span class="spec-name"
+                                  >Kidney Transplant</span
+                                ></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img
+                                  src="assets/liver.png"
+                                />
+                                <span class="spec-name"
+                                  >Liver Transplant</span
+                                ></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img
+                                  src="assets/organ-transplantation.png"
+                                />
+                                <span class="spec-name"
+                                  >Lung Transplant</span
+                                ></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img src="assets/urology.png" />
+                                <span class="spec-name">Urology</span></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img
+                                  src="assets/orthopedics.png"
+                                />
+                                <span class="spec-name">Orthopaedics</span></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img
+                                  src="assets/pediatrics.png"
+                                />
+                                <span class="spec-name">Paediatrics</span></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="views-field views-field-name">
+                            <span class="field-content"
+                              ><a
+                                ><img
+                                  src="assets/pulmonology.png"
+                                />
+                                <span class="spec-name">Pulmonology</span></a
+                              >
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!--<div class="views-element-container">-->
+                <!--  <div-->
+                <!--    class="speciality-block int-speciality-block section-empty js-view-dom-id-954a3005fb8901d98b54d5438c0761bf0e4595d22d87b7459a395b41b25b9a8f"-->
+                <!--  >-->
+                <!--    <header>-->
+                <!--      <h3 class="heading2">-->
+                <!--        Artemis International Patient Care Services-->
+                <!--      </h3>-->
+                <!--    </header>-->
+
+                <!--    <div class="item-list">-->
+                <!--      <ul class="speciality-card-slider">-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a -->
+                <!--                ><img-->
+                <!--                  src="drupal-data/2023-03/Cardiology.svg"-->
+                <!--                />-->
+                <!--                <span class="spec-name"-->
+                <!--                  >Cardiac Sciences</span-->
+                <!--                ></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a-->
+                <!--                ><img-->
+                <!--                  src="drupal-data/images/speciality.png"-->
+                <!--                />-->
+                <!--                <span class="spec-name"-->
+                <!--                  >Medical Oncology</span-->
+                <!--                ></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a-->
+                <!--                ><img-->
+                <!--                  src="drupal-data/2024-09/Radiation%20Oncology.svg"-->
+                <!--                />-->
+                <!--                <span class="spec-name"-->
+                <!--                  >Radiation Oncology</span-->
+                <!--                ></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a-->
+                <!--                ><img-->
+                <!--                  src="drupal-data/2024-09/Surgical%20Oncology.svg"-->
+                <!--                />-->
+                <!--                <span class="spec-name"-->
+                <!--                  >Surgical Oncology</span-->
+                <!--                ></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a-->
+                <!--                ><img src="drupal-data/2023-03/ENT.svg" />-->
+                <!--                <span class="spec-name">ENT</span></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a -->
+                <!--                ><img-->
+                <!--                  src="drupal-data/images/speciality.png"-->
+                <!--                />-->
+                <!--                <span class="spec-name"-->
+                <!--                  >Gastroenterology</span-->
+                <!--                ></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a-->
+                <!--                ><img-->
+                <!--                  src="drupal-data/images/speciality.png"-->
+                <!--                />-->
+                <!--                <span class="spec-name"-->
+                <!--                  >Bowel Transplant</span-->
+                <!--                ></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a-->
+                <!--                ><img-->
+                <!--                  src="drupal-data/images/speciality.png"-->
+                <!--                />-->
+                <!--                <span class="spec-name"-->
+                <!--                  >Haematology and BMT</span-->
+                <!--                ></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a-->
+                <!--                ><img-->
+                <!--                  src="drupal-data/images/speciality.png"-->
+                <!--                />-->
+                <!--                <span class="spec-name"-->
+                <!--                  >Heart Transplant</span-->
+                <!--                ></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a-->
+                <!--                ><img-->
+                <!--                  src="drupal-data/images/speciality.png"-->
+                <!--                />-->
+                <!--                <span class="spec-name"-->
+                <!--                  >Kidney Transplant</span-->
+                <!--                ></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a-->
+                <!--                ><img-->
+                <!--                  src="drupal-data/images/speciality.png"-->
+                <!--                />-->
+                <!--                <span class="spec-name"-->
+                <!--                  >Liver Transplant</span-->
+                <!--                ></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a-->
+                <!--                ><img-->
+                <!--                  src="drupal-data/images/speciality.png"-->
+                <!--                />-->
+                <!--                <span class="spec-name"-->
+                <!--                  >Lung Transplant</span-->
+                <!--                ></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a-->
+                <!--                ><img src="drupal-data/2023-03/Urology.svg" />-->
+                <!--                <span class="spec-name">Urology</span></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a-->
+                <!--                ><img-->
+                <!--                  src="drupal-data/2023-03/Orthopaedics.svg"-->
+                <!--                />-->
+                <!--                <span class="spec-name">Orthopaedics</span></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a-->
+                <!--                ><img-->
+                <!--                  src="drupal-data/2023-03/Paediatrics.svg"-->
+                <!--                />-->
+                <!--                <span class="spec-name">Paediatrics</span></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--        <li>-->
+                <!--          <div class="views-field views-field-name">-->
+                <!--            <span class="field-content"-->
+                <!--              ><a-->
+                <!--                ><img-->
+                <!--                  src="drupal-data/2023-03/Pulmonology.svg"-->
+                <!--                />-->
+                <!--                <span class="spec-name">Pulmonology</span></a-->
+                <!--              >-->
+                <!--            </span>-->
+                <!--          </div>-->
+                <!--        </li>-->
+                <!--      </ul>-->
+                <!--    </div>-->
+                <!--  </div>-->
+                <!--</div>-->
+
+               <div class="medical-procedures">
+                  <div class="views-element-container">
+                    <div
+                      class="section-empty int-medical-procedure js-view-dom-id-5ca0c6970e41ac3a02bf86be7acd9147029f39244de53b575556dd1d2c625285"
+                    >
+                      <div
+                        class="section-empty int-medical-procedure js-view-dom-id-ca941073125ff49ba23047f39fcf3607497f25c678f99e88b9150a8ca0073991"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                
+                  <!--<section class="healthcare-section pb-0">-->
+               <div class="container mt-3 mb-0">
+            <div class="section-bg mb-0 pb-0">
+                <div class="accent-circle accent-circle-1"></div>
+                <div class="accent-circle accent-circle-2"></div>
+                
+                <div class="row ">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="section-title text-center">Why Choose India for Your Healthcare Needs</h2>
+                        <!--<p class="subtitle">World-class medical care at a fraction of Western costs</p>-->
+                        <!--<p class="lead mb-4">India has emerged as a global leader in medical tourism, offering exceptional healthcare services with advanced technology, highly qualified doctors, and significant cost advantages, all while providing patients with an enriching cultural experience.</p>-->
+                    </div>
+                </div>
+                
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h3 class="subtitle text-center mb-4">Cost Advantages: India vs. Western Countries</h3>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-4">
+                        <div class="card cost-card">
+                            <div class="card-header">Heart Procedures</div>
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <div class="treatment-name mb-2">Coronary Artery Bypass</div>
+                                    <ul class="mb-3">
+                                        <li>Save up to 90% compared to US costs</li>
+                                        <li>World-class cardiac facilities</li>
+                                        <li>Experienced cardiologists with international training</li>
+                                        <li>Significantly shorter waiting times</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <div class="treatment-name mb-2">Heart Valve Replacement</div>
+                                    <ul class="mb-0">
+                                        <li>Advanced minimally invasive techniques</li>
+                                        <li>Comprehensive pre and post-operative care</li>
+                                        <li>Top-tier medical technology and equipment</li>
+                                        <li>Substantial cost savings over Western prices</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-4">
+                        <div class="card cost-card">
+                            <div class="card-header">Orthopedic Procedures</div>
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <div class="treatment-name mb-2">Hip Replacement</div>
+                                    <ul class="mb-3">
+                                        <li>Premium quality implants at fraction of the cost</li>
+                                        <li>Specialized orthopedic hospitals</li>
+                                        <li>Robotic-assisted surgical options</li>
+                                        <li>Comprehensive rehabilitation programs</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <div class="treatment-name mb-2">Knee Replacement</div>
+                                    <ul class="mb-0">
+                                        <li>Both partial and total replacement options</li>
+                                        <li>Computer-navigated precision surgery</li>
+                                        <li>Customized implants for better fit</li>
+                                        <li>Significant cost savings over Western prices</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-4">
+                        <div class="card cost-card">
+                            <div class="card-header">Specialty Treatments</div>
+                            <div class="card-body">
+                                <div class="mb-4">
+                                    <div class="treatment-name mb-2">Fertility Treatments</div>
+                                    <ul class="mb-3">
+                                        <li>Comprehensive IVF programs</li>
+                                        <li>High success rates comparable to global standards</li>
+                                        <li>Advanced reproductive technologies</li>
+                                        <li>Personalized treatment protocols</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <div class="treatment-name mb-2">Dental Procedures</div>
+                                    <ul class="mb-0">
+                                        <li>State-of-the-art dental clinics</li>
+                                        <li>Internationally certified materials</li>
+                                        <li>Same-day procedures available</li>
+                                        <li>Dramatic cost savings over Western prices</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <h3 class="subtitle mb-4">Benefits Beyond Cost Savings</h3>
+                    </div>
+                    
+                    <div class="col-lg-6 mb-4">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div>
+                                <h4 class="benefit-title">Internationally Accredited Hospitals</h4>
+                                <p class="mb-0">India boasts over 35 JCI-accredited hospitals with state-of-the-art facilities that meet rigorous international standards for quality.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 mb-4">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4 class="benefit-title">Highly Qualified Medical Professionals</h4>
+                                <p class="mb-0">Many Indian doctors are trained in prestigious medical schools in the US, UK, and other countries, bringing world-class expertise back to India.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 mb-4">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div>
+                                <h4 class="benefit-title">English-Speaking Staff</h4>
+                                <p class="mb-0">English is widely spoken in Indian medical facilities, eliminating language barriers for international patients from English-speaking countries.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 mb-4">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-landmark"></i>
+                            </div>
+                            <div>
+                                <h4 class="benefit-title">Cultural Experience</h4>
+                                <p class="mb-0">Combine your medical treatment with the opportunity to experience India's rich cultural heritage, diverse cuisine, and stunning landscapes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--<div class="row mb-5">-->
+                <!--    <div class="col-12">-->
+                <!--        <h3 class="subtitle mb-4">What Our Patients Say</h3>-->
+                <!--    </div>-->
+                    
+                <!--    <div class="col-lg-6 mb-4">-->
+                <!--        <div class="testimonial">-->
+                <!--            <p>"I was quoted an astronomical amount for my knee replacement in the US. I had the same procedure done in India with outstanding care at a top hospital in Delhi. The savings paid for my flights, accommodation, and even a two-week tour of India during my recovery."</p>-->
+                <!--            <div class="testimonial-author">-->
+                <!--                <div class="author-image">JM</div>-->
+                <!--                <div>-->
+                <!--                    <div class="author-name">John M.</div>-->
+                <!--                    <div class="author-title">from Canada</div>-->
+                <!--                </div>-->
+                <!--            </div>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                    
+                <!--    <div class="col-lg-6 mb-4">-->
+                <!--        <div class="testimonial">-->
+                <!--            <p>"After three failed IVF cycles in the UK, I was losing hope. My treatment in Mumbai was significantly more affordable and resulted in success! The doctors were incredibly knowledgeable and compassionate. I can't recommend it enough."</p>-->
+                <!--            <div class="testimonial-author">-->
+                <!--                <div class="author-image">SL</div>-->
+                <!--                <div>-->
+                <!--                    <div class="author-name">Sarah L.</div>-->
+                <!--                    <div class="author-title">from United Kingdom</div>-->
+                <!--                </div>-->
+                <!--            </div>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</div>-->
+                
+                <!--<div class="row">-->
+                <!--    <div class="col-lg-8 mx-auto text-center">-->
+                <!--        <h3 class="subtitle mb-4">Ready to Begin Your Healthcare Journey in India?</h3>-->
+                <!--        <p class="mb-4">Our team of medical tourism experts is ready to guide you through every step of the process - from choosing the right hospital and specialist to arranging your travel and accommodation.</p>-->
+                <!--        <div class="d-flex justify-content-center flex-wrap gap-3">-->
+                <!--            <a href="#" class="btn cta-button">Get Your Free Consultation</a>-->
+                <!--            <a href="#" class="btn cta-button cta-secondary">Request Personalized Assessment</a>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</div>-->
+            </div>
+        </div>
+                   <!--</section>-->
+                
+
+                <div class="patient-services">
+                  <div class="head-wrap">
+                    <h2 class="heading2">
+                      Healthcare Services for International Patients
+                    </h2>
+                    <div class="sub-text">
+                      At TruHealers Healthcare, we cater to a diverse global patient base,
+                      ensuring that every patient receives personalized and
+                      culturally sensitive medical care. We offer a wide range
+                      of specialized medical services in a world-class
+                      healthcare setting.
+                    </div>
+                  </div>
+                  <div class="views-element-container">
+                    <div
+                      class="section-empty js-view-dom-id-3b96531a79938d2915cf39667e836666b05b81864eeb34fbb1da20a92b18fe1f"
+                    >
+                      <div class="item-list">
+                        <ul class="patient-services-list">
+                          <li>
+                            <div class="text">
+                              Get a personalized treatment plan and estimate
+                            </div>
+                            <div class="icon">
+                              <img
+                                src="https://www.fortishealthcare.com/drupal-data/2023-05/cost%20%285%29.svg"
+                                alt="img"
+                                loading="lazy"
+                              />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="text">Visa assistance</div>
+                            <div class="icon">
+                              <img
+                                src="https://www.fortishealthcare.com/drupal-data/2023-05/credit-card%20%2811%29.svg"
+                                alt="img"
+                                loading="lazy"
+                              />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="text">Airport Pickup and Drop</div>
+                            <div class="icon">
+                              <img
+                                src="https://www.fortishealthcare.com/drupal-data/styles/search_autocomplete/azblob/2024-03/288-2881801_airport-transfers-chauffeur-services-parking-icon.png?itok=nPnmRcPy"
+                                width="50"
+                                height="50"
+                                alt="img"
+                                loading="lazy"
+                              />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="text">Relationship Manager</div>
+                            <div class="icon">
+                              <img
+                                src="https://www.fortishealthcare.com/drupal-data/2023-05/Group%2022934%20%285%29.svg"
+                                alt="img"
+                                loading="lazy"
+                              />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="text">Accommodation & Food</div>
+                            <div class="icon">
+                              <img
+                                src="https://www.fortishealthcare.com/drupal-data/2023-05/Group%2022935%20%284%29.svg"
+                                alt="img"
+                                loading="lazy"
+                              />
+                            </div>
+                          </li>
+                          <li>
+                            <div class="text">
+                              Discharge, Departure & Post-Hospitalization Care
+                            </div>
+                            <div class="icon">
+                              <img
+                                src="https://www.fortishealthcare.com/drupal-data/styles/search_autocomplete/azblob/2024-03/Discharge%20Departure%20%26%20Post%20hopsitalization%20care.png?itok=BVUV3UEA"
+                                width="50"
+                                height="50"
+                                alt="img"
+                                loading="lazy"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                  <!--journey starts-->
+                
+              <section class="py-4">
+            <div class="container">
+            <div class="section-title">
+                <h2>Plan Your Trip</h2>
+                <!--<p>We understand that seeking medical care abroad can be challenging. Our International Patient Department ensures you feel at home during your stay and return to your country in good health.</p>-->
+            </div>
+            
+            <div class="timeline-container">
+                <div class="top-dot"></div>
+                
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-left">
+                            <img src="assets/Processing.gif" alt="Process" class="timeline-image">
+                        </div>
+                        <div class="timeline-center">
+                            <div class="diamond">
+                                <div class="diamond-content">
+                                    <img src="assets/icons/milestone.png" alt="Process Icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-right">
+                            <div class="timeline-text">
+                                <span class="timeline-number">1.</span>
+                                <h3 class="timeline-title">Process</h3>
+                                <p class="timeline-description">The International Patient Department at TruHealers Healthcare was established to assist patients in planning and preparing their travel plans to the hospital.</p>
+                                <a href="#form" class="btn btn-primary">Talk To Experts</a>
+                                <a href="#form" class="btn btn-secondary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-left">
+                            <div class="timeline-text">
+                                <span class="timeline-number">2.</span>
+                                <h3 class="timeline-title">Required Documents</h3>
+                                <p class="timeline-description">When planning to travel abroad, it is important to prepare and bring the necessary documents to ensure a smooth and hassle-free experience.</p>
+                                <a href="#form" class="btn btn-primary">Talk To Experts</a>
+                                <a href="#form" class="btn btn-secondary">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="timeline-center">
+                            <div class="diamond">
+                                <div class="diamond-content">
+                                    <img src="assets/icons/Documnts.png" alt="Documents Icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-right">
+                            <img src="assets/document.jpeg"  alt="Documents" class="timeline-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-left">
+                            <img src="assets/visa.jpeg" alt="Visa" class="timeline-image">
+                        </div>
+                        <div class="timeline-center">
+                            <div class="diamond">
+                                <div class="diamond-content">
+                                    <img src="assets/icons/symbols.png" alt="Visa Icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-right">
+                            <div class="timeline-text">
+                                <span class="timeline-number">3.</span>
+                                <h3 class="timeline-title">Visa</h3>
+                                <p class="timeline-description">Foreign patients can refer to the Indian Immigration Bureau website to learn more about Indian Visa requirements and regulations here:</p>
+                                <a href="#form" class="btn btn-primary">Talk To Experts</a>
+                                <a href="#form" class="btn btn-secondary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-left">
+                            <div class="timeline-text">
+                                <span class="timeline-number">4.</span>
+                                <h3 class="timeline-title">Liability</h3>
+                                <p class="timeline-description">At TruHealers Healthcare, we work with a number of International Insurance providers.</p>
+                                <a href="#form" class="btn btn-primary">Talk To Experts</a>
+                                <a href="#form" class="btn btn-secondary">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="timeline-center">
+                            <div class="diamond">
+                                <div class="diamond-content">
+                                    <img src="assets/icons/Liability.png" alt="Liability Icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-right">
+                            <img src="assets/Lib.jpeg" alt="Liability" class="timeline-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-left">
+                            <img src="assets/airport.jpeg" alt="Airport" class="timeline-image">
+                        </div>
+                        <div class="timeline-center">
+                            <div class="diamond">
+                                <div class="diamond-content">
+                                    <img src="assets/icons/location-1.png" alt="Airport Icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-right">
+                            <div class="timeline-text">
+                                <span class="timeline-number">5.</span>
+                                <h3 class="timeline-title">Airport Cost</h3>
+                                <p class="timeline-description">At TruHealers Healthcare, we believe that Tender Loving Care should begin the moment you arrive.</p>
+                                <a href="#form" class="btn btn-primary">Talk To Experts</a>
+                                <a href="#form" class="btn btn-secondary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottom-dot"></div>
+            </div>
+        </div>
+    </section>
+                
+                  <!--journey ends -->
+                
+                
+                
+                
+                
+                
+                
+                <div class="plan-guidelines-wrap">
+                  <div class="plan-a-trip">
+                    <div class="head-wrap"></div>
+                    <div class="views-element-container">
+                      <div
+                        class="plan-trip-view section-empty js-view-dom-id-e5f081e81f44581090d9b93fc0eb5d6b75ad63f8c4f8b3a0ec42cb6d886a0d82"
+                      >
+                        <header>
+                          <h3 class="trip-head">Process</h3>
+                        </header>
+
+                        <div class="item-list">
+                          <ul class="plan-trip-list">
+                            <li>
+                              <div class="icon">
+                                <img
+                                  src="https://www.fortishealthcare.com/drupal-data/2023-05/question%20%284%29.svg"
+                                  alt="img"
+                                  loading="lazy"
+                                />
+                              </div>
+                              <div class="title">General Enquiry</div>
+                            </li>
+                            <li>
+                              <div class="icon">
+                                <img
+                                  src="https://www.fortishealthcare.com/drupal-data/2023-05/chat-4%20%284%29.svg"
+                                  alt="img"
+                                  loading="lazy"
+                                />
+                              </div>
+                              <div class="title">
+                                Medical opinion by experts
+                              </div>
+                            </li>
+                            <li>
+                              <div class="icon">
+                                <img
+                                  src="https://www.fortishealthcare.com/drupal-data/2023-05/credit-card%20%287%29.svg"
+                                  alt="img"
+                                  loading="lazy"
+                                />
+                              </div>
+                              <div class="title">Visa assistance</div>
+                            </li>
+                            <li>
+                              <div class="icon">
+                                <img
+                                  src="https://www.fortishealthcare.com/drupal-data/2023-05/calendar-4%20%283%29.svg"
+                                  alt="img"
+                                  loading="lazy"
+                                />
+                              </div>
+                              <div class="title">Booking, Arrival</div>
+                            </li>
+                            <li>
+                              <div class="icon">
+                                <img
+                                  src="https://www.fortishealthcare.com/drupal-data/2023-05/doctor-5%20%285%29.svg"
+                                  alt="img"
+                                  loading="lazy"
+                                />
+                              </div>
+                              <div class="title">
+                                Pre-Operative Consultation
+                              </div>
+                            </li>
+                            <li>
+                              <div class="icon">
+                                <img
+                                  src="https://www.fortishealthcare.com/drupal-data/2023-05/knife-and-scissor%20%285%29.svg"
+                                  alt="img"
+                                  loading="lazy"
+                                />
+                              </div>
+                              <div class="title">Treatment</div>
+                            </li>
+                            <li>
+                              <div class="icon">
+                                <img
+                                  src="https://www.fortishealthcare.com/drupal-data/2023-05/stay-healthy%20%284%29.svg"
+                                  alt="img"
+                                  loading="lazy"
+                                />
+                              </div>
+                              <div class="title">Recuperation</div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="guidelines">
+                    <h2 class="heading2">Guidelines</h2>
+                    <ul class="guidelines-tabs common-tabs">
+                      <li data-tab="checklist-section" class="current">
+                        Checklist
+                      </li>
+                      <li data-tab="payment-advisory">Payment Advisory</li>
+                    </ul>
+                    <div class="guidelines-content common-tabs-outer">
+                      <ul
+                        class="checklist-section common-tabs-content current"
+                        id="checklist-section"
+                      >
+                        <li>
+                          <ul class="checklist">
+                            <li class="checklist-row">
+                              Identity Proof/Passport/Visa copy
+                            </li>
+                            <li class="checklist-row">Insurance card</li>
+                            <li class="checklist-row">
+                              Any referral notes from the previous doctor
+                            </li>
+                            <li class="checklist-row">
+                              Passport size photographs (10) of the Patients as
+                              well as the attendant.
+                            </li>
+                            <li class="checklist-row">
+                              Recent medical reports (including scans, tissue
+                              block slides, X-rays, blood tests etc.)
+                            </li>
+                            <li class="checklist-row">
+                              A detailed report and prescriptions of the ongoing
+                              drugs
+                            </li>
+                            <li class="checklist-row">
+                              In case of an organ transplant, Organ transplant
+                              coordinator will assist with list of documents
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <ul
+                        class="payment-advisory common-tabs-content"
+                        id="payment-advisory"
+                      >
+                        <li>
+                          <div class="guidelines-desc">
+                            <p>
+                              <strong>Payment/Forex Advisory:&nbsp;</strong>
+                            </p>
+                            <p><strong>&nbsp;</strong></p>
+                            <p>
+                              The mode of payment will be
+                              <strong
+                                >either cash or bank transfer or international
+                                credit/debit card</strong
+                              >. 100 % payment needs to be deposited before
+                              surgery/procedure/investigations.&nbsp;
+                            </p>
+                            <p><strong>&nbsp;</strong></p>
+                            <ul>
+                              <li>
+                                You are required to share the transfer receipt
+                                with us if opted for wire transaction as it
+                                takes 7 to 10 working days to shown up in our
+                                account. Hence, it is recommended to transfer
+                                the amount at least 10 days prior to the
+                                arrival.&nbsp;
+                              </li>
+                            </ul>
+                            <p><strong>&nbsp;</strong></p>
+                            <ul>
+                              <li>
+                                Please note, as per Government of India foreign
+                                exchange rules (FEMA), all patients /passengers
+                                travelling to India and carrying currency more
+                                than <strong>USD 5000</strong> are required to
+                                declare the same as per the
+                                <strong>Customs Declaration Form (CDF)</strong>
+                                and should carry with them the CDF as proof of
+                                currency brought in to the country.&nbsp;
+                              </li>
+                            </ul>
+                            <p>&nbsp;</p>
+                            <ul>
+                              <li>
+                                CDF is available at the airport Custom
+                                office.&nbsp;
+                              </li>
+                            </ul>
+                            <p>&nbsp;</p>
+                            <ul>
+                              <li>
+                                Any medical procedure costing above
+                                <strong>USD 5000</strong>, we would request or
+                                prefer all funds to be transferred directly to
+                                the account of respective unit of TruHealers 
+                                Healthcare.&nbsp;
+                              </li>
+                            </ul>
+                            <p>&nbsp;</p>
+                            <ul>
+                              <li>
+                                Any amount can be accepted in foreign currency
+                                with declared value as per CDF&nbsp;
+                              </li>
+                            </ul>
+                            <p>&nbsp;</p>
+                            <ul>
+                              <li>
+                                In absence of CDF, foreign currency
+                                <strong>USD 5000</strong> can only be accepted
+                                at the hospital in cash.&nbsp;
+                              </li>
+                            </ul>
+                          </div>
+                          <ul class="press-release-section"></ul>
+                        </li>
+                      </ul>
+                      <ul
+                        class="safety-measures common-tabs-content"
+                        id="safety-measures"
+                      >
+                        <li>
+                          <ul class="press-release-section"></ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="views-element-container">
+                  <div
+                    class="patient-section section-empty patient-section-international js-view-dom-id-0030f84faa452f6010ef9374a6b6199456308b4929df155c998a07e5389b65d8"
+                  >
+                    <header>
+                      <div class="head-row">
+                        <h3 class="heading2">Patient Speaks</h3>
+                      </div>
+                    </header>
+
+                    <div class="patient-right">
+                      <ul class="patient-slider">
+                        <li class="patient-box">
+                          <div class="patient-left">
+                              <img src="assets/google.webp" >
+                            <div class="p-name-date"></div>
+                          </div>
+                          <div class="patient-text">
+                            <div class="patient-description">
+                              <p>
+                                "Life-Saving Care - My experience at TruHealers Healthcare was nothing short of miraculous. After suffering complications from a previous surgery at home, the doctors at TruHealers Healthcare not only saved my life but also provided me with a new lease on life. The care and attention I received was world-class."
+                              </p>
+                            </div>
+                            <div class="patient-location">
+                              <div class="patient-hospital">
+                                <span>TruHealers Healthcare</span>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="patient-box">
+                          <div class="patient-left">
+                            <img src="assets/google.webp" >
+                            <div class="p-name-date"></div>
+                          </div>
+                          <div class="patient-text">
+                            <div class="patient-description">
+                              <p>
+                                "High-Quality Medical Experience - The professional and empathetic treatment I received at TruHealers Healthcare for my knee replacement was exceptional. The staff was very accommodating, ensuring that I was comfortable and informed throughout my stay. The international patient coordinator was a great help!"
+                              </p>
+                            </div>
+                            <div class="patient-location">
+                              <div class="patient-hospital">
+                                <span>TruHealers Healthcare</span>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="patient-box">
+                          <div class="patient-left">
+                            <img src="assets/google.webp" >
+                            <div class="p-name-date"></div>
+                          </div>
+                          <div class="patient-text">
+                            <div class="patient-description">
+                              <p>
+                                "Beyond Expectations - I traveled to TruHealers Healthcare for a complex neurological procedure. The precision of the surgery and the advanced technology were impressive. The staff went above and beyond to make sure my recovery was smooth. I am deeply grateful for the excellent care."
+                              </p>
+                            </div>
+                            <div class="patient-location">
+                              <div class="patient-hospital">
+                                <span>
+                                  TruHealers Healthcare
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        
+                        <li class="patient-box">
+                          <div class="patient-left">
+                            <img src="assets/google.webp" >
+                            <div class="p-name-date"></div>
+                          </div>
+                          <div class="patient-text">
+                            <div class="patient-description">
+                              <p>
+                                "Comprehensive Cancer Care - Being diagnosed with breast cancer was devastating, but the oncology team at TruHealers Healthcare provided hope and detailed care. From the first consultation through treatment and follow-ups, their support was phenomenal. I highly recommend TruHealers Healthcare for comprehensive cancer treatment."
+                              </p>
+                            </div>
+                            <div class="patient-location">
+                              <div class="patient-hospital">
+                                <span>
+                                  TruHealers Healthcare
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="int-about-us">
+                  <div class="views-element-container">
+                    <div
+                      class="about-us-main section-empty js-view-dom-id-9c6fbb9681dba72bd6289c6ba6c0e14b5dbedd6fc883a401586b9be2b915dde6"
+                    >
+                      <header>
+                        <h3 class="heading2">
+                          Why Choose TruHealers Healthcare
+                        </h3>
+                      </header>
+
+                      <div>
+                        <div class="about-us-wrap">
+                          <div class="img">
+                            <img
+                              src="assets/choose-artemis.webp"
+                              width="407"
+                              height="219"
+                              alt="Fortis International Hospitals- Healthcare of International Standards within the reach of each"
+                              loading="lazy"
+                            />
+                          </div>
+                          <div class="text readmore-section">
+                              <p><b style="font-weight:bold;">World-Class Healthcare: </b>Access to top hospitals and internationally accredited medical facilities</p>
+                              <br>
+                              <p><b style="font-weight:bold;">Affordable Treatments: </b>High-quality care at a fraction of the cost compared to Western countries.</p>
+                              <br>
+                              <p><b style="font-weight:bold;">Free Medical Advice and Quote: </b> we offer free consultation with doctor</p>
+                              <br>
+                              <p><b style="font-weight:bold;">Personalized Support: </b>Tailored treatment plans to meet your unique needs.</p>
+                              <br>
+                              <p><b style="font-weight:bold;">Seamless Experience:</b> End-to-end support from consultation to recovery, with easy coordination.</p>
+                              <br>
+                              <p><b style="font-weight:bold;">Patient-Centered Approach:</b>Focus on safety, transparency, and patient satisfaction.</p>
+
+                        
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                
+                <!--<div class="int-partner-logo">-->
+                <!--  <div class="views-element-container">-->
+                <!--    <div-->
+                <!--      class="international-logo-view section-empty js-view-dom-id-fec9c1b4cdb13d87c240c0c477368ea6cb433d3700da65fb1c83171842cb2166"-->
+                <!--    >-->
+                <!--      <header>-->
+                <!--        <div class="head-row">-->
+                <!--          <h3 class="heading2">-->
+                <!--            Our International Insurance Partners-->
+                <!--          </h3>-->
+                          
+                <!--        </div>-->
+                <!--      </header>-->
+
+                <!--      <div class="item-list">-->
+                <!--        <ul class="international-logo-list">-->
+                <!--          <li>-->
+                <!--            <img-->
+                <!--              src="https://www.fortishealthcare.com/drupal-data/2023-05/Aetna.png"-->
+                <!--              width="516"-->
+                <!--              height="98"-->
+                <!--              alt="img"-->
+                <!--              loading="lazy"-->
+                <!--            />-->
+                <!--          </li>-->
+                <!--          <li>-->
+                <!--            <img-->
+                <!--              src="https://www.fortishealthcare.com/drupal-data/2023-05/Allianz%20Partner.png"-->
+                <!--              width="505"-->
+                <!--              height="100"-->
+                <!--              alt="img"-->
+                <!--              loading="lazy"-->
+                <!--            />-->
+                <!--          </li>-->
+                <!--          <li>-->
+                <!--            <img-->
+                <!--              src="https://www.fortishealthcare.com/drupal-data/2023-05/ARMS.png"-->
+                <!--              width="300"-->
+                <!--              height="86"-->
+                <!--              alt="img"-->
+                <!--              loading="lazy"-->
+                <!--            />-->
+                <!--          </li>-->
+                <!--          <li>-->
+                <!--            <img-->
+                <!--              src="https://www.fortishealthcare.com/drupal-data/2023-05/Assist%20Card.png"-->
+                <!--              width="512"-->
+                <!--              height="512"-->
+                <!--              alt="img"-->
+                <!--              loading="lazy"-->
+                <!--            />-->
+                <!--          </li>-->
+                <!--          <li>-->
+                <!--            <img-->
+                <!--              src="https://www.fortishealthcare.com/drupal-data/2023-05/ATMS.png"-->
+                <!--              width="366"-->
+                <!--              height="137"-->
+                <!--              alt="img"-->
+                <!--              loading="lazy"-->
+                <!--            />-->
+                <!--          </li>-->
+                <!--          <li>-->
+                <!--            <img-->
+                <!--              src="https://www.fortishealthcare.com/drupal-data/2023-05/Wellbe.jpg"-->
+                <!--              width="512"-->
+                <!--              height="250"-->
+                <!--              alt="img"-->
+                <!--              loading="lazy"-->
+                <!--            />-->
+                <!--          </li>-->
+                <!--          <li>-->
+                <!--            <img-->
+                <!--              src="https://www.fortishealthcare.com/drupal-data/2023-05/Falck.jpg"-->
+                <!--              width="537"-->
+                <!--              height="185"-->
+                <!--              alt="img"-->
+                <!--              loading="lazy"-->
+                <!--            />-->
+                <!--          </li>-->
+                <!--          <li>-->
+                <!--            <img-->
+                <!--              src="https://www.fortishealthcare.com/drupal-data/2023-05/East-west-rescue.jpg"-->
+                <!--              width="280"-->
+                <!--              height="314"-->
+                <!--              alt="img"-->
+                <!--              loading="lazy"-->
+                <!--            />-->
+                <!--          </li>-->
+                <!--          <li>-->
+                <!--            <img-->
+                <!--              src="https://www.fortishealthcare.com/drupal-data/2023-05/Paramount.png"-->
+                <!--              width="281"-->
+                <!--              height="250"-->
+                <!--              alt="IMG"-->
+                <!--              loading="lazy"-->
+                <!--            />-->
+                <!--          </li>-->
+                <!--          <li>-->
+                <!--            <img-->
+                <!--              src="https://www.fortishealthcare.com/drupal-data/2023-05/Prestige%20International.png"-->
+                <!--              width="512"-->
+                <!--              height="288"-->
+                <!--              alt="img"-->
+                <!--              loading="lazy"-->
+                <!--            />-->
+                <!--          </li>-->
+                <!--        </ul>-->
+                <!--      </div>-->
+                <!--    </div>-->
+                <!--  </div>-->
+                <!--</div>-->
+                <div class="int-faqs">
+                  <div class="views-element-container">
+                    <div
+                      class="faq-outer section-empty js-view-dom-id-813fc951f8a1d6a858eff298d52b3d92567ef8e9b4b5d5a21c9e0670a3c651c3"
+                    >
+                      <header>
+                        <div class="head-row">
+                          <h3 class="heading2">FAQ's</h3>
+                          
+                        </div>
+                      </header>
+
+                      <div class="item-list">
+                        <ul class="faq-sec">
+                            
+                            <li>
+                              <h4 class="faq-title">How can I get a visa for medical treatment in India?</h4>
+                              <div class="faq-content">
+                                <p>Once you confirm your treatment with us, we will provide a visa requisition letter to facilitate your visa application. Please provide your details via email to start the process.</p>
+                              </div>
+                            </li>
+                            
+                            <li>
+                              <h4 class="faq-title">What languages do your interpreters speak?</h4>
+                              <div class="faq-content">
+                                <p>Our interpreters are fluent in multiple languages including Arabic, French, Russian, and more, to ensure effective communication throughout your stay.</p>
+                              </div>
+                            </li>
+                            
+                            <li>
+                              <h4 class="faq-title">Can TruHealers Healthcare help with accommodations for my family?</h4>
+                              <div class="faq-content">
+                                <p>Yes, we can arrange accommodations for your family or attendants according to your preferences, from budget options to luxury hotels.</p>
+                              </div>
+                            </li>
+                            
+                            <li>
+                              <h4 class="faq-title">What should I bring with me for my treatment at TruHealers Healthcare</h4>
+                              <div class="faq-content">
+                                <p>Please bring all relevant medical documents, a valid passport, visa, travel insurance information, and personal items for your stay. Also, bring any medications you are currently taking.</p>
+                              </div>
+                            </li>
+                            
+                            <li>
+                              <h4 class="faq-title">How is the post-discharge process managed for international patients?</h4>
+                              <div class="faq-content">
+                                <p>Post-discharge, we assist with travel arrangements, provide tele-consultation services, and can organize a stay for recuperation in India, along with sightseeing if you are interested.</p>
+                              </div>
+                            </li>
+                            
+                            <li>
+                              <h4 class="faq-title">What payment methods does TruHealers Healthcare accept for international patients?</h4>
+                              <div class="faq-content">
+                                <p>TruHealers Healthcare accepts various payment methods including wire transfers, major credit cards (VISA, MasterCard, AMEX), and direct payments at the hospital. We can also accommodate payments in multiple currencies.</p>
+                              </div>
+                            </li>
+                            
+                            <li>
+                              <h4 class="faq-title">Are there any cultural or religious accommodations available at TruHealers Healthcare</h4>
+                              <div class="faq-content">
+                                <p>Yes, we respect the diverse backgrounds of our international patients. TruHealers Healthcare provides various cultural and religious accommodations, including halal meals, spaces for prayer, and language-appropriate religious materials.</p>
+                              </div>
+                            </li>
+                            
+                            <li>
+                              <h4 class="faq-title">Can TruHealers Healthcare arrange medical consultations or treatments that are not listed on the website?</h4>
+                              <div class="faq-content">
+                                <p>Absolutely. If you have specific medical needs, please discuss them with your international patient coordinator. We have a wide network of specialists across various disciplines and can arrange for specialized consultations and treatments as required.</p>
+                              </div>
+                            </li>
+                            
+                            <li>
+                              <h4 class="faq-title">How does TruHealers Healthcare ensure privacy and confidentiality for its international patients?</h4>
+                              <div class="faq-content">
+                                <p>We adhere strictly to patient confidentiality and privacy laws. All medical records, discussions, and treatments are handled with the utmost discretion and security.</p>
+                              </div>
+                            </li>
+                            
+                            <li>
+                              <h4 class="faq-title">What should I do if there is an emergency situation during my stay?</h4>
+                              <div class="faq-content">
+                                <p>TruHealers Healthcare provides 24/7 emergency care. In case of an emergency, you can contact the hospital’s main line or speak directly to your international patient coordinator who will ensure rapid response and care.</p>
+                              </div>
+                            </li>
+                            
+                            <li>
+                              <h4 class="faq-title">How long do I need to stay in India after my treatment for follow-up care?</h4>
+                              <div class="faq-content">
+                                <p>The duration of stay post-treatment varies depending on the type of procedure and your recovery rate. Your doctor and international patient coordinator will provide a recommended timeline based on your specific treatment plan.</p>
+                              </div>
+                            </li>
+                            
+                            <li>
+                              <h4 class="faq-title">Can TruHealers Healthcare help with extending my medical visa if needed?</h4>
+                              <div class="faq-content">
+                                <p>Yes, our dedicated visa assistance team can help with the necessary documentation and procedures to apply for an extension of your medical visa if your treatment requires a longer stay.</p>
+                              </div>
+                            </li>
+                            
+                            <li>
+                              <h4 class="faq-title">Does TruHealers Healthcare provide support for rehabilitation services post-treatment?</h4>
+                              <div class="faq-content">
+                                <p>Yes, we offer comprehensive rehabilitation services including physical therapy, occupational therapy, and other specialized rehabilitation services tailored to your recovery needs.</p>
+                              </div>
+                            </li>
+                            
+                            <li>
+                              <h4 class="faq-title">Are there facilities for online consultations with doctors after I return to my country?</h4>
+                              <div class="faq-content">
+                                <p>TruHealers Healthcare offers tele-consultation services enabling you to continue your follow-up appointments with your treating doctors from the comfort of your home country.</p>
+                              </div>
+                            </li>
+                            
+                            <li>
+                              <h4 class="faq-title">What amenities are available for attendants staying with the patient?</h4>
+                              <div class="faq-content">
+                                <p>Attendants can enjoy amenities such as comfortable lounge areas, cafeteria services, Wi-Fi, and accommodation assistance. We ensure that attendants are comfortable and well taken care of during their stay.</p>
+                              </div>
+                            </li>
+
+
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="moderation-form-sec"></div>
+            </div>
+          </div>
+        </div>
+
+
+      
+        
+        <!-- <div class="fixed-bottom-bar">
+            <a class="help-button" href="#contact-form">
+                <img style="max-width:20px;margin-right: 10px;filter: brightness(0) invert(1);" src="assets/phone-call.png" alt="search">
+                Need Help?
+            </a>
+            <a class="chat-button" href="thankyou">
+                <img style="max-width:22px;margin-right: 10px;" src="assets/whatsapp-icon.png" alt="search">
+                Whatsapp
+            </a>
+        </div> -->
+
+        <!-- Content ENDS -->
+
+        <!-- Page Top ENDS -->
+        <!-- Page Top STARTS -->
+      </main>
+
+      <!-- FOOTER START -->
+      <footer class="footer">
+        <!-- FOOTER  TOP START -->
+        
+
+        <!-- FOOTER  TOP END -->
+        <!-- FOOTER BOTTOM START -->
+        <div class="footer-bottom">
+          <div class="wrapper">
+            <div class="footer-bottom-inner">
+              <!-- FOOTER LEFT START -->
+              <div class="footer-bottom-left">
+                <div>
+                  <div id="block-footerbottomlogo">
+                    <div class="layout layout--onecol">
+                      <div class="layout__region layout__region--content">
+                        <div>
+                          <div class="footer-logo">
+                            <img
+                              src="assets/TruHealer.png" alt="Home" class="img-fluid" 
+                             
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- FOOTER LEFT END -->
+             
+              <div class="footer-link-outer">
+                <div>
+                  <nav
+                    role="navigation"
+                    aria-labelledby="block-footer-menu"
+                    id="block-footer"
+                    class="footer-link"
+                  >
+                    <h2 class="visually-hidden" id="block-footer-menu">
+                      Footer
+                    </h2>
+
+                    
+                  </nav>
+                  <div id="block-footerbottomcopyrightblock">
+                    <div class="layout layout--onecol">
+                      <div class="layout__region layout__region--content">
+                        <div>
+                          <p>2024 TruHealers Healthcare. All Rights Reserved.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- FOOTER RIGHT END -->
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- FOOTER END -->
+    </div>
+
+    <div class="popup-outer video-popup">
+      <div class="popup-sec">
+        <div class="close-video"></div>
+        <iframe
+          title="Window"
+          loading="lazy"
+          width="900"
+          height="506"
+          src=""
+          frameborder="0"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <video
+          class="video-mp4"
+          width="900"
+          height="506"
+          controls
+          src=""
+          type="video/mp4"
+        >
+          Browser not supported
+        </video>
+      </div>
+    </div>
+
+    <script
+      data-cfasync="false"
+      src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">
+      {
+        "path": {
+          "baseUrl": "\/",
+          "scriptPath": null,
+          "pathPrefix": "",
+          "currentPath": "node\/11683",
+          "currentPathIsAdmin": false,
+          "isFront": false,
+          "currentLanguage": "en"
+        },
+        "pluralDelimiter": "\u0003",
+        "suppressDeprecationErrors": true,
+        "ajaxPageState": {
+          "libraries": "core\/internal.jquery.form,file\/drupal.file,fortis\/global-request-callback,fortis\/global-scripts,fortis\/international-styling,fortis_contact\/feedback_query_form,fortis_doctor_details\/datepicker_lib,fortis_international\/fortis-international,fortis_search\/fortis-search-autocomplete,layout_discovery\/onecol,system\/base,views\/views.module",
+          "theme": "fortis",
+          "theme_token": null
+        },
+        "ajaxTrustedUrl": {
+          "form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM": true,
+          "\/international-patients?ajax_form=1": true,
+          "\/international-patients?element_parents=speciality_file_wrapper\/upload_file\u0026ajax_form=1": true,
+          "\/search": true
+        },
+        "ajax": {
+          "edit-submit": {
+            "callback": "::getAnestimateSubmitAjax",
+            "event": "click",
+            "progress": {
+              "type": "throbber"
+            },
+            "url": "\/international-patients?ajax_form=1",
+            "dialogType": "ajax",
+            "submit": {
+              "_triggering_element_name": "op",
+              "_triggering_element_value": "Get An Estimate"
+            }
+          },
+          "edit-upload-file-upload-button": {
+            "callback": [
+              "Drupal\\file\\Element\\ManagedFile",
+              "uploadAjaxCallback"
+            ],
+            "wrapper": "ajax-wrapper",
+            "effect": "fade",
+            "progress": {
+              "type": "throbber",
+              "message": null
+            },
+            "event": "mousedown",
+            "keypress": true,
+            "prevent": "click",
+            "url": "\/international-patients?element_parents=speciality_file_wrapper\/upload_file\u0026ajax_form=1",
+            "dialogType": "ajax",
+            "submit": {
+              "_triggering_element_name": "upload_file_upload_button",
+              "_triggering_element_value": "Upload"
+            }
+          }
+        },
+        "file": {
+          "elements": {
+            "#edit-upload-file-upload": "pdf,jpg,jpeg,png"
+          }
+        },
+        "fortis_doctor_details": {
+          "no_result_msg": "Looks like there are no matching results for this filter."
+        },
+        "fortis": {
+          "ag": true,
+          "locationDropdown": false
+        },
+        "user": {
+          "uid": 0,
+          "permissionsHash": "1c1b1d5b76a66a047c71ab96f38ef955f25227dce423900a7462cd8ceea5a2c8"
+        }
+      }
+    </script>
+    <script src="sites/default/files/js/js_rh3fZ05ZNf9awWZOZwZwjTAhAXz8pjlAHVo1eg6PN4k.js"></script>
+    <script src="sites/default/files/js/js_cT8MeBAdCNQyRnEn0l7Od-pNHW4ypLAuY-AeXSfBYRY.js"></script>
+    <script src="sites/default/files/js/js_zTIUREatI-kJp400NMaJ6RP2FDmsNr3BAPemG_JNfbA.js"></script>
+    <script src="sites/default/files/js/js_NRRUZeL7Cix-5oZNRT7rvq1oGslATZ3-showFGuHUro.js"></script>
+    
+    <script>
+            function limitNumberLength(input, maxLength) {
+                if (input.value.length > maxLength) {
+                    input.value = input.value.slice(0, maxLength);
+                }
+            }
+        </script>
+
+    <!--<script>-->
+    <!--  Defer.js(-->
+    <!--    "https://www.googletagmanager.com/gtag/js?id=AW-943766008",-->
+    <!--    "googleoptimize",-->
+    <!--    3500-->
+    <!--  );-->
+    <!--  Defer.js(-->
+    <!--    "https://www.googletagmanager.com/gtag/js?id=UA-17184833-1",-->
+    <!--    "googleoptimize",-->
+    <!--    3500-->
+    <!--  );-->
+    <!--</script>-->
+    
+    <a
+      data-dialog-type="modal"
+      data-dialog-options='{"dialogClass":"request-callback-popup form-position"}'
+      class="button use-ajax request-callback hide"
+      href="/request-callback-popup"
+      >Request callback
+    </a>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+      data-cf-beacon='{"rayId":"8d409fab8e218566","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2024.10.1","token":"73f660d192c94dd292746e0c3ba104d5"}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
