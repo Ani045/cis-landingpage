@@ -947,7 +947,12 @@
           color: white;
           margin-right: 10px;
       }
-      
+      .banner-section .banner-content {
+    position: absolute;
+    left: -80px;
+    right: 0;
+    bottom: 38px;
+}
       /* ----- Animations ----- */
       @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }
@@ -1140,11 +1145,244 @@
               background: linear-gradient(to right, var(--teal), var(--secondary));
           }
       }
+
+      .tm2023_modal_trigger_button {
+            background-color: #1976D2;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Modal Background */
+        .tm2023_modal_backdrop_overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Modal Content */
+        .tm2023_modal_content_wrapper {
+            background-color: white;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: tm2023_modal_animation_entrance 0.3s ease-out;
+        }
+        
+        /* Modal Header */
+        .tm2023_modal_header_section {
+            background-color: #1976D2;
+            color: white;
+            padding: 20px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .tm2023_modal_title_text {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .tm2023_modal_close_button {
+            font-size: 24px;
+            background: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        
+        /* Modal Body */
+        .tm2023_modal_body_container {
+            padding: 20px;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        
+        /* Form Styling */
+        .tm2023_form_group_container {
+            margin-bottom: 20px;
+        }
+        
+        .tm2023_form_label_text {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .tm2023_form_required_label:after {
+            content: "*";
+            color: #d32f2f;
+            margin-left: 4px;
+        }
+        
+        .tm2023_form_input_field,
+        .tm2023_form_select_dropdown,
+        .tm2023_form_textarea_field {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        .tm2023_form_input_field:focus,
+        .tm2023_form_select_dropdown:focus,
+        .tm2023_form_textarea_field:focus {
+            border-color: #1976D2;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+        }
+        
+        .tm2023_form_textarea_field {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        /* Submit Button */
+        .tm2023_form_submit_button {
+            background-color: #1976D2;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        .tm2023_form_submit_button:hover {
+            background-color: #1565C0;
+        }
+        
+        /* Disclaimer */
+        .tm2023_form_disclaimer_text {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #666;
+            line-height: 1.5;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        
+        /* Animation */
+        @keyframes tm2023_modal_animation_entrance {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .tm2023_modal_content_wrapper {
+                width: 95%;
+            }
+            
+            .tm2023_modal_header_section {
+                padding: 15px;
+            }
+            
+            .tm2023_modal_body_container {
+                padding: 15px;
+            }
+        }
       </style>
 
   </head>
 
   <body class="international-page fortis-path-node">
+    <div class="tm2023_modal_backdrop_overlay" id="tm2023_modal_overlay">
+      <!-- Modal Container -->
+      <div class="tm2023_modal_content_wrapper">
+          <!-- Modal Header -->
+          <div class="tm2023_modal_header_section">
+              <h3 class="tm2023_modal_title_text">Personalized Treatment Plan & Estimate</h3>
+              <button class="tm2023_modal_close_button" id="tm2023_close_modal_button">&times;</button>
+          </div>
+          
+          <!-- Modal Body -->
+          <div class="tm2023_modal_body_container">
+              <form id="tm2023_treatment_estimate_form" method="POST" action="#">
+                  <!-- Patient Information -->
+                  <div class="tm2023_form_group_container">
+                      <label class="tm2023_form_label_text tm2023_form_required_label" for="tm2023_patient_name_field">Name of the Patient</label>
+                      <input type="text" id="tm2023_patient_name_field" name="patientName" class="tm2023_form_input_field" required placeholder="Enter full name">
+                  </div>
+                  
+                  <div class="tm2023_form_group_container">
+                      <label class="tm2023_form_label_text" for="tm2023_patient_age_field">Age</label>
+                      <input type="number" id="tm2023_patient_age_field" name="patientAge" class="tm2023_form_input_field" placeholder="e.g. 45">
+                  </div>
+                  
+                  <div class="tm2023_form_group_container">
+                      <label class="tm2023_form_label_text" for="tm2023_gender_dropdown">Gender</label>
+                      <select id="tm2023_gender_dropdown" name="gender" class="tm2023_form_select_dropdown">
+                          <option value="">Select Gender</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                      </select>
+                  </div>
+                  
+                  <!-- Contact Details -->
+                  <div class="tm2023_form_group_container">
+                      <label class="tm2023_form_label_text tm2023_form_required_label" for="tm2023_country_code_field">Country Code</label>
+                      <input type="text" id="tm2023_country_code_field" name="countryCode" class="tm2023_form_input_field" required placeholder="e.g. +1">
+                  </div>
+                  
+                  <div class="tm2023_form_group_container">
+                      <label class="tm2023_form_label_text tm2023_form_required_label" for="tm2023_contact_number_field">Contact Number</label>
+                      <input type="tel" id="tm2023_contact_number_field" name="contactNumber" class="tm2023_form_input_field" required placeholder="Phone number">
+                  </div>
+                  
+                  <div class="tm2023_form_group_container">
+                      <label class="tm2023_form_label_text tm2023_form_required_label" for="tm2023_country_dropdown">Country</label>
+                      <select id="tm2023_country_dropdown" name="country" class="tm2023_form_select_dropdown" required>
+                          <option value="">Select Country</option>
+                          <option value="US">United States</option>
+                          <option value="UK">United Kingdom</option>
+                          <option value="CA">Canada</option>
+                          <option value="AU">Australia</option>
+                          <option value="IN">India</option>
+                          <!-- More countries would be added here -->
+                      </select>
+                  </div>
+                  
+                  <!-- Message -->
+                  <div class="tm2023_form_group_container">
+                      <label class="tm2023_form_label_text" for="tm2023_message_textarea">Your Message</label>
+                      <textarea id="tm2023_message_textarea" name="message" class="tm2023_form_textarea_field" placeholder="Please describe your medical condition and requirements..."></textarea>
+                  </div>
+                  
+                  <!-- Submit Button -->
+                  <button type="submit" class="tm2023_form_submit_button">Get An Estimate</button>
+                  
+                  <!-- Disclaimer -->
+                  <div class="tm2023_form_disclaimer_text">
+                      <strong>Disclaimer:</strong> This is an indicative cost based on the reports/information shared with us. Final estimate will be shared once patient is physically evaluated.
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+
     <a href="#main-content" class="visually-hidden focusable">
       Skip to main content
     </a>
@@ -1243,7 +1481,7 @@
                       </div> -->
                       <div class="text">
                           <img style="max-width:22px;margin-right: 10px;" src="assets/whatsapp-icon.png" alt="search" />
-                        <a href="https://wa.me/+91 99582 90364">+91 99582 90364</a>
+                        <a href="https://wa.me/+9188001 54003">+91 88001 54003</a>
                       </div>
                     </div>
                   </div>
@@ -1258,25 +1496,23 @@
               <a rel="home">
                 <img src="assets/TruHealer.png" alt="Home" class="img-fluid" />
               </a>
-              <!--<a href="/" rel="home">-->
-              <!--  <img style="margin-top: -7px;" src="https://www.fortishealthcare.com/themes/custom/fortis/logo.png" alt="Home" />-->
-              <!--</a>-->
+             
             </div>
             <div class="text" style="display:flex">
                     <div>
                         <img style="max-width:22px;margin-right: 10px;" src="assets/whatsapp-icon.png" alt="search" />
                         
                     </div>
-                        <a style="color: #db7c65;font-size:18px;font-weight:bold;font-family: sans-serif;text-decoration: underline;" href="https://wa.me/+91 99582 90364">+91 99582 90364</a>
+                        <a style="color: #db7c65;font-size:18px;font-weight:bold;font-family: sans-serif;text-decoration: underline;" href="https://wa.me/+9188001 54003">+91 8800154003</a>
                       </div>
             
           </div>
         </div>
       </header>
-      <!-- International Header ENDS -->
+    
 
       <main>
-        <!-- Banner STARTS -->
+       
         <div class="banner-outer">
           <div>
             <div
@@ -1311,17 +1547,18 @@
                               <div class="banner-left">
                                 <div class="banner-text">
                                   <h1>
-                                    TruHealers Healthcare - International Patients Department
+                                    TruHealers- International Patients Department
                                   </h1>
                                   <p>
-                                    At TruHealers Healthcare, we are committed to delivering exceptional medical care and making our international patients feel at home during their stay. Whether you're seeking a consultation, second opinion, or specialized medical treatment, our International Patients Department is here to ensure a seamless and supportive experience.
+                                    At TruHealers , we are committed to delivering exceptional medical care and making our international patients feel at home during their stay. Whether you're seeking a consultation, second opinion, or specialized medical treatment, our International Patients Department is here to ensure a seamless and supportive experience.
+                                    We excel in providing comprehensive medical tourism services tailored to meet the needs of international patients seeking surgical and medical treatments in India. Based in the thriving healthcare cities of Delhi and Gurgaon, we connect patients from Africa, Southeast Asia, and the Middle East with some of India’s premier medical institutions.
                                   </p>
                                 </div>
                               </div>
                               <div class="banner-right"></div>
                             </div>
-                          </div></div
-                      ></span>
+                          </div></div>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -1329,31 +1566,230 @@
             </div>
           </div>
         </div>
-        <!-- Banner ENDS -->
-
-        <!-- Breadcrumbs STARTS -->
-        <!-- Breadcrumbs ENDS -->
-
-        <!-- Page Top STARTS -->
-        <!-- Page Top ENDS -->
-
-        <!-- Content STARTS -->
+       
         
         <div class="mob-banner-text">
           <h1>
-            TruHealers Healthcare - International Patients Department
+            TruHealers- International Patients Department
           </h1>
-          <p>At TruHealers Healthcare, we are committed to delivering exceptional medical care and making our international patients feel at home during their stay. Whether you're seeking a consultation, second opinion, or specialized medical treatment, our International Patients Department is here to ensure a seamless and supportive experience.</p>
+          <p>At TruHealers , we are committed to delivering exceptional medical care and making our international patients feel at home during their stay. Whether you're seeking a consultation, second opinion, or specialized medical treatment, our International Patients Department is here to ensure a seamless and supportive experience. We excel in providing comprehensive medical tourism services tailored to meet the needs of international patients seeking surgical and medical treatments in India. Based in the thriving healthcare cities of Delhi and Gurgaon, we connect patients from Africa, Southeast Asia, and the Middle East with some of India’s premier medical institutions.</p>
+          
         </div>
+
+
+
+                <!--<section class="healthcare-section pb-0">-->
+                  <div class="container mt-3 mb-0">
+                    <div class="section-bg mb-0 pb-0">
+                        <div class="accent-circle accent-circle-1"></div>
+                        <div class="accent-circle accent-circle-2"></div>
+                        
+                        <div class="row ">
+                            <div class="col-lg-8 mx-auto text-center">
+                                <h2 class="section-title text-center">Why Choose India for Your Healthcare Needs</h2>
+                                <!--<p class="subtitle">World-class medical care at a fraction of Western costs</p>-->
+                                <!--<p class="lead mb-4">India has emerged as a global leader in medical tourism, offering exceptional healthcare services with advanced technology, highly qualified doctors, and significant cost advantages, all while providing patients with an enriching cultural experience.</p>-->
+                            </div>
+                        </div>
+                        
+                        <div class="row ">
+                            <div class="col-12">
+                                <h3 class="subtitle text-center mb-4">Cost Advantages: India vs. Western Countries</h3>
+                            </div>
+                            
+                            <div class="col-lg-4 mb-4">
+                                <div class="card cost-card">
+                                    <div class="card-header">Heart Procedures</div>
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <div class="treatment-name mb-2">Coronary Artery Bypass</div>
+                                            <ul class="mb-3">
+                                                <li>Save up to 90% compared to US costs</li>
+                                                <li>World-class cardiac facilities</li>
+                                                <li>Experienced cardiologists with international training</li>
+                                                <li>Significantly shorter waiting times</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div>
+                                            <div class="treatment-name mb-2">Heart Valve Replacement</div>
+                                            <ul class="mb-0">
+                                                <li>Advanced minimally invasive techniques</li>
+                                                <li>Comprehensive pre and post-operative care</li>
+                                                <li>Top-tier medical technology and equipment</li>
+                                                <li>Substantial cost savings over Western prices</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 mb-4">
+                                <div class="card cost-card">
+                                    <div class="card-header">Orthopedic Procedures</div>
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <div class="treatment-name mb-2">Hip Replacement</div>
+                                            <ul class="mb-3">
+                                                <li>Premium quality implants at fraction of the cost</li>
+                                                <li>Specialized orthopedic hospitals</li>
+                                                <li>Robotic-assisted surgical options</li>
+                                                <li>Comprehensive rehabilitation programs</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div>
+                                            <div class="treatment-name mb-2">Knee Replacement</div>
+                                            <ul class="mb-0">
+                                                <li>Both partial and total replacement options</li>
+                                                <li>Computer-navigated precision surgery</li>
+                                                <li>Customized implants for better fit</li>
+                                                <li>Significant cost savings over Western prices</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 mb-4">
+                                <div class="card cost-card">
+                                    <div class="card-header">Specialty Treatments</div>
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <div class="treatment-name mb-2">Fertility Treatments</div>
+                                            <ul class="mb-3">
+                                                <li>Comprehensive IVF programs</li>
+                                                <li>High success rates comparable to global standards</li>
+                                                <li>Advanced reproductive technologies</li>
+                                                <li>Personalized treatment protocols</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div>
+                                            <div class="treatment-name mb-2">Dental Procedures</div>
+                                            <ul class="mb-0">
+                                                <li>State-of-the-art dental clinics</li>
+                                                <li>Internationally certified materials</li>
+                                                <li>Same-day procedures available</li>
+                                                <li>Dramatic cost savings over Western prices</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row ">
+                            <div class="col-12">
+                                <h3 class="subtitle mb-4">Benefits Beyond Cost Savings</h3>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4">
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-user-md"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="benefit-title">Internationally Accredited Hospitals</h4>
+                                        <p class="mb-0">India boasts over 35 JCI-accredited hospitals with state-of-the-art facilities that meet rigorous international standards for quality.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4">
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="benefit-title">Highly Qualified Medical Professionals</h4>
+                                        <p class="mb-0">Many Indian doctors are trained in prestigious medical schools in the US, UK, and other countries, bringing world-class expertise back to India.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4">
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-language"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="benefit-title">English-Speaking Staff</h4>
+                                        <p class="mb-0">English is widely spoken in Indian medical facilities, eliminating language barriers for international patients from English-speaking countries.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4">
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-landmark"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="benefit-title">Cultural Experience</h4>
+                                        <p class="mb-0">Combine your medical treatment with the opportunity to experience India's rich cultural heritage, diverse cuisine, and stunning landscapes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--<div class="row mb-5">-->
+                        <!--    <div class="col-12">-->
+                        <!--        <h3 class="subtitle mb-4">What Our Patients Say</h3>-->
+                        <!--    </div>-->
+                            
+                        <!--    <div class="col-lg-6 mb-4">-->
+                        <!--        <div class="testimonial">-->
+                        <!--            <p>"I was quoted an astronomical amount for my knee replacement in the US. I had the same procedure done in India with outstanding care at a top hospital in Delhi. The savings paid for my flights, accommodation, and even a two-week tour of India during my recovery."</p>-->
+                        <!--            <div class="testimonial-author">-->
+                        <!--                <div class="author-image">JM</div>-->
+                        <!--                <div>-->
+                        <!--                    <div class="author-name">John M.</div>-->
+                        <!--                    <div class="author-title">from Canada</div>-->
+                        <!--                </div>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                            
+                        <!--    <div class="col-lg-6 mb-4">-->
+                        <!--        <div class="testimonial">-->
+                        <!--            <p>"After three failed IVF cycles in the UK, I was losing hope. My treatment in Mumbai was significantly more affordable and resulted in success! The doctors were incredibly knowledgeable and compassionate. I can't recommend it enough."</p>-->
+                        <!--            <div class="testimonial-author">-->
+                        <!--                <div class="author-image">SL</div>-->
+                        <!--                <div>-->
+                        <!--                    <div class="author-name">Sarah L.</div>-->
+                        <!--                    <div class="author-title">from United Kingdom</div>-->
+                        <!--                </div>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        
+                        <!--<div class="row">-->
+                        <!--    <div class="col-lg-8 mx-auto text-center">-->
+                        <!--        <h3 class="subtitle mb-4">Ready to Begin Your Healthcare Journey in India?</h3>-->
+                        <!--        <p class="mb-4">Our team of medical tourism experts is ready to guide you through every step of the process - from choosing the right hospital and specialist to arranging your travel and accommodation.</p>-->
+                        <!--        <div class="d-flex justify-content-center flex-wrap gap-3">-->
+                        <!--            <a href="#" class="btn cta-button">Get Your Free Consultation</a>-->
+                        <!--            <a href="#" class="btn cta-button cta-secondary">Request Personalized Assessment</a>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                           <!--</section>-->
+                        
+
+
+
+
         
-        <div class="wrapper about-convicare-div-parent">
-            <div class="about-convicare-div">
-                <h1>Welcome to TruHealers Healthcare</h1>
-          <p>
-            At TruHealers Healthcare, we excel in providing comprehensive medical tourism services tailored to meet the needs of international patients seeking surgical and medical treatments in India. Based in the thriving healthcare cities of Delhi and Gurgaon, we connect patients from Africa, Southeast Asia, and the Middle East with some of India’s premier medical institutions.
-          </p>
-            </div>
-        </div>
+       
+
+        
+       
+
+
 
         <section class="logo-showcase pt-5 pb-0">
           <div class="container" style="max-width: 1270px;">
@@ -1947,8 +2383,8 @@
                     class="speciality-block int-speciality-block section-empty js-view-dom-id-954a3005fb8901d98b54d5438c0761bf0e4595d22d87b7459a395b41b25b9a8f"
                   >
                     <header>
-                      <h3 class="heading2">
-                        TruHealers Healthcare International Patient Care Services
+                      <h3 class="section-title">
+                        TruHealersInternational Patient Care Services
                       </h3>
                     </header>
 
@@ -2407,215 +2843,15 @@
                   </div>
                 </div>
                 
-                  <!--<section class="healthcare-section pb-0">-->
-               <div class="container mt-3 mb-0">
-            <div class="section-bg mb-0 pb-0">
-                <div class="accent-circle accent-circle-1"></div>
-                <div class="accent-circle accent-circle-2"></div>
-                
-                <div class="row ">
-                    <div class="col-lg-8 mx-auto text-center">
-                        <h2 class="section-title text-center">Why Choose India for Your Healthcare Needs</h2>
-                        <!--<p class="subtitle">World-class medical care at a fraction of Western costs</p>-->
-                        <!--<p class="lead mb-4">India has emerged as a global leader in medical tourism, offering exceptional healthcare services with advanced technology, highly qualified doctors, and significant cost advantages, all while providing patients with an enriching cultural experience.</p>-->
-                    </div>
-                </div>
-                
-                <div class="row mb-5">
-                    <div class="col-12">
-                        <h3 class="subtitle text-center mb-4">Cost Advantages: India vs. Western Countries</h3>
-                    </div>
-                    
-                    <div class="col-lg-4 mb-4">
-                        <div class="card cost-card">
-                            <div class="card-header">Heart Procedures</div>
-                            <div class="card-body">
-                                <div class="mb-4">
-                                    <div class="treatment-name mb-2">Coronary Artery Bypass</div>
-                                    <ul class="mb-3">
-                                        <li>Save up to 90% compared to US costs</li>
-                                        <li>World-class cardiac facilities</li>
-                                        <li>Experienced cardiologists with international training</li>
-                                        <li>Significantly shorter waiting times</li>
-                                    </ul>
-                                </div>
-                                
-                                <div>
-                                    <div class="treatment-name mb-2">Heart Valve Replacement</div>
-                                    <ul class="mb-0">
-                                        <li>Advanced minimally invasive techniques</li>
-                                        <li>Comprehensive pre and post-operative care</li>
-                                        <li>Top-tier medical technology and equipment</li>
-                                        <li>Substantial cost savings over Western prices</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 mb-4">
-                        <div class="card cost-card">
-                            <div class="card-header">Orthopedic Procedures</div>
-                            <div class="card-body">
-                                <div class="mb-4">
-                                    <div class="treatment-name mb-2">Hip Replacement</div>
-                                    <ul class="mb-3">
-                                        <li>Premium quality implants at fraction of the cost</li>
-                                        <li>Specialized orthopedic hospitals</li>
-                                        <li>Robotic-assisted surgical options</li>
-                                        <li>Comprehensive rehabilitation programs</li>
-                                    </ul>
-                                </div>
-                                
-                                <div>
-                                    <div class="treatment-name mb-2">Knee Replacement</div>
-                                    <ul class="mb-0">
-                                        <li>Both partial and total replacement options</li>
-                                        <li>Computer-navigated precision surgery</li>
-                                        <li>Customized implants for better fit</li>
-                                        <li>Significant cost savings over Western prices</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 mb-4">
-                        <div class="card cost-card">
-                            <div class="card-header">Specialty Treatments</div>
-                            <div class="card-body">
-                                <div class="mb-4">
-                                    <div class="treatment-name mb-2">Fertility Treatments</div>
-                                    <ul class="mb-3">
-                                        <li>Comprehensive IVF programs</li>
-                                        <li>High success rates comparable to global standards</li>
-                                        <li>Advanced reproductive technologies</li>
-                                        <li>Personalized treatment protocols</li>
-                                    </ul>
-                                </div>
-                                
-                                <div>
-                                    <div class="treatment-name mb-2">Dental Procedures</div>
-                                    <ul class="mb-0">
-                                        <li>State-of-the-art dental clinics</li>
-                                        <li>Internationally certified materials</li>
-                                        <li>Same-day procedures available</li>
-                                        <li>Dramatic cost savings over Western prices</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="row mb-5">
-                    <div class="col-12">
-                        <h3 class="subtitle mb-4">Benefits Beyond Cost Savings</h3>
-                    </div>
-                    
-                    <div class="col-lg-6 mb-4">
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-user-md"></i>
-                            </div>
-                            <div>
-                                <h4 class="benefit-title">Internationally Accredited Hospitals</h4>
-                                <p class="mb-0">India boasts over 35 JCI-accredited hospitals with state-of-the-art facilities that meet rigorous international standards for quality.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-6 mb-4">
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div>
-                                <h4 class="benefit-title">Highly Qualified Medical Professionals</h4>
-                                <p class="mb-0">Many Indian doctors are trained in prestigious medical schools in the US, UK, and other countries, bringing world-class expertise back to India.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-6 mb-4">
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-language"></i>
-                            </div>
-                            <div>
-                                <h4 class="benefit-title">English-Speaking Staff</h4>
-                                <p class="mb-0">English is widely spoken in Indian medical facilities, eliminating language barriers for international patients from English-speaking countries.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-6 mb-4">
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-landmark"></i>
-                            </div>
-                            <div>
-                                <h4 class="benefit-title">Cultural Experience</h4>
-                                <p class="mb-0">Combine your medical treatment with the opportunity to experience India's rich cultural heritage, diverse cuisine, and stunning landscapes.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!--<div class="row mb-5">-->
-                <!--    <div class="col-12">-->
-                <!--        <h3 class="subtitle mb-4">What Our Patients Say</h3>-->
-                <!--    </div>-->
-                    
-                <!--    <div class="col-lg-6 mb-4">-->
-                <!--        <div class="testimonial">-->
-                <!--            <p>"I was quoted an astronomical amount for my knee replacement in the US. I had the same procedure done in India with outstanding care at a top hospital in Delhi. The savings paid for my flights, accommodation, and even a two-week tour of India during my recovery."</p>-->
-                <!--            <div class="testimonial-author">-->
-                <!--                <div class="author-image">JM</div>-->
-                <!--                <div>-->
-                <!--                    <div class="author-name">John M.</div>-->
-                <!--                    <div class="author-title">from Canada</div>-->
-                <!--                </div>-->
-                <!--            </div>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                    
-                <!--    <div class="col-lg-6 mb-4">-->
-                <!--        <div class="testimonial">-->
-                <!--            <p>"After three failed IVF cycles in the UK, I was losing hope. My treatment in Mumbai was significantly more affordable and resulted in success! The doctors were incredibly knowledgeable and compassionate. I can't recommend it enough."</p>-->
-                <!--            <div class="testimonial-author">-->
-                <!--                <div class="author-image">SL</div>-->
-                <!--                <div>-->
-                <!--                    <div class="author-name">Sarah L.</div>-->
-                <!--                    <div class="author-title">from United Kingdom</div>-->
-                <!--                </div>-->
-                <!--            </div>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</div>-->
-                
-                <!--<div class="row">-->
-                <!--    <div class="col-lg-8 mx-auto text-center">-->
-                <!--        <h3 class="subtitle mb-4">Ready to Begin Your Healthcare Journey in India?</h3>-->
-                <!--        <p class="mb-4">Our team of medical tourism experts is ready to guide you through every step of the process - from choosing the right hospital and specialist to arranging your travel and accommodation.</p>-->
-                <!--        <div class="d-flex justify-content-center flex-wrap gap-3">-->
-                <!--            <a href="#" class="btn cta-button">Get Your Free Consultation</a>-->
-                <!--            <a href="#" class="btn cta-button cta-secondary">Request Personalized Assessment</a>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</div>-->
-            </div>
-        </div>
-                   <!--</section>-->
                 
 
                 <div class="patient-services">
                   <div class="head-wrap">
-                    <h2 class="heading2">
+                    <h2 class="section-title">
                       Healthcare Services for International Patients
                     </h2>
                     <div class="sub-text">
-                      At TruHealers Healthcare, we cater to a diverse global patient base,
+                      At TruHealers , we cater to a diverse global patient base,
                       ensuring that every patient receives personalized and
                       culturally sensitive medical care. We offer a wide range
                       of specialized medical services in a world-class
@@ -2737,8 +2973,8 @@
                             <div class="timeline-text">
                                 <span class="timeline-number">1.</span>
                                 <h3 class="timeline-title">Process</h3>
-                                <p class="timeline-description">The International Patient Department at TruHealers Healthcare was established to assist patients in planning and preparing their travel plans to the hospital.</p>
-                                <a href="#form" class="btn btn-primary">Talk To Experts</a>
+                                <p class="timeline-description">The International Patient Department at TruHealerswas established to assist patients in planning and preparing their travel plans to the hospital.</p>
+                                <a href="#form" id="tm2023_open_modal_button" class="btn btn-primary">Talk To Experts</a>
                                 <a href="#form" class="btn btn-secondary">Learn More</a>
                             </div>
                         </div>
@@ -2802,7 +3038,7 @@
                             <div class="timeline-text">
                                 <span class="timeline-number">4.</span>
                                 <h3 class="timeline-title">Liability</h3>
-                                <p class="timeline-description">At TruHealers Healthcare, we work with a number of International Insurance providers.</p>
+                                <p class="timeline-description">At TruHealers , we work with a number of International Insurance providers.</p>
                                 <a href="#form" class="btn btn-primary">Talk To Experts</a>
                                 <a href="#form" class="btn btn-secondary">Learn More</a>
                             </div>
@@ -2837,7 +3073,7 @@
                             <div class="timeline-text">
                                 <span class="timeline-number">5.</span>
                                 <h3 class="timeline-title">Airport Cost</h3>
-                                <p class="timeline-description">At TruHealers Healthcare, we believe that Tender Loving Care should begin the moment you arrive.</p>
+                                <p class="timeline-description">At TruHealers , we believe that Tender Loving Care should begin the moment you arrive.</p>
                                 <a href="#form" class="btn btn-primary">Talk To Experts</a>
                                 <a href="#form" class="btn btn-secondary">Learn More</a>
                             </div>
@@ -2850,7 +3086,7 @@
         </div>
     </section>
                 
-                  <!--journey ends -->
+                
                 
                 
                 
@@ -2866,7 +3102,7 @@
                         class="plan-trip-view section-empty js-view-dom-id-e5f081e81f44581090d9b93fc0eb5d6b75ad63f8c4f8b3a0ec42cb6d886a0d82"
                       >
                         <header>
-                          <h3 class="trip-head">Process</h3>
+                          <h3 class="section-title">Process</h3>
                         </header>
 
                         <div class="item-list">
@@ -2950,8 +3186,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="guidelines">
-                    <h2 class="heading2">Guidelines</h2>
+                    <div class="guidelines"> 
+                    <h2 class="section-title">Guidelines</h2>
                     <ul class="guidelines-tabs common-tabs">
                       <li data-tab="checklist-section" class="current">
                         Checklist
@@ -3047,7 +3283,7 @@
                                 <strong>USD 5000</strong>, we would request or
                                 prefer all funds to be transferred directly to
                                 the account of respective unit of TruHealers 
-                                Healthcare.&nbsp;
+                                .&nbsp;
                               </li>
                             </ul>
                             <p>&nbsp;</p>
@@ -3078,7 +3314,7 @@
                         </li>
                       </ul>
                     </div>
-                  </div>
+                  </div> 
                 </div>
                 <div class="views-element-container">
                   <div
@@ -3086,7 +3322,7 @@
                   >
                     <header>
                       <div class="head-row">
-                        <h3 class="heading2">Patient Speaks</h3>
+                        <h3 class="section-title">Patient Speaks</h3>
                       </div>
                     </header>
 
@@ -3100,12 +3336,12 @@
                           <div class="patient-text">
                             <div class="patient-description">
                               <p>
-                                "Life-Saving Care - My experience at TruHealers Healthcare was nothing short of miraculous. After suffering complications from a previous surgery at home, the doctors at TruHealers Healthcare not only saved my life but also provided me with a new lease on life. The care and attention I received was world-class."
+                                "Life-Saving Care - My experience at TruHealerswas nothing short of miraculous. After suffering complications from a previous surgery at home, the doctors at TruHealersnot only saved my life but also provided me with a new lease on life. The care and attention I received was world-class."
                               </p>
                             </div>
                             <div class="patient-location">
                               <div class="patient-hospital">
-                                <span>TruHealers Healthcare</span>
+                                <span>TruHealers </span>
                               </div>
                             </div>
                           </div>
@@ -3118,12 +3354,12 @@
                           <div class="patient-text">
                             <div class="patient-description">
                               <p>
-                                "High-Quality Medical Experience - The professional and empathetic treatment I received at TruHealers Healthcare for my knee replacement was exceptional. The staff was very accommodating, ensuring that I was comfortable and informed throughout my stay. The international patient coordinator was a great help!"
+                                "High-Quality Medical Experience - The professional and empathetic treatment I received at TruHealersfor my knee replacement was exceptional. The staff was very accommodating, ensuring that I was comfortable and informed throughout my stay. The international patient coordinator was a great help!"
                               </p>
                             </div>
                             <div class="patient-location">
                               <div class="patient-hospital">
-                                <span>TruHealers Healthcare</span>
+                                <span>TruHealers </span>
                               </div>
                             </div>
                           </div>
@@ -3136,13 +3372,13 @@
                           <div class="patient-text">
                             <div class="patient-description">
                               <p>
-                                "Beyond Expectations - I traveled to TruHealers Healthcare for a complex neurological procedure. The precision of the surgery and the advanced technology were impressive. The staff went above and beyond to make sure my recovery was smooth. I am deeply grateful for the excellent care."
+                                "Beyond Expectations - I traveled to TruHealersfor a complex neurological procedure. The precision of the surgery and the advanced technology were impressive. The staff went above and beyond to make sure my recovery was smooth. I am deeply grateful for the excellent care."
                               </p>
                             </div>
                             <div class="patient-location">
                               <div class="patient-hospital">
                                 <span>
-                                  TruHealers Healthcare
+                                  TruHealers 
                                 </span>
                               </div>
                             </div>
@@ -3157,13 +3393,13 @@
                           <div class="patient-text">
                             <div class="patient-description">
                               <p>
-                                "Comprehensive Cancer Care - Being diagnosed with breast cancer was devastating, but the oncology team at TruHealers Healthcare provided hope and detailed care. From the first consultation through treatment and follow-ups, their support was phenomenal. I highly recommend TruHealers Healthcare for comprehensive cancer treatment."
+                                "Comprehensive Cancer Care - Being diagnosed with breast cancer was devastating, but the oncology team at TruHealersprovided hope and detailed care. From the first consultation through treatment and follow-ups, their support was phenomenal. I highly recommend TruHealersfor comprehensive cancer treatment."
                               </p>
                             </div>
                             <div class="patient-location">
                               <div class="patient-hospital">
                                 <span>
-                                  TruHealers Healthcare
+                                  TruHealers 
                                 </span>
                               </div>
                             </div>
@@ -3181,8 +3417,8 @@
                       class="about-us-main section-empty js-view-dom-id-9c6fbb9681dba72bd6289c6ba6c0e14b5dbedd6fc883a401586b9be2b915dde6"
                     >
                       <header>
-                        <h3 class="heading2">
-                          Why Choose TruHealers Healthcare
+                        <h3 class="section-title">
+                          Why Choose TruHealers 
                         </h3>
                       </header>
 
@@ -3340,7 +3576,7 @@
                     >
                       <header>
                         <div class="head-row">
-                          <h3 class="heading2">FAQ's</h3>
+                          <h3 class="section-title">FAQ's</h3>
                           
                         </div>
                       </header>
@@ -3363,14 +3599,14 @@
                             </li>
                             
                             <li>
-                              <h4 class="faq-title">Can TruHealers Healthcare help with accommodations for my family?</h4>
+                              <h4 class="faq-title">Can TruHealershelp with accommodations for my family?</h4>
                               <div class="faq-content">
                                 <p>Yes, we can arrange accommodations for your family or attendants according to your preferences, from budget options to luxury hotels.</p>
                               </div>
                             </li>
                             
                             <li>
-                              <h4 class="faq-title">What should I bring with me for my treatment at TruHealers Healthcare</h4>
+                              <h4 class="faq-title">What should I bring with me for my treatment at TruHealers </h4>
                               <div class="faq-content">
                                 <p>Please bring all relevant medical documents, a valid passport, visa, travel insurance information, and personal items for your stay. Also, bring any medications you are currently taking.</p>
                               </div>
@@ -3384,28 +3620,28 @@
                             </li>
                             
                             <li>
-                              <h4 class="faq-title">What payment methods does TruHealers Healthcare accept for international patients?</h4>
+                              <h4 class="faq-title">What payment methods does TruHealersaccept for international patients?</h4>
                               <div class="faq-content">
-                                <p>TruHealers Healthcare accepts various payment methods including wire transfers, major credit cards (VISA, MasterCard, AMEX), and direct payments at the hospital. We can also accommodate payments in multiple currencies.</p>
+                                <p>TruHealersaccepts various payment methods including wire transfers, major credit cards (VISA, MasterCard, AMEX), and direct payments at the hospital. We can also accommodate payments in multiple currencies.</p>
                               </div>
                             </li>
                             
                             <li>
-                              <h4 class="faq-title">Are there any cultural or religious accommodations available at TruHealers Healthcare</h4>
+                              <h4 class="faq-title">Are there any cultural or religious accommodations available at TruHealers </h4>
                               <div class="faq-content">
-                                <p>Yes, we respect the diverse backgrounds of our international patients. TruHealers Healthcare provides various cultural and religious accommodations, including halal meals, spaces for prayer, and language-appropriate religious materials.</p>
+                                <p>Yes, we respect the diverse backgrounds of our international patients. TruHealersprovides various cultural and religious accommodations, including halal meals, spaces for prayer, and language-appropriate religious materials.</p>
                               </div>
                             </li>
                             
                             <li>
-                              <h4 class="faq-title">Can TruHealers Healthcare arrange medical consultations or treatments that are not listed on the website?</h4>
+                              <h4 class="faq-title">Can TruHealersarrange medical consultations or treatments that are not listed on the website?</h4>
                               <div class="faq-content">
                                 <p>Absolutely. If you have specific medical needs, please discuss them with your international patient coordinator. We have a wide network of specialists across various disciplines and can arrange for specialized consultations and treatments as required.</p>
                               </div>
                             </li>
                             
                             <li>
-                              <h4 class="faq-title">How does TruHealers Healthcare ensure privacy and confidentiality for its international patients?</h4>
+                              <h4 class="faq-title">How does TruHealersensure privacy and confidentiality for its international patients?</h4>
                               <div class="faq-content">
                                 <p>We adhere strictly to patient confidentiality and privacy laws. All medical records, discussions, and treatments are handled with the utmost discretion and security.</p>
                               </div>
@@ -3414,7 +3650,7 @@
                             <li>
                               <h4 class="faq-title">What should I do if there is an emergency situation during my stay?</h4>
                               <div class="faq-content">
-                                <p>TruHealers Healthcare provides 24/7 emergency care. In case of an emergency, you can contact the hospital’s main line or speak directly to your international patient coordinator who will ensure rapid response and care.</p>
+                                <p>TruHealersprovides 24/7 emergency care. In case of an emergency, you can contact the hospital’s main line or speak directly to your international patient coordinator who will ensure rapid response and care.</p>
                               </div>
                             </li>
                             
@@ -3426,14 +3662,14 @@
                             </li>
                             
                             <li>
-                              <h4 class="faq-title">Can TruHealers Healthcare help with extending my medical visa if needed?</h4>
+                              <h4 class="faq-title">Can TruHealershelp with extending my medical visa if needed?</h4>
                               <div class="faq-content">
                                 <p>Yes, our dedicated visa assistance team can help with the necessary documentation and procedures to apply for an extension of your medical visa if your treatment requires a longer stay.</p>
                               </div>
                             </li>
                             
                             <li>
-                              <h4 class="faq-title">Does TruHealers Healthcare provide support for rehabilitation services post-treatment?</h4>
+                              <h4 class="faq-title">Does TruHealersprovide support for rehabilitation services post-treatment?</h4>
                               <div class="faq-content">
                                 <p>Yes, we offer comprehensive rehabilitation services including physical therapy, occupational therapy, and other specialized rehabilitation services tailored to your recovery needs.</p>
                               </div>
@@ -3442,7 +3678,7 @@
                             <li>
                               <h4 class="faq-title">Are there facilities for online consultations with doctors after I return to my country?</h4>
                               <div class="faq-content">
-                                <p>TruHealers Healthcare offers tele-consultation services enabling you to continue your follow-up appointments with your treating doctors from the comfort of your home country.</p>
+                                <p>TruHealersoffers tele-consultation services enabling you to continue your follow-up appointments with your treating doctors from the comfort of your home country.</p>
                               </div>
                             </li>
                             
@@ -3534,7 +3770,7 @@
                     <div class="layout layout--onecol">
                       <div class="layout__region layout__region--content">
                         <div>
-                          <p>2024 TruHealers Healthcare. All Rights Reserved.</p>
+                          <p>2024 TruHealers . All Rights Reserved.</p>
                         </div>
                       </div>
                     </div>
@@ -3697,5 +3933,60 @@
       data-cf-beacon='{"rayId":"8d409fab8e218566","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2024.10.1","token":"73f660d192c94dd292746e0c3ba104d5"}'
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Get modal elements
+      const tm2023_open_button = document.getElementById('tm2023_open_modal_button');
+      const tm2023_close_button = document.getElementById('tm2023_close_modal_button');
+      const tm2023_modal_overlay = document.getElementById('tm2023_modal_overlay');
+      
+      // Open modal function
+      tm2023_open_button.addEventListener('click', function() {
+          tm2023_modal_overlay.style.display = 'flex';
+          document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+      });
+      
+      // Close modal function
+      function tm2023_close_modal() {
+          tm2023_modal_overlay.style.display = 'none';
+          document.body.style.overflow = 'auto'; // Re-enable scrolling
+      }
+      
+      // Event listeners for closing modal
+      tm2023_close_button.addEventListener('click', tm2023_close_modal);
+      
+      // Close when clicking outside the modal
+      tm2023_modal_overlay.addEventListener('click', function(e) {
+          if (e.target === tm2023_modal_overlay) {
+              tm2023_close_modal();
+          }
+      });
+      
+      // Close with 'Escape' key
+      document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && tm2023_modal_overlay.style.display === 'flex') {
+              tm2023_close_modal();
+          }
+      });
+      
+      // Form submission (prevent default for demonstration)
+      document.getElementById('tm2023_treatment_estimate_form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          alert('Form submitted! In a real application, this would send your data to the server.');
+          // You can replace the alert with AJAX call to your server
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+            // Check if this is the first visit using localStorage
+            if (!localStorage.getItem('tm2023_modal_shown')) {
+                // Short delay to ensure everything is loaded
+                setTimeout(function() {
+                    tm2023_open_modal();
+                    // Set flag in localStorage so it doesn't show on refresh
+                    localStorage.setItem('tm2023_modal_shown', 'true');
+                }, 500);
+            }
+        });
+        
+  </script> 
+
   </body>
 </html>
