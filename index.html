@@ -45,7 +45,7 @@
 
 
 
-    <style>
+    <!-- <style>
       /* ----- Base Variables ----- */
       :root {
         --primary-purple: #1a56db;       /* Deep blue instead of purple */
@@ -1146,242 +1146,1634 @@
           }
       }
 
-      .tm2023_modal_trigger_button {
-            background-color: #1976D2;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        
-        /* Modal Background */
-        .tm2023_modal_backdrop_overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        /* Modal Content */
-        .tm2023_modal_content_wrapper {
-            background-color: white;
-            width: 90%;
-            max-width: 600px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            position: relative;
-            animation: tm2023_modal_animation_entrance 0.3s ease-out;
-        }
-        
-        /* Modal Header */
-        .tm2023_modal_header_section {
-            background-color: #1976D2;
-            color: white;
-            padding: 20px;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .tm2023_modal_title_text {
-            font-size: 20px;
-            font-weight: 600;
-        }
-        
-        .tm2023_modal_close_button {
-            font-size: 24px;
-            background: transparent;
-            border: none;
-            color: white;
-            cursor: pointer;
-        }
-        
-        /* Modal Body */
-        .tm2023_modal_body_container {
-            padding: 20px;
-            max-height: 70vh;
-            overflow-y: auto;
-        }
-        
-        /* Form Styling */
-        .tm2023_form_group_container {
-            margin-bottom: 20px;
-        }
-        
-        .tm2023_form_label_text {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #333;
-        }
-        
-        .tm2023_form_required_label:after {
-            content: "*";
-            color: #d32f2f;
-            margin-left: 4px;
-        }
-        
-        .tm2023_form_input_field,
-        .tm2023_form_select_dropdown,
-        .tm2023_form_textarea_field {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 14px;
-            transition: border-color 0.3s;
-        }
-        
-        .tm2023_form_input_field:focus,
-        .tm2023_form_select_dropdown:focus,
-        .tm2023_form_textarea_field:focus {
-            border-color: #1976D2;
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
-        }
-        
-        .tm2023_form_textarea_field {
-            resize: vertical;
-            min-height: 100px;
-        }
-        
-        /* Submit Button */
-        .tm2023_form_submit_button {
-            background-color: #1976D2;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            transition: background-color 0.3s;
-        }
-        
-        .tm2023_form_submit_button:hover {
-            background-color: #1565C0;
-        }
-        
-        /* Disclaimer */
-        .tm2023_form_disclaimer_text {
-            margin-top: 15px;
-            font-size: 12px;
-            color: #666;
-            line-height: 1.5;
-            background-color: #f5f5f5;
-            padding: 10px;
-            border-radius: 4px;
-        }
-        
-        /* Animation */
-        @keyframes tm2023_modal_animation_entrance {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .tm2023_modal_content_wrapper {
-                width: 95%;
-            }
-            
-            .tm2023_modal_header_section {
-                padding: 15px;
-            }
-            
-            .tm2023_modal_body_container {
-                padding: 15px;
-            }
-        }
-      </style>
+      
+      </style> -->
 
-  </head>
+  <style>
+    /* ----- Base Variables ----- */
+:root {
+  --primary-purple: #6D0107;       /* Deep red instead of blue */
+  --light-purple: #8B0D16;         /* Lighter red instead of light blue */
+  --dark-purple: #5A0106;          /* Darker red instead of dark blue */
+  --primary-brown: #5B5959;        /* Dark gray instead of sky blue */
+  --light-brown: #737171; 
+  --whatsapp-green: #25D366;         /* Lighter gray instead of lighter sky blue */
+  --dark-brown: #494747;           /* Darker gray instead of darker sky blue */
+  --bg-cream: #FFF5F5;             /* Very light red background instead of light blue */
+  --text-dark: #333333;            /* Dark gray for text instead of slate blue */
+  --yellow: #8B0D16;               /* Lighter red instead of medium blue */
+  --primary: #6D0107;              /* Deep red instead of royal blue */
+  --secondary: #5B5959;            /* Dark gray for secondary */
+  --teal: #494747;                 /* Darker gray instead of blue-teal */
+  --background: #ffffff;           /* Keeping white background */
+  --text-light: #666666;           /* Gray for light text */
+  --white: #ffffff;                /* Keeping white */
+  --border-radius: 10px;           /* Keeping same border radius */
+  --box-shadow: 0 4px 12px rgba(109, 1, 7, 0.1); /* Red-tinted shadow */
+  --transition: all 0.3s ease; 
+      /* Keeping same transition */
+} 
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+}
+.tpe-modal-content {
+      border-radius: 15px;
+      border: none;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .tpe-modal-header {
+      background: linear-gradient(135deg, var(--primary-purple) 0%, var(--dark-purple) 100%);
+      color: white;
+      border-radius: 15px 15px 0 0;
+      border: none;
+      padding: 1.5rem;
+    }
+    
+    .tpe-modal-title {
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+    
+    .tpe-modal-body {
+      padding: 2rem;
+    }
+    
+    .tpe-form-label {
+      font-weight: 500;
+      color: var(--primary-brown);
+      margin-bottom: 0.5rem;
+    }
+    
+    .tpe-form-control, .tpe-form-select {
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      border: 1px solid #e0e0e0;
+      transition: all 0.3s;
+    }
+    
+    .tpe-form-control:focus, .tpe-form-select:focus {
+      box-shadow: 0 0 0 0.25rem rgba(109, 1, 7, 0.25);
+      border-color: rgba(139, 13, 22, 0.5);
+    }
+    
+    .tpe-btn-primary {
+      background: linear-gradient(135deg, var(--primary-purple) 0%, var(--dark-purple) 100%);
+      border: none;
+      border-radius: 8px;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      transition: all 0.3s;
+      color: white;
+    }
+    
+    .tpe-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(109, 1, 7, 0.4);
+      background: linear-gradient(135deg, var(--light-purple) 0%, var(--primary-purple) 100%);
+    }
+    
+    .tpe-disclaimer {
+      background-color: #f8f9fa;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--primary-brown);
+      margin-top: 1.5rem;
+      border-left: 4px solid var(--primary-purple);
+    }
+    
+    .tpe-form-row {
+      margin-bottom: 1.5rem;
+    }
+    
+    .tpe-form-text {
+      color: var(--primary-brown);
+    }
+    
+    /* Add animation */
+    .tpe-modal.fade .modal-dialog {
+      transition: transform 0.3s ease-out;
+      transform: scale(0.9);
+    }
+    
+    .tpe-modal.show .modal-dialog {
+      transform: scale(1);
+    }
+    
+    /* WhatsApp button styles */
+    .tpe-whatsapp-btn {
+      background-color: var(--whatsapp-green);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    
+    .tpe-whatsapp-btn:hover {
+      background-color: #128C7E;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+      color: white;
+    }
+    
+    .tpe-whatsapp-btn i {
+      font-size: 1.2rem;
+    }
+    
+    .tpe-whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: var(--whatsapp-green);
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .tpe-whatsapp-float:hover {
+      background-color: #128C7E;
+      transform: scale(1.05);
+      color: white;
+    }
+    
+    .tpe-contact-options {
+      text-align: center;
+      padding-top: 15px;
+      border-top: 1px solid #e0e0e0;
+      margin-top: 20px;
+    }
+    
+    .tpe-separator {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 15px 0;
+      color: var(--primary-brown);
+    }
+    
+    .tpe-separator::before,
+    .tpe-separator::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .tpe-separator::before {
+      margin-right: 10px;
+    }
+    
+    .tpe-separator::after {
+      margin-left: 10px;
+    }
+
+/* ----- Layout Components ----- */
+.international-page .international-header .international-main-header {
+    height: auto !important;
+}
+.int-number-view .international-number-list li {
+  width: calc(25% - 22px);
+}
+.patient-services .patient-services-list li .icon {
+  padding: 20px 50px 40px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background: #FFF5F5;
+  border-radius: 50% 50% 0 0;
+  min-height: 120px;
+}
+
+.about-convicare-div {
+    background: #fff;
+    box-shadow: 0px 3px 26px #0000001C;
+    border-radius: 8px;
+    padding: 26px 32px 26px 32px;
+    margin-top: 16px;
+}
+
+.about-convicare-div h1 {
+    font-size: 24px;
+}
+
+.about-convicare-div-parent {
+    margin-top: 30px;
+}
+
+.international-page .international-header .international-main-header > div {
+    align-items: center;
+}
+
+.mob-banner-text {
+    display: none;
+}
+
+.mob-banner {
+    display: none;
+}
+
+.fixed-bottom-bar {
+    display: none;
+}
+
+.section-bg {
+    padding: 3rem;
+}
+
+.healthcare-section {
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn {
+    gap: 20px;
+}
+.logo-showcase {
+      /* padding: 80px 0; */
+      /* background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%); */
+      position: relative;
+      overflow: hidden;
+  }
+
+  .logo-showcase::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+      pointer-events: none;
+  }
+
+  .logo-showcase__heading {
+      text-align: center;
+      margin-bottom: 50px;
+      color: #333;
+      position: relative;
+  }
+
+  .logo-showcase__heading h2 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #2a2a2a;
+  }
+
+  .logo-showcase__heading p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #555;
+  }
+
+  .logo-showcase__heading::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background-color: var(--primary-color);
+      margin: 20px auto 0;
+      border-radius: 2px;
+  }
+
+  .logo-slider {
+      position: relative;
+      overflow: hidden;
+      /* padding: 20px 0; */
+      /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); */
+      border-radius: 15px;
+      background-color: white;
+  }
+
+  .logo-slider__container {
+      display: flex;
+      animation: scroll 30s linear infinite;
+      width: calc(220px * 12);
+  }
+
+  .logo-slider__item { 
+      width: 250px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      transition: transform 0.3s, filter 0.3s;
+  }
+
+  .logo-slider__item:hover {
+      transform: scale(1.1);
+      filter: none !important;
+  }
+
+  .logo-slider__image {
+      max-width: 100%;
+      max-height: 80px;
+      /* filter: grayscale(100%) opacity(0.7); */
+      transition: all 0.3s ease;
+  }
+
+  .logo-slider__item:hover .logo-slider__image {
+      filter: grayscale(0%) opacity(1);
+  }
+
+  @keyframes scroll {
+      0% {
+          transform: translateX(0);
+      }
+      100% {
+          transform: translateX(calc(-250px * 6));
+      }
+  }
+
+  /* Overlay gradients to create fade effect */
+  .logo-slider::before,
+  .logo-slider::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 150px;
+      height: 100%;
+      z-index: 2;
+  }
+
+  .logo-slider::before {
+      left: 0;
+      background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+  }
+
+  .logo-slider::after {
+      right: 0;
+      background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .logo-showcase {
+          padding: 50px 0;
+      }
+      
+      .logo-showcase__heading h2 {
+          font-size: 1.8rem;
+      }
+      
+      .logo-slider__container {
+          width: calc(200px * 12);
+      }
+      
+      .logo-slider__item {
+          width: 200px;
+          height: 120px;
+      }
+      
+      @keyframes scroll {
+          0% {
+              transform: translateX(0);
+          }
+          100% {
+              transform: translateX(calc(-200px * 6));
+          }
+      }
+  }
+
+
+/* ----- Section Titles ----- */
+.section-title {
+    color: #000;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-top: 20px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+.section-title h2:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary), var(--yellow));
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.section-title p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    position: relative;
+}
+
+.section-title:before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(109, 1, 7, 0.07) 0%, rgba(255, 255, 255, 0) 70%);
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    animation: pulse 8s infinite alternate;
+}
+
+.subtitle {
+    color: var(--primary-brown);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* ----- Buttons ----- */
+.button {
+    background: #F5E9E9;
+}
+
+.button:hover, 
+.button:focus {
+    background-color: #D9B3B5 !important;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--yellow), var(--primary));
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 7px 14px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 8px rgba(109, 1, 7, 0.2);
+    transition: all 0.3s ease;
+    margin-right: 6px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--yellow));
+    transition: all 0.3s ease;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.btn-primary:hover:before {
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(109, 1, 7, 0.3);
+    background-color: #8B0D16;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text-dark);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    padding: 7px 14px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+    background: #f8f8f8;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #e5e5e5;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, var(--primary-purple) 0%, var(--dark-purple) 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(109, 1, 7, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(109, 1, 7, 0.4);
+    background: linear-gradient(135deg, var(--light-purple) 0%, var(--primary-purple) 100%);
+    color: white;
+}
+
+.cta-secondary {
+    background: linear-gradient(135deg, var(--primary-brown) 0%, var(--dark-brown) 100%);
+    box-shadow: 0 5px 15px rgba(91, 89, 89, 0.3);
+}
+
+.cta-secondary:hover {
+    background: linear-gradient(135deg, var(--light-brown) 0%, var(--primary-brown) 100%);
+    box-shadow: 0 8px 20px rgba(91, 89, 89, 0.4);
+}
+
+/* ----- Timeline Styles ----- */
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 15px auto;
+    padding: 15px 0;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,242,242,0.3) 49%, rgba(255,242,242,0.3) 51%, rgba(255,255,255,0) 100%);
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary), var(--yellow));
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    box-shadow: 0 0 8px rgba(109, 1, 7, 0.2);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.3s; }
+.timeline-item:nth-child(3) { animation-delay: 0.5s; }
+.timeline-item:nth-child(4) { animation-delay: 0.7s; }
+.timeline-item:nth-child(5) { animation-delay: 0.9s; }
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.timeline-left, 
+.timeline-right {
+    width: 47%;
+}
+
+.timeline-center {
+    position: relative;
+    width: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.diamond {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: var(--transition);
+    border: none;
+    background: linear-gradient(135deg, #fff, #f7f7f7);
+    z-index: 3;
+}
+
+.timeline-item:nth-child(odd) .diamond:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, var(--yellow), var(--primary));
+    z-index: -1;
+    transform: rotate(0deg);
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+.timeline-item:nth-child(even) .diamond:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, var(--teal), var(--secondary));
+    z-index: -1;
+    transform: rotate(0deg);
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+.diamond:hover {
+    transform: rotate(45deg) scale(1.08);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.diamond-content {
+    transform: rotate(-45deg);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diamond-content img {
+    max-width: 22px;
+    max-height: 22px;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.top-dot, 
+.bottom-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: glow 3s infinite alternate;
+}
+
+.top-dot {
+    top: 0;
+    background: linear-gradient(135deg, var(--primary), #8B0D16);
+}
+
+.bottom-dot {
+    bottom: 0;
+    background: linear-gradient(135deg, var(--yellow), #A01F27);
+}
+
+.timeline-item:nth-child(odd) .diamond {
+    background-color: var(--yellow);
+    border: 4px solid rgba(139, 13, 22, 0.3);
+}
+
+.timeline-item:nth-child(even) .diamond {
+    background-color: var(--teal);
+    border: 4px solid rgba(73, 71, 71, 0.3);
+}
+
+.timeline-text {
+    padding: 15px;
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-left: 3px solid var(--yellow);
+    overflow: hidden;
+}
+
+.timeline-item:nth-child(even) .timeline-text {
+    border-left: none;
+    border-right: 3px solid var(--teal);
+}
+
+.timeline-text:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--yellow), var(--primary));
+    opacity: 0.7;
+}
+
+.timeline-item:nth-child(even) .timeline-text:before {
+    background: linear-gradient(to right, var(--teal), var(--secondary));
+}
+
+.timeline-text:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-number {
+    color: var(--yellow);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1px;
+    display: block;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:nth-child(even) .timeline-number {
+    color: var(--teal);
+}
+
+.timeline-title {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    position: relative;
+    display: inline-block;
+}
+
+.timeline-description {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.timeline-image {
+    max-width: 95%;
+    max-height: 220px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    transform: perspective(800px) rotateY(0deg);
+    filter: brightness(1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 0 auto;
+    display: block;
+}
+
+.timeline-image:hover {
+    transform: perspective(800px) rotateY(2deg) translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.05);
+}
+
+.timeline-item:nth-child(even) .btn-primary {
+    background: linear-gradient(135deg, var(--teal), var(--secondary));
+    box-shadow: 0 4px 8px rgba(109, 1, 7, 0.2);
+    background-color: var(--teal);
+    box-shadow: 0 4px 10px rgba(73, 71, 71, 0.3);
+}
+
+.timeline-item:nth-child(even) .btn-primary:before {
+    background: linear-gradient(135deg, var(--secondary), var(--teal));
+}
+
+.timeline-item:nth-child(even) .btn-primary:hover {
+    box-shadow: 0 6px 12px rgba(109, 1, 7, 0.3);
+    background-color: #3A3838;
+    box-shadow: 0 6px 15px rgba(73, 71, 71, 0.4);
+}
+
+/* ----- Cards and Elements ----- */
+.cost-card {
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.cost-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: var(--primary-purple);
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    padding: 1rem;
+    border: none;
+}
+
+.treatment-name {
+    font-weight: 600;
+    color: var(--dark-purple);
+}
+
+.price-tag {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-purple);
+}
+
+.price-tag.foreign {
+    color: var(--primary-brown);
+}
+
+.savings {
+    background-color: rgba(109, 1, 7, 0.1);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    color: var(--dark-purple);
+}
+
+.benefit-item {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+    background: var(--light-purple);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 1rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.benefit-title {
+    font-weight: 600;
+    color: var(--primary-purple);
+    margin-bottom: 0.5rem;
+}
+
+.accent-circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.accent-circle-2 {
+    background-color: var(--primary-brown);
+    bottom: -100px;
+    left: -100px;
+}
+
+.testimonial {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--primary-purple);
+    position: relative;
+}
+
+.testimonial::before {
+    content: '\201C';
+    font-size: 4rem;
+    color: var(--light-purple);
+    opacity: 0.3;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-family: Georgia, serif;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.author-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    background-color: var(--light-brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+
+.author-name {
+    font-weight: 600;
+    color: var(--dark-purple);
+}
+
+.author-title {
+    font-size: 0.875rem;
+    color: var(--primary-brown);
+}
+
+/* Plan Trip View */
+.plan-trip-view .plan-trip-list li .icon {
+    background: linear-gradient(135deg, var(--yellow), var(--primary)) !important;
+}
+
+.plan-trip-view .plan-trip-list li .icon:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    border-right: 1px dashed #A01F27 !important;
+    border-left: 1px dashed #A01F27 !important;
+    left: 50%;
+    transform: translateY(-50%);
+    bottom: 0;
+}
+
+.plan-trip-view .plan-trip-list li .icon:before {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    border-right: 1px dashed #A01F27 !important;
+    border-left: 1px dashed #A01F27 !important;
+    left: 50%;
+    transform: translateY(-50%);
+    bottom: 0;
+}
+.int-number-view .international-number-list li:nth-child(5n+1) {
+    background: #f7f7f7 !important;
+    border: 2px solid #f7f7f7 ;
+}
+/* International Number List */
+.int-number-view .international-number-list li:nth-child(5n+2) {
+    background: #FFF9F9 !important;
+    border: 4px solid #FFF9F9 !important;
+}
+
+.int-number-view .international-number-list li:nth-child(5n+3) {
+    background: #F7F7F7 !important;
+    border:4px solid #F7F7F7 !important;
+}
+
+.int-number-view .international-number-list li:nth-child(5n+4) {
+    background: #FFF9F9 !important;
+    border: 4px solid #FFF9F9 !important;
+}
+
+.int-number-view .international-number-list li:nth-child(5n+5) {
+    background: #F7F7F7 !important;
+    border: 4px solid #F7F7F7 !important;
+}
+
+/* ----- Banner Section ----- */
+.banner-section .banner-left .banner-text {
+    backdrop-filter: blur(10px);
+}
+
+.banner-section .banner-img > img, 
+.banner-section .banner-img picture img {
+    min-height: 350px;
+}
+
+/* ----- Fixed Bottom Bar ----- */
+.fixed-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.help-button, 
+.chat-button {
+    width: 47%;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.help-button {
+    background-color: red;
+    color: white;
+    margin-left: 10px;
+}
+
+.chat-button {
+    background-color: green;
+    color: white;
+    margin-right: 10px;
+}
+.banner-section .banner-content {
+  position: absolute;
+  left: -80px;
+  right: 0;
+  bottom: 38px;
+}
+
+/* ----- Animations ----- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: translateX(-50%) scale(1); opacity: 0.5; }
+    50% { transform: translateX(-50%) scale(1.2); opacity: 0.3; }
+    100% { transform: translateX(-50%) scale(1); opacity: 0.5; }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(139, 13, 22, 0.5); }
+    100% { box-shadow: 0 0 12px rgba(139, 13, 22, 0.8), 0 0 20px rgba(139, 13, 22, 0.3); }
+}
+
+/* ----- Responsive Media Queries ----- */
+@media only screen and (min-width: 600px) {
+    .international-page .international-header .international-top-header {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .desktop-banner {
+        display: none;
+    }
+    
+    .mob-banner {
+        display: block;
+    }
+    
+    .fixed-bottom-bar {
+        display: block;
+    }
+    
+    .submit-btn {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .banner-section .banner-left .banner-text {
+        backdrop-filter: blur(20px) !important;
+        margin-top: 150px;
+        display: none !important;
+    }
+    
+    .international-main-header {
+        display: none;
+    }
+    
+    .phone-wrap {
+        margin-right: 10px;
+    }
+    
+    .mob-banner-text {
+        backdrop-filter: blur(20px) !important;
+        background: rgba(255, 255, 255, 0.5);
+        margin-top: 20px;
+        display: inline-block;
+        border-radius: 8px;
+        padding: 8px 42px 8px 11px;
+    }
+    
+    .help-button, 
+    .chat-button {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .int-number-view .international-number-list li:nth-child(5n+3),
+    .int-number-view .international-number-list li:nth-child(5n+4) {
+        width: calc(50% - 6px) !important;
+        margin: 0 3px 6px;
+    }
+    
+    .int-number-view .international-number-list li:nth-child(5n+5) {
+        width: calc(100% - 6px);
+        margin: 0 3px 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-bg {
+        padding: 2rem 1.5rem;
+    }
+    
+    .cost-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .timeline-title {
+        font-size: 1.2rem;
+    }
+    
+    .btn-primary, 
+    .btn-secondary {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .timeline-container::after {
+        display: none;
+    }
+    
+    .top-dot, 
+    .bottom-dot {
+        display: none;
+    }
+    
+    .timeline-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .timeline-left, 
+    .timeline-right {
+        width: 100%;
+        order: 2;
+        margin-top: 10px;
+    }
+    
+    .timeline-center {
+        width: 100%;
+        order: 1;
+        justify-content: flex-start;
+        padding-left: 0;
+        margin-bottom: 5px;
+        margin-left: 0;
+    }
+    
+    .diamond {
+        margin: 0 auto 15px auto;
+        transform: rotate(45deg);
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content .timeline-left,
+    .timeline-item:nth-child(even) .timeline-content .timeline-right {
+        order: 2;
+    }
+    
+    .timeline-item {
+        margin-bottom: 25px;
+        padding-left: 0;
+        border-radius: 10px;
+        background: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        padding: 15px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-text {
+        border-right: none;
+        border-left: 3px solid var(--teal);
+    }
+    
+    .timeline-text {
+        box-shadow: none;
+        padding: 10px 0 0 0;
+        border-left: none !important;
+        border-right: none !important;
+    }
+    
+    .timeline-text:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        opacity: 0.8;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-text:before {
+        background: linear-gradient(to right, var(--yellow), var(--primary));
+    }
+    
+    .timeline-item:nth-child(even) .timeline-text:before {
+        background: linear-gradient(to right, var(--teal), var(--secondary));
+    }
+}
+  </style>
+    </head>
 
   <body class="international-page fortis-path-node">
-    <div class="tm2023_modal_backdrop_overlay" id="tm2023_modal_overlay">
-      <!-- Modal Container -->
-      <div class="tm2023_modal_content_wrapper">
-          <!-- Modal Header -->
-          <div class="tm2023_modal_header_section">
-              <h3 class="tm2023_modal_title_text">Personalized Treatment Plan & Estimate</h3>
-              <button class="tm2023_modal_close_button" id="tm2023_close_modal_button">&times;</button>
+
+    <div class="modal fade tpe-modal" id="treatmentModal" tabindex="-1" aria-labelledby="treatmentModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content tpe-modal-content">
+          <div class="modal-header tpe-modal-header">
+            <h5 class="modal-title tpe-modal-title" id="treatmentModalLabel">Get a Personalised Treatment Plan and Estimate</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          
-          <!-- Modal Body -->
-          <div class="tm2023_modal_body_container">
-              <form id="tm2023_treatment_estimate_form" method="POST" action="#">
-                  <!-- Patient Information -->
-                  <div class="tm2023_form_group_container">
-                      <label class="tm2023_form_label_text tm2023_form_required_label" for="tm2023_patient_name_field">Name of the Patient</label>
-                      <input type="text" id="tm2023_patient_name_field" name="patientName" class="tm2023_form_input_field" required placeholder="Enter full name">
-                  </div>
-                  
-                  <div class="tm2023_form_group_container">
-                      <label class="tm2023_form_label_text" for="tm2023_patient_age_field">Age</label>
-                      <input type="number" id="tm2023_patient_age_field" name="patientAge" class="tm2023_form_input_field" placeholder="e.g. 45">
-                  </div>
-                  
-                  <div class="tm2023_form_group_container">
-                      <label class="tm2023_form_label_text" for="tm2023_gender_dropdown">Gender</label>
-                      <select id="tm2023_gender_dropdown" name="gender" class="tm2023_form_select_dropdown">
-                          <option value="">Select Gender</option>
-                          <option value="male">Male</option>
-                          <option value="female">Female</option>
-                      </select>
-                  </div>
-                  
-                  <!-- Contact Details -->
-                  <div class="tm2023_form_group_container">
-                      <label class="tm2023_form_label_text tm2023_form_required_label" for="tm2023_country_code_field">Country Code</label>
-                      <input type="text" id="tm2023_country_code_field" name="countryCode" class="tm2023_form_input_field" required placeholder="e.g. +1">
-                  </div>
-                  
-                  <div class="tm2023_form_group_container">
-                      <label class="tm2023_form_label_text tm2023_form_required_label" for="tm2023_contact_number_field">Contact Number</label>
-                      <input type="tel" id="tm2023_contact_number_field" name="contactNumber" class="tm2023_form_input_field" required placeholder="Phone number">
-                  </div>
-                  
-                  <div class="tm2023_form_group_container">
-                      <label class="tm2023_form_label_text tm2023_form_required_label" for="tm2023_country_dropdown">Country</label>
-                      <select id="tm2023_country_dropdown" name="country" class="tm2023_form_select_dropdown" required>
-                          <option value="">Select Country</option>
-                          <option value="US">United States</option>
-                          <option value="UK">United Kingdom</option>
-                          <option value="CA">Canada</option>
-                          <option value="AU">Australia</option>
-                          <option value="IN">India</option>
-                          <!-- More countries would be added here -->
-                      </select>
-                  </div>
-                  
-                  <!-- Message -->
-                  <div class="tm2023_form_group_container">
-                      <label class="tm2023_form_label_text" for="tm2023_message_textarea">Your Message</label>
-                      <textarea id="tm2023_message_textarea" name="message" class="tm2023_form_textarea_field" placeholder="Please describe your medical condition and requirements..."></textarea>
-                  </div>
-                  
-                  <!-- Submit Button -->
-                  <button type="submit" class="tm2023_form_submit_button">Get An Estimate</button>
-                  
-                  <!-- Disclaimer -->
-                  <div class="tm2023_form_disclaimer_text">
-                      <strong>Disclaimer:</strong> This is an indicative cost based on the reports/information shared with us. Final estimate will be shared once patient is physically evaluated.
-                  </div>
-              </form>
+          <div class="modal-body tpe-modal-body">
+            <form id="treatment-form">
+              <!-- First row -->
+              <div class="row tpe-form-row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                  <label for="patient-name" class="form-label tpe-form-label">Name of the Patient <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control tpe-form-control" id="patient-name" name="patientName" required>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                  <label for="patient-age" class="form-label tpe-form-label">Age</label>
+                  <input type="number" class="form-control tpe-form-control" id="patient-age" name="PatientAge" max="150">
+                </div>
+                <div class="col-md-4">
+                  <label for="gender" class="form-label tpe-form-label">Gender</label>
+                  <select class="form-select tpe-form-select" id="gender" name="gender">
+                    <option value="0">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+              </div>
+              
+              <!-- Second row -->
+              <div class="row tpe-form-row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                  <label for="country-code" class="form-label tpe-form-label">Country Code <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control tpe-form-control" id="country-code" name="countryCode" required placeholder="+91">
+                </div>
+                <div class="col-md-8">
+                  <label for="contact-number" class="form-label tpe-form-label">Contact No <span class="text-danger">*</span></label>
+                  <input type="tel" class="form-control tpe-form-control" id="contact-number" name="patientNumber" required>
+                </div>
+              </div>
+              
+              <!-- Country selection -->
+              <div class="row tpe-form-row">
+                <div class="col-12">
+                  <label for="country" class="form-label tpe-form-label">Country <span class="text-danger">*</span></label>
+                  <select class="form-select tpe-form-select" id="country" name="country" required>
+                    <option value="0">Please select Country</option>
+                    <option value="AF">Afghanistan</option>
+                    <option value="AL">Albania</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AS">American Samoa</option>
+                    <option value="AD">Andorra</option>
+                    <option value="AO">Angola</option>
+                    <option value="AI">Anguilla</option>
+                    <option value="AQ">Antarctica</option>
+                    <option value="AG">Antigua & Barbuda</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AM">Armenia</option>
+                    <option value="AW">Aruba</option>
+                    <option value="AC">Ascension Island</option>
+                    <option value="AU">Australia</option>
+                    <option value="AT">Austria</option>
+                    <option value="AZ">Azerbaijan</option>
+                    <option value="BS">Bahamas</option>
+                    <option value="BH">Bahrain</option>
+                    <option value="BD">Bangladesh</option>
+                    <option value="BB">Barbados</option>
+                    <option value="BY">Belarus</option>
+                    <option value="BE">Belgium</option>
+                    <option value="BZ">Belize</option>
+                    <option value="BJ">Benin</option>
+                    <option value="BM">Bermuda</option>
+                    <option value="BT">Bhutan</option>
+                    <option value="BO">Bolivia</option>
+                    <option value="BA">Bosnia & Herzegovina</option>
+                    <option value="BW">Botswana</option>
+                    <option value="BV">Bouvet Island</option>
+                    <option value="BR">Brazil</option>
+                    <option value="IO">British Indian Ocean Territory</option>
+                    <option value="VG">British Virgin Islands</option>
+                    <option value="BN">Brunei</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="BF">Burkina Faso</option>
+                    <option value="BI">Burundi</option>
+                    <option value="KH">Cambodia</option>
+                    <option value="CM">Cameroon</option>
+                    <option value="CA">Canada</option>
+                    <option value="IC">Canary Islands</option>
+                    <option value="CV">Cape Verde</option>
+                    <option value="BQ">Caribbean Netherlands</option>
+                    <option value="KY">Cayman Islands</option>
+                    <option value="CF">Central African Republic</option>
+                    <option value="EA">Ceuta & Melilla</option>
+                    <option value="TD">Chad</option>
+                    <option value="CL">Chile</option>
+                    <option value="CN">China</option>
+                    <option value="CX">Christmas Island</option>
+                    <option value="CP">Clipperton Island</option>
+                    <option value="CC">Cocos (Keeling) Islands</option>
+                    <option value="CO">Colombia</option>
+                    <option value="KM">Comoros</option>
+                    <option value="CG">Congo - Brazzaville</option>
+                    <option value="CD">Congo - Kinshasa</option>
+                    <option value="CK">Cook Islands</option>
+                    <option value="CR">Costa Rica</option>
+                    <option value="HR">Croatia</option>
+                    <option value="CU">Cuba</option>
+                    <option value="CW">Curaçao</option>
+                    <option value="CY">Cyprus</option>
+                    <option value="CZ">Czechia</option>
+                    <option value="CI">Côte d'Ivoire</option>
+                    <option value="DK">Denmark</option>
+                    <option value="DG">Diego Garcia</option>
+                    <option value="DJ">Djibouti</option>
+                    <option value="DM">Dominica</option>
+                    <option value="DO">Dominican Republic</option>
+                    <option value="EC">Ecuador</option>
+                    <option value="EG">Egypt</option>
+                    <option value="SV">El Salvador</option>
+                    <option value="GQ">Equatorial Guinea</option>
+                    <option value="ER">Eritrea</option>
+                    <option value="EE">Estonia</option>
+                    <option value="SZ">Eswatini</option>
+                    <option value="ET">Ethiopia</option>
+                    <option value="FK">Falkland Islands</option>
+                    <option value="FO">Faroe Islands</option>
+                    <option value="FJ">Fiji</option>
+                    <option value="FI">Finland</option>
+                    <option value="FR">France</option>
+                    <option value="GF">French Guiana</option>
+                    <option value="PF">French Polynesia</option>
+                    <option value="TF">French Southern Territories</option>
+                    <option value="GA">Gabon</option>
+                    <option value="GM">Gambia</option>
+                    <option value="GE">Georgia</option>
+                    <option value="DE">Germany</option>
+                    <option value="GH">Ghana</option>
+                    <option value="GI">Gibraltar</option>
+                    <option value="GR">Greece</option>
+                    <option value="GL">Greenland</option>
+                    <option value="GD">Grenada</option>
+                    <option value="GP">Guadeloupe</option>
+                    <option value="GU">Guam</option>
+                    <option value="GT">Guatemala</option>
+                    <option value="GG">Guernsey</option>
+                    <option value="GN">Guinea</option>
+                    <option value="GW">Guinea-Bissau</option>
+                    <option value="GY">Guyana</option>
+                    <option value="HT">Haiti</option>
+                    <option value="HM">Heard & McDonald Islands</option>
+                    <option value="HN">Honduras</option>
+                    <option value="HK">Hong Kong SAR China</option>
+                    <option value="HU">Hungary</option>
+                    <option value="IS">Iceland</option>
+                    <option value="IN">India</option>
+                    <option value="ID">Indonesia</option>
+                    <option value="IR">Iran</option>
+                    <option value="IQ">Iraq</option>
+                    <option value="IE">Ireland</option>
+                    <option value="IM">Isle of Man</option>
+                    <option value="IL">Israel</option>
+                    <option value="IT">Italy</option>
+                    <option value="JM">Jamaica</option>
+                    <option value="JP">Japan</option>
+                    <option value="JE">Jersey</option>
+                    <option value="JO">Jordan</option>
+                    <option value="KZ">Kazakhstan</option>
+                    <option value="KE">Kenya</option>
+                    <option value="KI">Kiribati</option>
+                    <option value="XK">Kosovo</option>
+                    <option value="KW">Kuwait</option>
+                    <option value="KG">Kyrgyzstan</option>
+                    <option value="LA">Laos</option>
+                    <option value="LV">Latvia</option>
+                    <option value="LB">Lebanon</option>
+                    <option value="LS">Lesotho</option>
+                    <option value="LR">Liberia</option>
+                    <option value="LY">Libya</option>
+                    <option value="LI">Liechtenstein</option>
+                    <option value="LT">Lithuania</option>
+                    <option value="LU">Luxembourg</option>
+                    <option value="MO">Macao SAR China</option>
+                    <option value="MG">Madagascar</option>
+                    <option value="MW">Malawi</option>
+                    <option value="MY">Malaysia</option>
+                    <option value="MV">Maldives</option>
+                    <option value="ML">Mali</option>
+                    <option value="MT">Malta</option>
+                    <option value="MH">Marshall Islands</option>
+                    <option value="MQ">Martinique</option>
+                    <option value="MR">Mauritania</option>
+                    <option value="MU">Mauritius</option>
+                    <option value="YT">Mayotte</option>
+                    <option value="MX">Mexico</option>
+                    <option value="FM">Micronesia</option>
+                    <option value="MD">Moldova</option>
+                    <option value="MC">Monaco</option>
+                    <option value="MN">Mongolia</option>
+                    <option value="ME">Montenegro</option>
+                    <option value="MS">Montserrat</option>
+                    <option value="MA">Morocco</option>
+                    <option value="MZ">Mozambique</option>
+                    <option value="MM">Myanmar (Burma)</option>
+                    <option value="NA">Namibia</option>
+                    <option value="NR">Nauru</option>
+                    <option value="NP">Nepal</option>
+                    <option value="NL">Netherlands</option>
+                    <option value="NC">New Caledonia</option>
+                    <option value="NZ">New Zealand</option>
+                    <option value="NI">Nicaragua</option>
+                    <option value="NE">Niger</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="NU">Niue</option>
+                    <option value="NF">Norfolk Island</option>
+                    <option value="MP">Northern Mariana Islands</option>
+                    <option value="KP">North Korea</option>
+                    <option value="MK">North Macedonia</option>
+                    <option value="NO">Norway</option>
+                    <option value="OM">Oman</option>
+                    <option value="QO">Outlying Oceania</option>
+                    <option value="PK">Pakistan</option>
+                    <option value="PW">Palau</option>
+                    <option value="PS">Palestinian Territories</option>
+                    <option value="PA">Panama</option>
+                    <option value="PG">Papua New Guinea</option>
+                    <option value="PY">Paraguay</option>
+                    <option value="PE">Peru</option>
+                    <option value="PH">Philippines</option>
+                    <option value="PN">Pitcairn Islands</option>
+                    <option value="PL">Poland</option>
+                    <option value="PT">Portugal</option>
+                    <option value="PR">Puerto Rico</option>
+                    <option value="QA">Qatar</option>
+                    <option value="RO">Romania</option>
+                    <option value="RU">Russia</option>
+                    <option value="RW">Rwanda</option>
+                    <option value="RE">Réunion</option>
+                    <option value="WS">Samoa</option>
+                    <option value="SM">San Marino</option>
+                    <option value="SA">Saudi Arabia</option>
+                    <option value="SN">Senegal</option>
+                    <option value="RS">Serbia</option>
+                    <option value="SC">Seychelles</option>
+                    <option value="SL">Sierra Leone</option>
+                    <option value="SG">Singapore</option>
+                    <option value="SX">Sint Maarten</option>
+                    <option value="SK">Slovakia</option>
+                    <option value="SI">Slovenia</option>
+                    <option value="SB">Solomon Islands</option>
+                    <option value="SO">Somalia</option>
+                    <option value="ZA">South Africa</option>
+                    <option value="GS">South Georgia & South Sandwich Islands</option>
+                    <option value="KR">South Korea</option>
+                    <option value="SS">South Sudan</option>
+                    <option value="ES">Spain</option>
+                    <option value="LK">Sri Lanka</option>
+                    <option value="BL">St. Barthélemy</option>
+                    <option value="SH">St. Helena</option>
+                    <option value="KN">St. Kitts & Nevis</option>
+                    <option value="LC">St. Lucia</option>
+                    <option value="MF">St. Martin</option>
+                    <option value="PM">St. Pierre & Miquelon</option>
+                    <option value="VC">St. Vincent & Grenadines</option>
+                    <option value="SD">Sudan</option>
+                    <option value="SR">Suriname</option>
+                    <option value="SJ">Svalbard & Jan Mayen</option>
+                    <option value="SE">Sweden</option>
+                    <option value="CH">Switzerland</option>
+                    <option value="SY">Syria</option>
+                    <option value="ST">São Tomé & Príncipe</option>
+                    <option value="TW">Taiwan</option>
+                    <option value="TJ">Tajikistan</option>
+                    <option value="TZ">Tanzania</option>
+                    <option value="TH">Thailand</option>
+                    <option value="TL">Timor-Leste</option>
+                    <option value="TG">Togo</option>
+                    <option value="TK">Tokelau</option>
+                    <option value="TO">Tonga</option>
+                    <option value="TT">Trinidad & Tobago</option>
+                    <option value="TA">Tristan da Cunha</option>
+                    <option value="TN">Tunisia</option>
+                    <option value="TR">Turkey</option>
+                    <option value="TM">Turkmenistan</option>
+                    <option value="TC">Turks & Caicos Islands</option>
+                    <option value="TV">Tuvalu</option>
+                    <option value="UM">U.S. Outlying Islands</option>
+                    <option value="VI">U.S. Virgin Islands</option>
+                    <option value="UG">Uganda</option>
+                    <option value="UA">Ukraine</option>
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="US">United States</option>
+                    <option value="UY">Uruguay</option>
+                    <option value="UZ">Uzbekistan</option>
+                    <option value="VU">Vanuatu</option>
+                    <option value="VA">Vatican City</option>
+                    <option value="VE">Venezuela</option>
+                    <option value="VN">Vietnam</option>
+                    <option value="WF">Wallis & Futuna</option>
+                    <option value="EH">Western Sahara</option>
+                    <option value="YE">Yemen</option>
+                    <option value="ZM">Zambia</option>
+                    <option value="ZW">Zimbabwe</option>
+                    <option value="AX">Åland Islands</option>
+                  </select>
+                </div>
+              </div>
+              
+              <!-- Message -->
+              <div class="row tpe-form-row">
+                <div class="col-12">
+                  <label for="patient-message" class="form-label tpe-form-label">Your Message</label>
+                  <textarea class="form-control tpe-form-control" id="patient-message" name="message" rows="4"></textarea>
+                  <div class="form-text tpe-form-text">Please share any relevant medical information, symptoms, or questions you have.</div>
+                </div>
+              </div>
+              
+              <!-- Submit button and disclaimer -->
+              <div class="d-grid gap-2 mt-4">
+                <button type="submit" class="btn tpe-btn-primary">Get An Estimate</button>
+              </div>
+              
+              <div class="tpe-disclaimer">
+                <strong>Disclaimer:</strong> This is an indicative cost based on the reports/information shared with us. Final estimate will be shared once patient is physically evaluated.
+              </div>
+              
+              <!-- WhatsApp contact option -->
+              <div class="tpe-contact-options">
+                <div class="tpe-separator">OR</div>
+                <p>Need immediate assistance? Contact us directly via WhatsApp</p>
+                <a href="https://wa.me/910000000000" class="btn tpe-whatsapp-btn">
+                  <i class="fa fa-whatsapp"></i> Contact via WhatsApp
+                </a>
+              </div>
+            </form>
           </div>
+        </div>
       </div>
-  </div>
+    </div>
+    
+    <!-- Floating WhatsApp button -->
+    <a href="https://wa.me/910000000000" class="tpe-whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    
+  
+    
+   
 
     <a href="#main-content" class="visually-hidden focusable">
       Skip to main content
@@ -1394,7 +2786,7 @@
           <div>
             <div id="block-sitebranding-2" class="page-logo int-mobile-logo">
               <a rel="home">
-                <img style="margin-top:10px" src="assets/TruHealer.png" alt="Home" class="img-fluid"  /> 
+                <img style="margin-top:10px ; width: 120px;;"  src="assets/TruHealers (1).png" alt="Home" class="img-fluid"  /> 
               </a>
               
             </div>
@@ -1492,12 +2884,12 @@
         </div>
         <div class="international-main-header">
           <div>
-            <div id="block-sitebranding" class="page-logo">
+            <!-- <div id="block-sitebranding"  class="page-logo"> -->
               <a rel="home">
-                <img src="assets/TruHealer.png" alt="Home" class="img-fluid" />
+                <img src="assets/TruHealers (1).png" width="170px" height="60px"  alt="Home" class="img-fluid" /> 
               </a>
              
-            </div>
+            <!-- </div> -->
             <div class="text" style="display:flex">
                     <div>
                         <img style="max-width:22px;margin-right: 10px;" src="assets/whatsapp-icon.png" alt="search" />
@@ -1578,206 +2970,6 @@
 
 
 
-                <!--<section class="healthcare-section pb-0">-->
-                  <div class="container mt-3 mb-0">
-                    <div class="section-bg mb-0 pb-0">
-                        <div class="accent-circle accent-circle-1"></div>
-                        <div class="accent-circle accent-circle-2"></div>
-                        
-                        <div class="row ">
-                            <div class="col-lg-8 mx-auto text-center">
-                                <h2 class="section-title text-center">Why Choose India for Your Healthcare Needs</h2>
-                                <!--<p class="subtitle">World-class medical care at a fraction of Western costs</p>-->
-                                <!--<p class="lead mb-4">India has emerged as a global leader in medical tourism, offering exceptional healthcare services with advanced technology, highly qualified doctors, and significant cost advantages, all while providing patients with an enriching cultural experience.</p>-->
-                            </div>
-                        </div>
-                        
-                        <div class="row ">
-                            <div class="col-12">
-                                <h3 class="subtitle text-center mb-4">Cost Advantages: India vs. Western Countries</h3>
-                            </div>
-                            
-                            <div class="col-lg-4 mb-4">
-                                <div class="card cost-card">
-                                    <div class="card-header">Heart Procedures</div>
-                                    <div class="card-body">
-                                        <div class="mb-4">
-                                            <div class="treatment-name mb-2">Coronary Artery Bypass</div>
-                                            <ul class="mb-3">
-                                                <li>Save up to 90% compared to US costs</li>
-                                                <li>World-class cardiac facilities</li>
-                                                <li>Experienced cardiologists with international training</li>
-                                                <li>Significantly shorter waiting times</li>
-                                            </ul>
-                                        </div>
-                                        
-                                        <div>
-                                            <div class="treatment-name mb-2">Heart Valve Replacement</div>
-                                            <ul class="mb-0">
-                                                <li>Advanced minimally invasive techniques</li>
-                                                <li>Comprehensive pre and post-operative care</li>
-                                                <li>Top-tier medical technology and equipment</li>
-                                                <li>Substantial cost savings over Western prices</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-4 mb-4">
-                                <div class="card cost-card">
-                                    <div class="card-header">Orthopedic Procedures</div>
-                                    <div class="card-body">
-                                        <div class="mb-4">
-                                            <div class="treatment-name mb-2">Hip Replacement</div>
-                                            <ul class="mb-3">
-                                                <li>Premium quality implants at fraction of the cost</li>
-                                                <li>Specialized orthopedic hospitals</li>
-                                                <li>Robotic-assisted surgical options</li>
-                                                <li>Comprehensive rehabilitation programs</li>
-                                            </ul>
-                                        </div>
-                                        
-                                        <div>
-                                            <div class="treatment-name mb-2">Knee Replacement</div>
-                                            <ul class="mb-0">
-                                                <li>Both partial and total replacement options</li>
-                                                <li>Computer-navigated precision surgery</li>
-                                                <li>Customized implants for better fit</li>
-                                                <li>Significant cost savings over Western prices</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-4 mb-4">
-                                <div class="card cost-card">
-                                    <div class="card-header">Specialty Treatments</div>
-                                    <div class="card-body">
-                                        <div class="mb-4">
-                                            <div class="treatment-name mb-2">Fertility Treatments</div>
-                                            <ul class="mb-3">
-                                                <li>Comprehensive IVF programs</li>
-                                                <li>High success rates comparable to global standards</li>
-                                                <li>Advanced reproductive technologies</li>
-                                                <li>Personalized treatment protocols</li>
-                                            </ul>
-                                        </div>
-                                        
-                                        <div>
-                                            <div class="treatment-name mb-2">Dental Procedures</div>
-                                            <ul class="mb-0">
-                                                <li>State-of-the-art dental clinics</li>
-                                                <li>Internationally certified materials</li>
-                                                <li>Same-day procedures available</li>
-                                                <li>Dramatic cost savings over Western prices</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row ">
-                            <div class="col-12">
-                                <h3 class="subtitle mb-4">Benefits Beyond Cost Savings</h3>
-                            </div>
-                            
-                            <div class="col-lg-6 mb-4">
-                                <div class="benefit-item">
-                                    <div class="benefit-icon">
-                                        <i class="fas fa-user-md"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="benefit-title">Internationally Accredited Hospitals</h4>
-                                        <p class="mb-0">India boasts over 35 JCI-accredited hospitals with state-of-the-art facilities that meet rigorous international standards for quality.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-6 mb-4">
-                                <div class="benefit-item">
-                                    <div class="benefit-icon">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="benefit-title">Highly Qualified Medical Professionals</h4>
-                                        <p class="mb-0">Many Indian doctors are trained in prestigious medical schools in the US, UK, and other countries, bringing world-class expertise back to India.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-6 mb-4">
-                                <div class="benefit-item">
-                                    <div class="benefit-icon">
-                                        <i class="fas fa-language"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="benefit-title">English-Speaking Staff</h4>
-                                        <p class="mb-0">English is widely spoken in Indian medical facilities, eliminating language barriers for international patients from English-speaking countries.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-6 mb-4">
-                                <div class="benefit-item">
-                                    <div class="benefit-icon">
-                                        <i class="fas fa-landmark"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="benefit-title">Cultural Experience</h4>
-                                        <p class="mb-0">Combine your medical treatment with the opportunity to experience India's rich cultural heritage, diverse cuisine, and stunning landscapes.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!--<div class="row mb-5">-->
-                        <!--    <div class="col-12">-->
-                        <!--        <h3 class="subtitle mb-4">What Our Patients Say</h3>-->
-                        <!--    </div>-->
-                            
-                        <!--    <div class="col-lg-6 mb-4">-->
-                        <!--        <div class="testimonial">-->
-                        <!--            <p>"I was quoted an astronomical amount for my knee replacement in the US. I had the same procedure done in India with outstanding care at a top hospital in Delhi. The savings paid for my flights, accommodation, and even a two-week tour of India during my recovery."</p>-->
-                        <!--            <div class="testimonial-author">-->
-                        <!--                <div class="author-image">JM</div>-->
-                        <!--                <div>-->
-                        <!--                    <div class="author-name">John M.</div>-->
-                        <!--                    <div class="author-title">from Canada</div>-->
-                        <!--                </div>-->
-                        <!--            </div>-->
-                        <!--        </div>-->
-                        <!--    </div>-->
-                            
-                        <!--    <div class="col-lg-6 mb-4">-->
-                        <!--        <div class="testimonial">-->
-                        <!--            <p>"After three failed IVF cycles in the UK, I was losing hope. My treatment in Mumbai was significantly more affordable and resulted in success! The doctors were incredibly knowledgeable and compassionate. I can't recommend it enough."</p>-->
-                        <!--            <div class="testimonial-author">-->
-                        <!--                <div class="author-image">SL</div>-->
-                        <!--                <div>-->
-                        <!--                    <div class="author-name">Sarah L.</div>-->
-                        <!--                    <div class="author-title">from United Kingdom</div>-->
-                        <!--                </div>-->
-                        <!--            </div>-->
-                        <!--        </div>-->
-                        <!--    </div>-->
-                        <!--</div>-->
-                        
-                        <!--<div class="row">-->
-                        <!--    <div class="col-lg-8 mx-auto text-center">-->
-                        <!--        <h3 class="subtitle mb-4">Ready to Begin Your Healthcare Journey in India?</h3>-->
-                        <!--        <p class="mb-4">Our team of medical tourism experts is ready to guide you through every step of the process - from choosing the right hospital and specialist to arranging your travel and accommodation.</p>-->
-                        <!--        <div class="d-flex justify-content-center flex-wrap gap-3">-->
-                        <!--            <a href="#" class="btn cta-button">Get Your Free Consultation</a>-->
-                        <!--            <a href="#" class="btn cta-button cta-secondary">Request Personalized Assessment</a>-->
-                        <!--        </div>-->
-                        <!--    </div>-->
-                        <!--</div>-->
-                    </div>
-                </div>
-                           <!--</section>-->
                         
 
 
@@ -2831,6 +4023,208 @@
                 <!--  </div>-->
                 <!--</div>-->
 
+
+                <!--<section class="healthcare-section pb-0">-->
+                  <div class="container mt-3 mb-0">
+                    <div class="section-bg mb-0 pb-0">
+                        <div class="accent-circle accent-circle-1"></div>
+                        <div class="accent-circle accent-circle-2"></div>
+                        
+                        <div class="row ">
+                            <div class="col-lg-8 mx-auto text-center">
+                                <h2 class="section-title text-center">Why Choose India for Your Healthcare Needs</h2>
+                                <!--<p class="subtitle">World-class medical care at a fraction of Western costs</p>-->
+                                <!--<p class="lead mb-4">India has emerged as a global leader in medical tourism, offering exceptional healthcare services with advanced technology, highly qualified doctors, and significant cost advantages, all while providing patients with an enriching cultural experience.</p>-->
+                            </div>
+                        </div>
+                        
+                        <div class="row ">
+                            <div class="col-12">
+                                <h3 class="subtitle text-center mb-4">Cost Advantages: India vs. Western Countries</h3>
+                            </div>
+                            
+                            <div class="col-lg-4 mb-4">
+                                <div class="card cost-card">
+                                    <div class="card-header">Heart Procedures</div>
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <div class="treatment-name mb-2">Coronary Artery Bypass</div>
+                                            <ul class="mb-3">
+                                                <li>Save up to 90% compared to US costs</li>
+                                                <li>World-class cardiac facilities</li>
+                                                <li>Experienced cardiologists with international training</li>
+                                                <li>Significantly shorter waiting times</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div>
+                                            <div class="treatment-name mb-2">Heart Valve Replacement</div>
+                                            <ul class="mb-0">
+                                                <li>Advanced minimally invasive techniques</li>
+                                                <li>Comprehensive pre and post-operative care</li>
+                                                <li>Top-tier medical technology and equipment</li>
+                                                <li>Substantial cost savings over Western prices</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 mb-4">
+                                <div class="card cost-card">
+                                    <div class="card-header">Orthopedic Procedures</div>
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <div class="treatment-name mb-2">Hip Replacement</div>
+                                            <ul class="mb-3">
+                                                <li>Premium quality implants at fraction of the cost</li>
+                                                <li>Specialized orthopedic hospitals</li>
+                                                <li>Robotic-assisted surgical options</li>
+                                                <li>Comprehensive rehabilitation programs</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div>
+                                            <div class="treatment-name mb-2">Knee Replacement</div>
+                                            <ul class="mb-0">
+                                                <li>Both partial and total replacement options</li>
+                                                <li>Computer-navigated precision surgery</li>
+                                                <li>Customized implants for better fit</li>
+                                                <li>Significant cost savings over Western prices</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 mb-4">
+                                <div class="card cost-card">
+                                    <div class="card-header">Specialty Treatments</div>
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <div class="treatment-name mb-2">Fertility Treatments</div>
+                                            <ul class="mb-3">
+                                                <li>Comprehensive IVF programs</li>
+                                                <li>High success rates comparable to global standards</li>
+                                                <li>Advanced reproductive technologies</li>
+                                                <li>Personalized treatment protocols</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div>
+                                            <div class="treatment-name mb-2">Dental Procedures</div>
+                                            <ul class="mb-0">
+                                                <li>State-of-the-art dental clinics</li>
+                                                <li>Internationally certified materials</li>
+                                                <li>Same-day procedures available</li>
+                                                <li>Dramatic cost savings over Western prices</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row ">
+                            <div class="col-12">
+                                <h3 class="subtitle mb-4">Benefits Beyond Cost Savings</h3>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4">
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-user-md"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="benefit-title">Internationally Accredited Hospitals</h4>
+                                        <p class="mb-0">India boasts over 35 JCI-accredited hospitals with state-of-the-art facilities that meet rigorous international standards for quality.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4">
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="benefit-title">Highly Qualified Medical Professionals</h4>
+                                        <p class="mb-0">Many Indian doctors are trained in prestigious medical schools in the US, UK, and other countries, bringing world-class expertise back to India.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4">
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-language"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="benefit-title">English-Speaking Staff</h4>
+                                        <p class="mb-0">English is widely spoken in Indian medical facilities, eliminating language barriers for international patients from English-speaking countries.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 mb-4">
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">
+                                        <i class="fas fa-landmark"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="benefit-title">Cultural Experience</h4>
+                                        <p class="mb-0">Combine your medical treatment with the opportunity to experience India's rich cultural heritage, diverse cuisine, and stunning landscapes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--<div class="row mb-5">-->
+                        <!--    <div class="col-12">-->
+                        <!--        <h3 class="subtitle mb-4">What Our Patients Say</h3>-->
+                        <!--    </div>-->
+                            
+                        <!--    <div class="col-lg-6 mb-4">-->
+                        <!--        <div class="testimonial">-->
+                        <!--            <p>"I was quoted an astronomical amount for my knee replacement in the US. I had the same procedure done in India with outstanding care at a top hospital in Delhi. The savings paid for my flights, accommodation, and even a two-week tour of India during my recovery."</p>-->
+                        <!--            <div class="testimonial-author">-->
+                        <!--                <div class="author-image">JM</div>-->
+                        <!--                <div>-->
+                        <!--                    <div class="author-name">John M.</div>-->
+                        <!--                    <div class="author-title">from Canada</div>-->
+                        <!--                </div>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                            
+                        <!--    <div class="col-lg-6 mb-4">-->
+                        <!--        <div class="testimonial">-->
+                        <!--            <p>"After three failed IVF cycles in the UK, I was losing hope. My treatment in Mumbai was significantly more affordable and resulted in success! The doctors were incredibly knowledgeable and compassionate. I can't recommend it enough."</p>-->
+                        <!--            <div class="testimonial-author">-->
+                        <!--                <div class="author-image">SL</div>-->
+                        <!--                <div>-->
+                        <!--                    <div class="author-name">Sarah L.</div>-->
+                        <!--                    <div class="author-title">from United Kingdom</div>-->
+                        <!--                </div>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                        
+                        <!--<div class="row">-->
+                        <!--    <div class="col-lg-8 mx-auto text-center">-->
+                        <!--        <h3 class="subtitle mb-4">Ready to Begin Your Healthcare Journey in India?</h3>-->
+                        <!--        <p class="mb-4">Our team of medical tourism experts is ready to guide you through every step of the process - from choosing the right hospital and specialist to arranging your travel and accommodation.</p>-->
+                        <!--        <div class="d-flex justify-content-center flex-wrap gap-3">-->
+                        <!--            <a href="#" class="btn cta-button">Get Your Free Consultation</a>-->
+                        <!--            <a href="#" class="btn cta-button cta-secondary">Request Personalized Assessment</a>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                           <!--</section>-->
+
                <div class="medical-procedures">
                   <div class="views-element-container">
                     <div
@@ -3740,7 +5134,7 @@
                         <div>
                           <div class="footer-logo">
                             <img
-                              src="assets/TruHealer.png" alt="Home" class="img-fluid" 
+                              src="assets/TruHealers (1).png" width="200px" alt="Home" class="img-fluid" 
                              
                             />
                           </div>
@@ -3934,59 +5328,47 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      // Get modal elements
-      const tm2023_open_button = document.getElementById('tm2023_open_modal_button');
-      const tm2023_close_button = document.getElementById('tm2023_close_modal_button');
-      const tm2023_modal_overlay = document.getElementById('tm2023_modal_overlay');
-      
-      // Open modal function
-      tm2023_open_button.addEventListener('click', function() {
-          tm2023_modal_overlay.style.display = 'flex';
-          document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-      });
-      
-      // Close modal function
-      function tm2023_close_modal() {
-          tm2023_modal_overlay.style.display = 'none';
-          document.body.style.overflow = 'auto'; // Re-enable scrolling
-      }
-      
-      // Event listeners for closing modal
-      tm2023_close_button.addEventListener('click', tm2023_close_modal);
-      
-      // Close when clicking outside the modal
-      tm2023_modal_overlay.addEventListener('click', function(e) {
-          if (e.target === tm2023_modal_overlay) {
-              tm2023_close_modal();
-          }
-      });
-      
-      // Close with 'Escape' key
-      document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape' && tm2023_modal_overlay.style.display === 'flex') {
-              tm2023_close_modal();
-          }
-      });
-      
-      // Form submission (prevent default for demonstration)
-      document.getElementById('tm2023_treatment_estimate_form').addEventListener('submit', function(e) {
-          e.preventDefault();
-          alert('Form submitted! In a real application, this would send your data to the server.');
-          // You can replace the alert with AJAX call to your server
-      });
       document.addEventListener('DOMContentLoaded', function() {
-            // Check if this is the first visit using localStorage
-            if (!localStorage.getItem('tm2023_modal_shown')) {
-                // Short delay to ensure everything is loaded
-                setTimeout(function() {
-                    tm2023_open_modal();
-                    // Set flag in localStorage so it doesn't show on refresh
-                    localStorage.setItem('tm2023_modal_shown', 'true');
-                }, 500);
-            }
+        // Initialize the modal
+        var treatmentModal = new bootstrap.Modal(document.getElementById('treatmentModal'), {
+          backdrop: 'static' // Modal doesn't close when clicking outside
         });
         
-  </script> 
+        // Show the modal when page is loaded
+        setTimeout(function() {
+          treatmentModal.show();
+        }, 500); // Small delay for better user experience
+        
+        // Form validation and submission
+        document.getElementById('treatment-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          // Simple validation
+          const patientName = document.getElementById('patient-name').value.trim();
+          const countryCode = document.getElementById('country-code').value.trim();
+          const contactNumber = document.getElementById('contact-number').value.trim();
+          const country = document.getElementById('country').value;
+          
+          if (!patientName || !countryCode || !contactNumber || country === '0') {
+            alert('Please fill in all required fields.');
+            return;
+          }
+          
+          // You can add more form validation and submission logic here
+          alert('Thank you! Your information has been submitted. We will contact you shortly with your personalized treatment plan.');
+          
+          // Optionally close the modal after submission
+          // treatmentModal.hide();
+        });
+        
+        // Limit the input length for telephone number
+        document.getElementById('contact-number').addEventListener('input', function() {
+          if (this.value.length > 10) {
+            this.value = this.value.slice(0, 10);
+          }
+        });
+      });
+    </script>
 
   </body>
 </html>
