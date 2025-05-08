@@ -5,6 +5,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
+    
     <link
       rel="icon"
       href="assets/TruHealer.png"
@@ -2572,6 +2573,37 @@ body {
         font-size: 0.875rem;
       }
     }
+    .patient-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .patient-image-container {
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #f5f5f5;
+            border: 3px solid #6D0107;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+        }
+        
+        .patient-image-container img {
+            height: auto;
+            width: 100%;
+            object-fit: cover;
+        }
+        @media (max-width: 767px)
+          {
+            .patient-image-container { 
+              width: 120px;
+              height: 120px;
+            }
+          }
+        
 
   </style>
     </head>
@@ -3143,7 +3175,7 @@ body {
                                     <picture>
                                       <source media="(max-width:767px)" srcset="" />
                                       <img class="truh-desktop-banner" src="assets/desk-banner/1.webp" alt="TruHealers Banner" />
-                                      <img class="truh-mob-banner" src="assets/mob-banner/1.webp" alt="TruHealers Mobile Banner" />
+                                      <img class="truh-mob-banner" src="assets/mob-banner/APOLLO.webp" alt="TruHealers Mobile Banner" />
                                     </picture>
                                   </div>
                                   <div class="truh-banner-content">
@@ -3262,7 +3294,7 @@ body {
                                     <picture>
                                       <source media="(max-width:767px)" srcset="" />
                                       <img class="truh-desktop-banner" src="assets/desk-banner/5.webp" alt="Health Journey Banner" />
-                                      <img class="truh-mob-banner" src="assets/mob-banner/Mobile.webp" alt="Health Journey Mobile Banner" />
+                                      <img class="truh-mob-banner" src="assets/mob-banner/YASHODA.webp" alt="Health Journey Mobile Banner" />
                                     </picture>
                                   </div>
                                   <div class="truh-banner-content">
@@ -3336,41 +3368,28 @@ body {
                   <div class="logo-slider__container">
                       <!-- Logos (first set) -->
                       <div class="logo-slider__item">
-                          <img src="assets/id34Pe80Sc_1745824651374.png" alt="Company Logo 1" class="logo-slider__image">
+                          <img src="assets/id34Pe80Sc_1745824651374.png" width="150px" alt="Company Logo 1" class="logo-slider__image">
                       </div>
                       <div class="logo-slider__item">
-                          <img src="assets/idaSZ5BXu2_1745824480710.jpeg" alt="Company Logo 2" class="logo-slider__image">
+                          <img src="assets/logos/apollo-logo.svg" width="150px" alt="Company Logo 2" class="logo-slider__image">
                       </div>
                       <div class="logo-slider__item">
-                          <img src="assets/idmbb-Q7Z0_logos.png" alt="Company Logo 3" class="logo-slider__image">
+                          <img src="assets/idmbb-Q7Z0_logos.png" width="150px" alt="Company Logo 3" class="logo-slider__image">
                       </div>
                       <div class="logo-slider__item">
-                          <img src="assets/idwUX6mmSi_logos.jpeg" alt="Company Logo 4" class="logo-slider__image">
-                      </div>
+                        <img src="assets/logos/artemis.png" width="150px" alt="Company Logo 4" class="logo-slider__image">
+                    </div>
                       <div class="logo-slider__item">
-                        <img src="assets/id34Pe80Sc_1745824651374.png" alt="Company Logo 1" class="logo-slider__image">
+                        <img src="assets/logos/asian1.png" width="150px"  height="150px" alt="Company Logo 1" class="logo-slider__image">
+                    </div>       
+                    <div class="logo-slider__item">
+                        <img src="assets/logos/download.png" width="150px"  alt="Company Logo 2" class="logo-slider__image">
                     </div>
                     <div class="logo-slider__item">
-                        <img src="assets/idaSZ5BXu2_1745824480710.jpeg" alt="Company Logo 2" class="logo-slider__image">
+                        <img src="assets/logos/fortis-healthcare6714.jpg" width="150px" alt="Company Logo 3" class="logo-slider__image">
                     </div>
-                    <div class="logo-slider__item">
-                        <img src="assets/idmbb-Q7Z0_logos.png" alt="Company Logo 3" class="logo-slider__image">
-                    </div>
-                    <div class="logo-slider__item">
-                        <img src="assets/idwUX6mmSi_logos.jpeg" alt="Company Logo 4" class="logo-slider__image">
-                    </div>
-                    <div class="logo-slider__item">
-                      <img src="assets/id34Pe80Sc_1745824651374.png" alt="Company Logo 1" class="logo-slider__image">
-                  </div>
-                  <div class="logo-slider__item">
-                      <img src="assets/idaSZ5BXu2_1745824480710.jpeg" alt="Company Logo 2" class="logo-slider__image">
-                  </div>
-                  <div class="logo-slider__item">
-                      <img src="assets/idmbb-Q7Z0_logos.png" alt="Company Logo 3" class="logo-slider__image">
-                  </div>
-                  <div class="logo-slider__item">
-                      <img src="assets/idwUX6mmSi_logos.jpeg" alt="Company Logo 4" class="logo-slider__image">
-                  </div>
+                  
+                   
                       
                      
                   </div>
@@ -3448,7 +3467,7 @@ body {
                             />
                           </div>
                           <div class="text-wrap">
-                            <div class="title">175+</div>
+                            <div class="title">140+</div>
                             <div class="des">
                               Countries covered across the globe
                             </div>
@@ -3922,7 +3941,7 @@ body {
                   >
                     <header>
                       <h3 class="section-title">
-                        TruHealersInternational Patient Care Services
+                        TruHealers International Patient Care Services
                       </h3>
                     </header>
 
@@ -4396,20 +4415,20 @@ body {
                                         <div class="mb-4">
                                             <div class="treatment-name mb-2">Coronary Artery Bypass</div>
                                             <ul class="mb-3">
-                                                <li>Save up to 90% compared to US costs</li>
-                                                <li>World-class cardiac facilities</li>
-                                                <li>Experienced cardiologists with international training</li>
-                                                <li>Significantly shorter waiting times</li>
+                                                <li>● Save up to 50% compared to US costs</li>
+                                                <li>● World-class cardiac facilities</li>
+                                                <li>● Experienced cardiologists with international training</li>
+                                                <li>● Significantly shorter waiting times</li>
                                             </ul>
                                         </div>
                                         
                                         <div>
                                             <div class="treatment-name mb-2">Heart Valve Replacement</div>
                                             <ul class="mb-0">
-                                                <li>Advanced minimally invasive techniques</li>
-                                                <li>Comprehensive pre and post-operative care</li>
-                                                <li>Top-tier medical technology and equipment</li>
-                                                <li>Substantial cost savings over Western prices</li>
+                                                <li>● Advanced minimally invasive techniques</li>
+                                                <li>● Comprehensive pre and post-operative care</li>
+                                                <li>● Top-tier medical technology and equipment</li>
+                                                <li>● Substantial cost savings over Western prices</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -4423,20 +4442,20 @@ body {
                                         <div class="mb-4">
                                             <div class="treatment-name mb-2">Hip Replacement</div>
                                             <ul class="mb-3">
-                                                <li>Premium quality implants at fraction of the cost</li>
-                                                <li>Specialized orthopedic hospitals</li>
-                                                <li>Robotic-assisted surgical options</li>
-                                                <li>Comprehensive rehabilitation programs</li>
+                                                <li>● Premium quality implants at fraction of the cost</li>
+                                                <li>● Specialized orthopedic hospitals</li>
+                                                <li>● Robotic-assisted surgical options</li>
+                                                <li>● Comprehensive rehabilitation programs</li>
                                             </ul>
                                         </div>
                                         
                                         <div>
                                             <div class="treatment-name mb-2">Knee Replacement</div>
                                             <ul class="mb-0">
-                                                <li>Both partial and total replacement options</li>
-                                                <li>Computer-navigated precision surgery</li>
-                                                <li>Customized implants for better fit</li>
-                                                <li>Significant cost savings over Western prices</li>
+                                                <li>● Both partial and total replacement options</li>
+                                                <li>● Computer-navigated precision surgery</li>
+                                                <li>● Customized implants for better fit</li>
+                                                <li>● Significant cost savings over Western prices</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -4450,20 +4469,20 @@ body {
                                         <div class="mb-4">
                                             <div class="treatment-name mb-2">Fertility Treatments</div>
                                             <ul class="mb-3">
-                                                <li>Comprehensive IVF programs</li>
-                                                <li>High success rates comparable to global standards</li>
-                                                <li>Advanced reproductive technologies</li>
-                                                <li>Personalized treatment protocols</li>
+                                                <li>● Comprehensive IVF programs</li>
+                                                <li>● High success rates comparable to global standards</li>
+                                                <li>● Advanced reproductive technologies</li>
+                                                <li>● Personalized treatment protocols</li>
                                             </ul>
                                         </div>
                                         
                                         <div>
                                             <div class="treatment-name mb-2">Dental Procedures</div>
                                             <ul class="mb-0">
-                                                <li>State-of-the-art dental clinics</li>
-                                                <li>Internationally certified materials</li>
-                                                <li>Same-day procedures available</li>
-                                                <li>Dramatic cost savings over Western prices</li>
+                                                <li>● State-of-the-art dental clinics</li>
+                                                <li>● Internationally certified materials</li>
+                                                <li>● Same-day procedures available</li>
+                                                <li>● Dramatic cost savings over Western prices</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -4713,9 +4732,9 @@ body {
                             <div class="timeline-text">
                                 <span class="timeline-number">1.</span>
                                 <h3 class="timeline-title">Process</h3>
-                                <p class="timeline-description">The International Patient Department at TruHealerswas established to assist patients in planning and preparing their travel plans to the hospital.</p>
+                                <p class="timeline-description">The International Patient Department at TruHealers was established to assist patients in planning and preparing their travel plans to the hospital.</p>
                                 <a href="#form" id="tm2023_open_modal_button" class="btn btn-primary">Talk To Experts</a>
-                                <a href="#form" class="btn btn-secondary">Learn More</a>
+                                <!-- <a href="#form" class="btn btn-secondary">Learn More</a> -->
                             </div>
                         </div>
                     </div>
@@ -4730,7 +4749,7 @@ body {
                                 <h3 class="timeline-title">Required Documents</h3>
                                 <p class="timeline-description">When planning to travel abroad, it is important to prepare and bring the necessary documents to ensure a smooth and hassle-free experience.</p>
                                 <a href="#form" class="btn btn-primary">Talk To Experts</a>
-                                <a href="#form" class="btn btn-secondary">Learn More</a>
+                                <!-- <a href="#form" class="btn btn-secondary">Learn More</a> -->
                             </div>
                         </div>
                         <div class="timeline-center">
@@ -4765,7 +4784,7 @@ body {
                                 <h3 class="timeline-title">Visa</h3>
                                 <p class="timeline-description">Foreign patients can refer to the Indian Immigration Bureau website to learn more about Indian Visa requirements and regulations here:</p>
                                 <a href="#form" class="btn btn-primary">Talk To Experts</a>
-                                <a href="#form" class="btn btn-secondary">Learn More</a>
+                                <!-- <a href="#form" class="btn btn-secondary">Learn More</a> -->
                             </div>
                         </div>
                     </div>
@@ -4780,7 +4799,7 @@ body {
                                 <h3 class="timeline-title">Liability</h3>
                                 <p class="timeline-description">At TruHealers , we work with a number of International Insurance providers.</p>
                                 <a href="#form" class="btn btn-primary">Talk To Experts</a>
-                                <a href="#form" class="btn btn-secondary">Learn More</a>
+                                <!-- <a href="#form" class="btn btn-secondary">Learn More</a> -->
                             </div>
                         </div>
                         <div class="timeline-center">
@@ -4815,7 +4834,7 @@ body {
                                 <h3 class="timeline-title">Airport Cost</h3>
                                 <p class="timeline-description">At TruHealers , we believe that Tender Loving Care should begin the moment you arrive.</p>
                                 <a href="#form" class="btn btn-primary">Talk To Experts</a>
-                                <a href="#form" class="btn btn-secondary">Learn More</a>
+                                <!-- <a href="#form" class="btn btn-secondary">Learn More</a> -->
                             </div>
                         </div>
                     </div>
@@ -5062,7 +5081,7 @@ body {
                   >
                     <header>
                       <div class="head-row">
-                        <h3 class="section-title">Patient Speaks</h3>
+                        <h3 class="section-title">Patients Speaks</h3>
                       </div>
                     </header>
 
@@ -5070,13 +5089,15 @@ body {
                       <ul class="patient-slider">
                         <li class="patient-box">
                           <div class="patient-left">
-                              <img src="assets/google.webp" >
+                            <div class="patient-image-container">
+                                <img src="assets/patient1.jpg" alt="Patient Profile">
+                            </div>
                             <div class="p-name-date"></div>
-                          </div>
+                        </div>
                           <div class="patient-text">
                             <div class="patient-description">
                               <p>
-                                "Life-Saving Care - My experience at TruHealerswas nothing short of miraculous. After suffering complications from a previous surgery at home, the doctors at TruHealersnot only saved my life but also provided me with a new lease on life. The care and attention I received was world-class."
+                                "Life-Saving Care - My experience at TruHealers was nothing short of miraculous. After suffering complications from a previous surgery at home, the doctors at TruHealers not only saved my life but also provided me with a new lease on life. The care and attention I received was world-class."
                               </p>
                             </div>
                             <div class="patient-location">
@@ -5088,13 +5109,15 @@ body {
                         </li>
                         <li class="patient-box">
                           <div class="patient-left">
-                            <img src="assets/google.webp" >
+                            <div class="patient-image-container">
+                                <img src="assets/patient3.jpg" alt="Patient Profile">
+                            </div>
                             <div class="p-name-date"></div>
-                          </div>
+                        </div>
                           <div class="patient-text">
                             <div class="patient-description">
                               <p>
-                                "High-Quality Medical Experience - The professional and empathetic treatment I received at TruHealersfor my knee replacement was exceptional. The staff was very accommodating, ensuring that I was comfortable and informed throughout my stay. The international patient coordinator was a great help!"
+                                "High-Quality Medical Experience - The professional and empathetic treatment I received at TruHealers for my knee replacement was exceptional. The staff was very accommodating, ensuring that I was comfortable and informed throughout my stay. The international patient coordinator was a great help!"
                               </p>
                             </div>
                             <div class="patient-location">
@@ -5106,13 +5129,15 @@ body {
                         </li>
                         <li class="patient-box">
                           <div class="patient-left">
-                            <img src="assets/google.webp" >
+                            <div class="patient-image-container">
+                                <img src="assets/patient4.jpg" alt="Patient Profile">
+                            </div>
                             <div class="p-name-date"></div>
-                          </div>
+                        </div>
                           <div class="patient-text">
                             <div class="patient-description">
                               <p>
-                                "Beyond Expectations - I traveled to TruHealersfor a complex neurological procedure. The precision of the surgery and the advanced technology were impressive. The staff went above and beyond to make sure my recovery was smooth. I am deeply grateful for the excellent care."
+                                "Beyond Expectations - I traveled to TruHealers for a complex neurological procedure. The precision of the surgery and the advanced technology were impressive. The staff went above and beyond to make sure my recovery was smooth. I am deeply grateful for the excellent care."
                               </p>
                             </div>
                             <div class="patient-location">
@@ -5127,13 +5152,15 @@ body {
                         
                         <li class="patient-box">
                           <div class="patient-left">
-                            <img src="assets/google.webp" >
+                            <div class="patient-image-container">
+                                <img src="assets/patient5.jpg" alt="Patient Profile">
+                            </div>
                             <div class="p-name-date"></div>
-                          </div>
+                        </div>
                           <div class="patient-text">
                             <div class="patient-description">
                               <p>
-                                "Comprehensive Cancer Care - Being diagnosed with breast cancer was devastating, but the oncology team at TruHealersprovided hope and detailed care. From the first consultation through treatment and follow-ups, their support was phenomenal. I highly recommend TruHealersfor comprehensive cancer treatment."
+                                "Comprehensive Cancer Care - Being diagnosed with breast cancer was devastating, but the oncology team at TruHealers provided hope and detailed care. From the first consultation through treatment and follow-ups, their support was phenomenal. I highly recommend TruHealers for comprehensive cancer treatment."
                               </p>
                             </div>
                             <div class="patient-location">
@@ -5166,7 +5193,7 @@ body {
                         <div class="about-us-wrap">
                           <div class="img">
                             <img
-                              src="assets/choose-artemis.webp"
+                              src="assets/why-choose-us.jpg"
                               width="407"
                               height="219"
                               alt="Fortis International Hospitals- Healthcare of International Standards within the reach of each"
@@ -5339,9 +5366,9 @@ body {
                             </li>
                             
                             <li>
-                              <h4 class="faq-title">Can TruHealershelp with accommodations for my family?</h4>
+                              <h4 class="faq-title">Can TruHealers help with accommodations for my family?</h4>
                               <div class="faq-content">
-                                <p>Yes, we can arrange accommodations for your family or attendants according to your preferences, from budget options to luxury hotels.</p>
+                                <p>Yes,  The Hospital can arrange accommodations for your family or attendants according to your preferences, from budget options to luxury hotels.</p>
                               </div>
                             </li>
                             
@@ -5360,28 +5387,28 @@ body {
                             </li>
                             
                             <li>
-                              <h4 class="faq-title">What payment methods does TruHealersaccept for international patients?</h4>
+                              <h4 class="faq-title">What payment methods does TruHealers accept for international patients?</h4>
                               <div class="faq-content">
-                                <p>TruHealersaccepts various payment methods including wire transfers, major credit cards (VISA, MasterCard, AMEX), and direct payments at the hospital. We can also accommodate payments in multiple currencies.</p>
+                                <p>TruHealers accepts various payment methods including wire transfers, major credit cards (VISA, MasterCard, AMEX), and direct payments at the hospital. We can also accommodate payments in multiple currencies.</p>
                               </div>
                             </li>
                             
                             <li>
                               <h4 class="faq-title">Are there any cultural or religious accommodations available at TruHealers </h4>
                               <div class="faq-content">
-                                <p>Yes, we respect the diverse backgrounds of our international patients. TruHealersprovides various cultural and religious accommodations, including halal meals, spaces for prayer, and language-appropriate religious materials.</p>
+                                <p>Yes, we respect the diverse backgrounds of our international patients. TruHealers provides various cultural and religious accommodations, including halal meals, spaces for prayer, and language-appropriate religious materials.</p>
                               </div>
                             </li>
                             
                             <li>
-                              <h4 class="faq-title">Can TruHealersarrange medical consultations or treatments that are not listed on the website?</h4>
+                              <h4 class="faq-title">Can TruHealers arrange medical consultations or treatments that are not listed on the website?</h4>
                               <div class="faq-content">
                                 <p>Absolutely. If you have specific medical needs, please discuss them with your international patient coordinator. We have a wide network of specialists across various disciplines and can arrange for specialized consultations and treatments as required.</p>
                               </div>
                             </li>
                             
                             <li>
-                              <h4 class="faq-title">How does TruHealersensure privacy and confidentiality for its international patients?</h4>
+                              <h4 class="faq-title">How does TruHealers ensure privacy and confidentiality for its international patients?</h4>
                               <div class="faq-content">
                                 <p>We adhere strictly to patient confidentiality and privacy laws. All medical records, discussions, and treatments are handled with the utmost discretion and security.</p>
                               </div>
@@ -5390,7 +5417,7 @@ body {
                             <li>
                               <h4 class="faq-title">What should I do if there is an emergency situation during my stay?</h4>
                               <div class="faq-content">
-                                <p>TruHealersprovides 24/7 emergency care. In case of an emergency, you can contact the hospital’s main line or speak directly to your international patient coordinator who will ensure rapid response and care.</p>
+                                <p>TruHealers provides 24/7 emergency care. In case of an emergency, you can contact the hospital’s main line or speak directly to your international patient coordinator who will ensure rapid response and care.</p>
                               </div>
                             </li>
                             
@@ -5402,14 +5429,14 @@ body {
                             </li>
                             
                             <li>
-                              <h4 class="faq-title">Can TruHealershelp with extending my medical visa if needed?</h4>
+                              <h4 class="faq-title">Can TruHealers help with extending my medical visa if needed?</h4>
                               <div class="faq-content">
                                 <p>Yes, our dedicated visa assistance team can help with the necessary documentation and procedures to apply for an extension of your medical visa if your treatment requires a longer stay.</p>
                               </div>
                             </li>
                             
                             <li>
-                              <h4 class="faq-title">Does TruHealersprovide support for rehabilitation services post-treatment?</h4>
+                              <h4 class="faq-title">Does TruHealers provide support for rehabilitation services post-treatment?</h4>
                               <div class="faq-content">
                                 <p>Yes, we offer comprehensive rehabilitation services including physical therapy, occupational therapy, and other specialized rehabilitation services tailored to your recovery needs.</p>
                               </div>
@@ -5418,7 +5445,7 @@ body {
                             <li>
                               <h4 class="faq-title">Are there facilities for online consultations with doctors after I return to my country?</h4>
                               <div class="faq-content">
-                                <p>TruHealersoffers tele-consultation services enabling you to continue your follow-up appointments with your treating doctors from the comfort of your home country.</p>
+                                <p>TruHealers offers tele-consultation services enabling you to continue your follow-up appointments with your treating doctors from the comfort of your home country.</p>
                               </div>
                             </li>
                             
