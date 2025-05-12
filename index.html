@@ -1173,6 +1173,8 @@
   --border-radius: 10px;           /* Keeping same border radius */
   --box-shadow: 0 4px 12px rgba(109, 1, 7, 0.1); /* Red-tinted shadow */
   --transition: all 0.3s ease; 
+  --text-color: #333333;
+            --light-bg: #FFF9F9;
       /* Keeping same transition */
 } 
 
@@ -2603,8 +2605,261 @@ body {
               height: 120px;
             }
           }
-        
+          .right-cta-container {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 2px; /* Small gap between buttons */
+        }
 
+        /* Individual CTA buttons */
+        .side-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 160px;
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            border: none;
+            outline: none;
+            background-color: var(--primary-purple);
+            box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+        }
+
+        .side-cta:hover {
+            width: 45px;
+            color: white;
+            text-decoration: none;
+            background-color: var(--dark-purple);
+        }
+
+        /* Contact button with icon */
+        .side-cta.contact {
+            height: 45px;
+            width: 35px;
+            writing-mode: horizontal-tb;
+            transform: none;
+            font-size: 18px;
+        }
+
+        .side-cta.contact:hover {
+            width: 45px;
+        }
+
+        /* Phone icon */
+        .phone-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .phone-icon::before {
+            content: "📞";
+            font-size: 16px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .side-cta {
+                width: 30px;
+                height: 130px;
+                font-size: 11px;
+                letter-spacing: 0.3px;
+            }
+            
+            .side-cta:hover {
+                width: 35px;
+            }
+            
+            .side-cta.contact {
+                height: 40px;
+                width: 30px;
+            }
+            
+            .side-cta.contact:hover {
+                width: 35px;
+            }
+            
+            .phone-icon::before {
+                font-size: 14px;
+            }
+        }
+
+        /* Very small screens */
+        @media (max-width: 480px) {
+            .right-cta-container {
+                top: 60%;
+            }
+            
+            .side-cta {
+                width: 28px;
+                height: 110px;
+                font-size: 10px;
+            }
+            
+            .side-cta.contact {
+                height: 35px;
+                width: 28px;
+            }
+            
+            .phone-icon::before {
+                font-size: 12px;
+            }
+        }
+
+        /* Ensure text stays centered */
+        .side-cta {
+            padding: 15px 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .th-intl-patients-section {
+            width: 100%;
+            padding: 30px 0;
+            background-color: var(--light-bg);
+            position: relative;
+        }
+
+        .th-intl-container {
+            max-width: 1270px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 768px) {
+            .th-intl-refined-section {
+                display: none !important;
+            }
+        }
+
+        /* Main Section - Desktop Only */
+        .th-intl-refined-section {
+            width: 100%;
+            padding: 50px 0;
+            /* background-color: var(--light-bg); */
+            position: relative;
+        }
+
+        .th-intl-refined-container {
+            max-width: 1270px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Content Wrapper */
+        .th-intl-refined-content {
+            background: white;
+            padding: 30px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            max-width: 1270px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Accent Border */
+        .th-intl-refined-content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            /* background: linear-gradient(180deg, var(--primary-purple) 0%, var(--light-purple) 100%); */
+        }
+
+        /* Main Text */
+        .th-intl-refined-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Brand Name */
+        .th-intl-brand-name {
+            color: var(--primary-purple);
+            font-weight: 600;
+            font-size: 19px;
+        }
+
+        /* Emphasized Text */
+        .th-intl-emphasis {
+            color: var(--primary-purple);
+            font-weight: 500;
+        }
+
+        /* Top Decoration */
+        .th-intl-top-accent {
+            width: 60px;
+            height: 2px;
+            background: var(--primary-purple);
+            margin: 0 auto 30px;
+        }
+
+        /* Subtle Animation */
+        .th-intl-refined-content {
+            animation: thIntlSubtleFadeIn 1.2s ease-out;
+        }
+
+        @keyframes thIntlSubtleFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hover Effect */
+        .th-intl-refined-content {
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .th-intl-refined-content:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+
+        /* Optional: Small icon */
+        .th-intl-small-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-purple);
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .th-intl-icon-wrapper {
+            text-align: center;
+        }
   </style>
     </head>
 
@@ -2950,6 +3205,18 @@ body {
         </div>
       </div>
     </div>
+
+    <div class="right-cta-container">
+      <a href="https://wa.me/+918800154003" class="side-cta book-appointment">
+          Book Doctor Appointment
+      </a>
+      <a href="" class="side-cta second-opinion" data-bs-toggle="modal" data-bs-target="#treatmentModal">
+          Free Second Opinion
+      </a>
+      <!-- <a href="https://wa.me/+918800154003" class="side-cta whatsapp" target="_blank">
+          <span class="whatsapp-icon">💬</span>
+      </a> -->
+  </div>
     
     <!-- Floating WhatsApp button -->
     <a href="https://wa.me/+91 8800154003" class="tpe-whatsapp-float" target="_blank">
@@ -3179,7 +3446,7 @@ body {
                                     </picture>
                                   </div>
                                   <div class="truh-banner-content">
-                                    <div class="truh-wrapper">
+                                    <!-- <div class="truh-wrapper">
                                       <div class="truh-banner-left">
                                         <div class="truh-banner-text">
                                           <h1>TruHealers- International Patients Department</h1>
@@ -3187,7 +3454,7 @@ body {
                                         </div>
                                       </div>
                                       <div class="truh-banner-right"></div>
-                                    </div>
+                                    </div> -->
                                   </div>
                                 </div>
                               </span>
@@ -3207,7 +3474,7 @@ body {
                                       <img class="truh-mob-banner" src="assets/mob-banner/2.webp" alt="Premier Healthcare Mobile Banner" />
                                     </picture>
                                   </div>
-                                  <div class="truh-banner-content">
+                                  <!-- <div class="truh-banner-content">
                                     <div class="truh-wrapper">
                                       <div class="truh-banner-left">
                                         <div class="truh-banner-text">
@@ -3217,7 +3484,7 @@ body {
                                       </div>
                                       <div class="truh-banner-right"></div>
                                     </div>
-                                  </div>
+                                  </div> -->
                                 </div>
                               </span>
                             </div>
@@ -3237,7 +3504,7 @@ body {
                                       <img class="truh-mob-banner" src="assets/mob-banner/3.webp" alt="Premier Healthcare Mobile Banner" />
                                     </picture>
                                   </div>
-                                  <div class="truh-banner-content">
+                                  <!-- <div class="truh-banner-content">
                                     <div class="truh-wrapper">
                                       <div class="truh-banner-left">
                                         <div class="truh-banner-text">
@@ -3247,7 +3514,7 @@ body {
                                       </div>
                                       <div class="truh-banner-right"></div>
                                     </div>
-                                  </div>
+                                  </div> -->
                                 </div>
                               </span>
                             </div>
@@ -3267,7 +3534,7 @@ body {
                                       <img class="truh-mob-banner" src="assets/mob-banner/4.webp" alt="Premier Healthcare Mobile Banner" />
                                     </picture>
                                   </div>
-                                  <div class="truh-banner-content">
+                                  <!-- <div class="truh-banner-content">
                                     <div class="truh-wrapper">
                                       <div class="truh-banner-left">
                                         <div class="truh-banner-text">
@@ -3277,7 +3544,7 @@ body {
                                       </div>
                                       <div class="truh-banner-right"></div>
                                     </div>
-                                  </div>
+                                  </div> -->
                                 </div>
                               </span>
                             </div>
@@ -3297,7 +3564,7 @@ body {
                                       <img class="truh-mob-banner" src="assets/mob-banner/YASHODA.webp" alt="Health Journey Mobile Banner" />
                                     </picture>
                                   </div>
-                                  <div class="truh-banner-content">
+                                  <!-- <div class="truh-banner-content">
                                     <div class="truh-wrapper">
                                       <div class="truh-banner-left">
                                         <div class="truh-banner-text">
@@ -3307,7 +3574,7 @@ body {
                                       </div>
                                       <div class="truh-banner-right"></div>
                                     </div>
-                                  </div>
+                                  </div> -->
                                 </div>
                               </span>
                             </div>
@@ -3334,7 +3601,19 @@ body {
         </div>
 
 
-
+        <section class="th-intl-refined-section">
+          <div class="th-intl-refined-container">
+              <div class="th-intl-refined-content">
+                  <div class="th-intl-icon-wrapper">
+                      <div class="th-intl-small-icon">⚕</div>
+                  </div>
+                  <div class="th-intl-top-accent"></div>
+                  <p class="th-intl-refined-text">
+                      At <span class="th-intl-brand-name">TruHealers</span>, we are committed to delivering exceptional medical care and making our international patients <span class="th-intl-emphasis">feel at home</span> during their stay. Whether you're seeking a consultation, second opinion, or specialized medical treatment, our International Patients Department is here to ensure a <span class="th-intl-emphasis">seamless and supportive experience</span>.
+                  </p>
+              </div>
+          </div>
+      </section>
 
 
 
@@ -3361,7 +3640,7 @@ body {
 
 
 
-        <section class="logo-showcase pt-5 pb-0">
+        <section class="logo-showcase pt-4 pb-0">
           <div class="container" style="max-width: 1270px;">
               
               <div class="logo-slider">
@@ -3493,447 +3772,7 @@ body {
 
                 
 
-                <div class="get-an-estimate" id=form>
-                  <form id="contact-form" class="get-an-estimate-form" accept-charset='UTF-8' action='#' method='POST'>
-                    <h2 class="heading2 mb-4" style ="font-size: 2rem; font-weight: 700;">
-                      Get A Personalised Treatment Plan 
-                    </h2>
-                    <div class="first-wrap">
-                      <div
-                        class="js-form-item form-item js-form-type-textfield form-item-int-name js-form-item-int-name"
-                      >
-                        <label class="form-required" for="edit-int-name"
-                          >Name of the Patient</label
-                        >
-                        <input
-                          data-drupal-selector="edit-int-name"
-                          type="text"
-                          id="edit-int-name"
-                          name="patientName"
-                          value=""
-                          size="60"
-                          maxlength="40"
-                          class="form-text"
-                          required
-                        />
-                      </div>
-                      <div
-                        class="js-form-item form-item js-form-type-tel form-item-age js-form-item-age"
-                      >
-                        <label
-                          for="edit-age"
-                          >Age</label
-                        >
-                        <input
-                          data-drupal-selector="edit-age"
-                          type="tel"
-                          id="edit-age"
-                          name="PatientAge"
-                          value=""
-                          size="30"
-                          maxlength="3"
-                          class="form-tel required"
-                        />
-                      </div>
-                      <div
-                        class="js-form-item form-item js-form-type-select form-item-gender js-form-item-gender"
-                      >
-                        <label for="edit-gender"
-                          >Gender</label
-                        >
-                        <select
-                          data-drupal-selector="edit-gender"
-                          id="edit-gender"
-                          name="gender"
-                          class="form-select"
-                        >
-                          <option value="0">Select Gender</option>
-                          <option value="male">Male</option>
-                          <option value="female">Female</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="second-wrap">
-                      <div
-                        class="js-form-item form-item js-form-type-tel form-item-int-country-code js-form-item-int-country-code"
-                      >
-                        <label class="form-required" for="edit-int-country-code"
-                          >Country Code</label
-                        >
-                        <input
-                          data-drupal-selector="edit-int-country-code"
-                          type="tel"
-                          id="edit-int-country-code"
-                          name="countryCode"
-                          value=""
-                          size="30"
-                          maxlength="5"
-                          class="form-tel"
-                          required
-                        />
-                      </div>
-                      <div
-                        class="js-form-item form-item js-form-type-tel form-item-int-mobile-number js-form-item-int-mobile-number"
-                      >
-                        <label
-                          class="form-required"
-                          for="edit-int-mobile-number"
-                          >Contact No</label
-                        >
-                        <input
-                          data-drupal-selector="edit-int-mobile-number"
-                          type="tel"
-                          id="edit-int-mobile-number"
-                          name="patientNumber"
-                          value=""
-                          size="30"
-                          maxlength="128"
-                          class="form-tel"
-                          oninput="limitNumberLength(this, 9+1)"
-                          required
-                        />
-                      </div>
-                      <div
-                        class="js-form-item form-item js-form-type-select form-item-country js-form-item-country"
-                      >
-                        <label class="form-required" for="edit-country"
-                          >Country</label
-                        >
-                        <select
-                          data-drupal-selector="edit-country"
-                          id="edit-country"
-                          name="country"
-                          class="form-select"
-                        >
-                          <option value="0">Please select Country</option>
-                          <option value="AF">Afghanistan</option>
-                          <option value="AL">Albania</option>
-                          <option value="DZ">Algeria</option>
-                          <option value="AS">American Samoa</option>
-                          <option value="AD">Andorra</option>
-                          <option value="AO">Angola</option>
-                          <option value="AI">Anguilla</option>
-                          <option value="AQ">Antarctica</option>
-                          <option value="AG">Antigua & Barbuda</option>
-                          <option value="AR">Argentina</option>
-                          <option value="AM">Armenia</option>
-                          <option value="AW">Aruba</option>
-                          <option value="AC">Ascension Island</option>
-                          <option value="AU">Australia</option>
-                          <option value="AT">Austria</option>
-                          <option value="AZ">Azerbaijan</option>
-                          <option value="BS">Bahamas</option>
-                          <option value="BH">Bahrain</option>
-                          <option value="BD">Bangladesh</option>
-                          <option value="BB">Barbados</option>
-                          <option value="BY">Belarus</option>
-                          <option value="BE">Belgium</option>
-                          <option value="BZ">Belize</option>
-                          <option value="BJ">Benin</option>
-                          <option value="BM">Bermuda</option>
-                          <option value="BT">Bhutan</option>
-                          <option value="BO">Bolivia</option>
-                          <option value="BA">Bosnia & Herzegovina</option>
-                          <option value="BW">Botswana</option>
-                          <option value="BV">Bouvet Island</option>
-                          <option value="BR">Brazil</option>
-                          <option value="IO">
-                            British Indian Ocean Territory
-                          </option>
-                          <option value="VG">British Virgin Islands</option>
-                          <option value="BN">Brunei</option>
-                          <option value="BG">Bulgaria</option>
-                          <option value="BF">Burkina Faso</option>
-                          <option value="BI">Burundi</option>
-                          <option value="KH">Cambodia</option>
-                          <option value="CM">Cameroon</option>
-                          <option value="CA">Canada</option>
-                          <option value="IC">Canary Islands</option>
-                          <option value="CV">Cape Verde</option>
-                          <option value="BQ">Caribbean Netherlands</option>
-                          <option value="KY">Cayman Islands</option>
-                          <option value="CF">Central African Republic</option>
-                          <option value="EA">Ceuta & Melilla</option>
-                          <option value="TD">Chad</option>
-                          <option value="CL">Chile</option>
-                          <option value="CN">China</option>
-                          <option value="CX">Christmas Island</option>
-                          <option value="CP">Clipperton Island</option>
-                          <option value="CC">Cocos (Keeling) Islands</option>
-                          <option value="CO">Colombia</option>
-                          <option value="KM">Comoros</option>
-                          <option value="CG">Congo - Brazzaville</option>
-                          <option value="CD">Congo - Kinshasa</option>
-                          <option value="CK">Cook Islands</option>
-                          <option value="CR">Costa Rica</option>
-                          <option value="HR">Croatia</option>
-                          <option value="CU">Cuba</option>
-                          <option value="CW">Curaçao</option>
-                          <option value="CY">Cyprus</option>
-                          <option value="CZ">Czechia</option>
-                          <option value="CI">Côte d’Ivoire</option>
-                          <option value="DK">Denmark</option>
-                          <option value="DG">Diego Garcia</option>
-                          <option value="DJ">Djibouti</option>
-                          <option value="DM">Dominica</option>
-                          <option value="DO">Dominican Republic</option>
-                          <option value="EC">Ecuador</option>
-                          <option value="EG">Egypt</option>
-                          <option value="SV">El Salvador</option>
-                          <option value="GQ">Equatorial Guinea</option>
-                          <option value="ER">Eritrea</option>
-                          <option value="EE">Estonia</option>
-                          <option value="SZ">Eswatini</option>
-                          <option value="ET">Ethiopia</option>
-                          <option value="FK">Falkland Islands</option>
-                          <option value="FO">Faroe Islands</option>
-                          <option value="FJ">Fiji</option>
-                          <option value="FI">Finland</option>
-                          <option value="FR">France</option>
-                          <option value="GF">French Guiana</option>
-                          <option value="PF">French Polynesia</option>
-                          <option value="TF">
-                            French Southern Territories
-                          </option>
-                          <option value="GA">Gabon</option>
-                          <option value="GM">Gambia</option>
-                          <option value="GE">Georgia</option>
-                          <option value="DE">Germany</option>
-                          <option value="GH">Ghana</option>
-                          <option value="GI">Gibraltar</option>
-                          <option value="GR">Greece</option>
-                          <option value="GL">Greenland</option>
-                          <option value="GD">Grenada</option>
-                          <option value="GP">Guadeloupe</option>
-                          <option value="GU">Guam</option>
-                          <option value="GT">Guatemala</option>
-                          <option value="GG">Guernsey</option>
-                          <option value="GN">Guinea</option>
-                          <option value="GW">Guinea-Bissau</option>
-                          <option value="GY">Guyana</option>
-                          <option value="HT">Haiti</option>
-                          <option value="HM">Heard & McDonald Islands</option>
-                          <option value="HN">Honduras</option>
-                          <option value="HK">Hong Kong SAR China</option>
-                          <option value="HU">Hungary</option>
-                          <option value="IS">Iceland</option>
-                          <option value="IN">India</option>
-                          <option value="ID">Indonesia</option>
-                          <option value="IR">Iran</option>
-                          <option value="IQ">Iraq</option>
-                          <option value="IE">Ireland</option>
-                          <option value="IM">Isle of Man</option>
-                          <option value="IL">Israel</option>
-                          <option value="IT">Italy</option>
-                          <option value="JM">Jamaica</option>
-                          <option value="JP">Japan</option>
-                          <option value="JE">Jersey</option>
-                          <option value="JO">Jordan</option>
-                          <option value="KZ">Kazakhstan</option>
-                          <option value="KE">Kenya</option>
-                          <option value="KI">Kiribati</option>
-                          <option value="XK">Kosovo</option>
-                          <option value="KW">Kuwait</option>
-                          <option value="KG">Kyrgyzstan</option>
-                          <option value="LA">Laos</option>
-                          <option value="LV">Latvia</option>
-                          <option value="LB">Lebanon</option>
-                          <option value="LS">Lesotho</option>
-                          <option value="LR">Liberia</option>
-                          <option value="LY">Libya</option>
-                          <option value="LI">Liechtenstein</option>
-                          <option value="LT">Lithuania</option>
-                          <option value="LU">Luxembourg</option>
-                          <option value="MO">Macao SAR China</option>
-                          <option value="MG">Madagascar</option>
-                          <option value="MW">Malawi</option>
-                          <option value="MY">Malaysia</option>
-                          <option value="MV">Maldives</option>
-                          <option value="ML">Mali</option>
-                          <option value="MT">Malta</option>
-                          <option value="MH">Marshall Islands</option>
-                          <option value="MQ">Martinique</option>
-                          <option value="MR">Mauritania</option>
-                          <option value="MU">Mauritius</option>
-                          <option value="YT">Mayotte</option>
-                          <option value="MX">Mexico</option>
-                          <option value="FM">Micronesia</option>
-                          <option value="MD">Moldova</option>
-                          <option value="MC">Monaco</option>
-                          <option value="MN">Mongolia</option>
-                          <option value="ME">Montenegro</option>
-                          <option value="MS">Montserrat</option>
-                          <option value="MA">Morocco</option>
-                          <option value="MZ">Mozambique</option>
-                          <option value="MM">Myanmar (Burma)</option>
-                          <option value="NA">Namibia</option>
-                          <option value="NR">Nauru</option>
-                          <option value="NP">Nepal</option>
-                          <option value="NL">Netherlands</option>
-                          <option value="AN">Netherlands Antilles</option>
-                          <option value="NC">New Caledonia</option>
-                          <option value="NZ">New Zealand</option>
-                          <option value="NI">Nicaragua</option>
-                          <option value="NE">Niger</option>
-                          <option value="NG">Nigeria</option>
-                          <option value="NU">Niue</option>
-                          <option value="NF">Norfolk Island</option>
-                          <option value="MP">Northern Mariana Islands</option>
-                          <option value="KP">North Korea</option>
-                          <option value="MK">North Macedonia</option>
-                          <option value="NO">Norway</option>
-                          <option value="OM">Oman</option>
-                          <option value="QO">Outlying Oceania</option>
-                          <option value="PK">Pakistan</option>
-                          <option value="PW">Palau</option>
-                          <option value="PS">Palestinian Territories</option>
-                          <option value="PA">Panama</option>
-                          <option value="PG">Papua New Guinea</option>
-                          <option value="PY">Paraguay</option>
-                          <option value="PE">Peru</option>
-                          <option value="PH">Philippines</option>
-                          <option value="PN">Pitcairn Islands</option>
-                          <option value="PL">Poland</option>
-                          <option value="PT">Portugal</option>
-                          <option value="PR">Puerto Rico</option>
-                          <option value="QA">Qatar</option>
-                          <option value="RO">Romania</option>
-                          <option value="RU">Russia</option>
-                          <option value="RW">Rwanda</option>
-                          <option value="RE">Réunion</option>
-                          <option value="WS">Samoa</option>
-                          <option value="SM">San Marino</option>
-                          <option value="SA">Saudi Arabia</option>
-                          <option value="SN">Senegal</option>
-                          <option value="RS">Serbia</option>
-                          <option value="SC">Seychelles</option>
-                          <option value="SL">Sierra Leone</option>
-                          <option value="SG">Singapore</option>
-                          <option value="SX">Sint Maarten</option>
-                          <option value="SK">Slovakia</option>
-                          <option value="SI">Slovenia</option>
-                          <option value="SB">Solomon Islands</option>
-                          <option value="SO">Somalia</option>
-                          <option value="ZA">South Africa</option>
-                          <option value="GS">
-                            South Georgia & South Sandwich Islands
-                          </option>
-                          <option value="KR">South Korea</option>
-                          <option value="SS">South Sudan</option>
-                          <option value="ES">Spain</option>
-                          <option value="LK">Sri Lanka</option>
-                          <option value="BL">St. Barthélemy</option>
-                          <option value="SH">St. Helena</option>
-                          <option value="KN">St. Kitts & Nevis</option>
-                          <option value="LC">St. Lucia</option>
-                          <option value="MF">St. Martin</option>
-                          <option value="PM">St. Pierre & Miquelon</option>
-                          <option value="VC">St. Vincent & Grenadines</option>
-                          <option value="SD">Sudan</option>
-                          <option value="SR">Suriname</option>
-                          <option value="SJ">Svalbard & Jan Mayen</option>
-                          <option value="SE">Sweden</option>
-                          <option value="CH">Switzerland</option>
-                          <option value="SY">Syria</option>
-                          <option value="ST">São Tomé & Príncipe</option>
-                          <option value="TW">Taiwan</option>
-                          <option value="TJ">Tajikistan</option>
-                          <option value="TZ">Tanzania</option>
-                          <option value="TH">Thailand</option>
-                          <option value="TL">Timor-Leste</option>
-                          <option value="TG">Togo</option>
-                          <option value="TK">Tokelau</option>
-                          <option value="TO">Tonga</option>
-                          <option value="TT">Trinidad & Tobago</option>
-                          <option value="TA">Tristan da Cunha</option>
-                          <option value="TN">Tunisia</option>
-                          <option value="TR">Turkey</option>
-                          <option value="TM">Turkmenistan</option>
-                          <option value="TC">Turks & Caicos Islands</option>
-                          <option value="TV">Tuvalu</option>
-                          <option value="UM">U.S. Outlying Islands</option>
-                          <option value="VI">U.S. Virgin Islands</option>
-                          <option value="UG">Uganda</option>
-                          <option value="UA">Ukraine</option>
-                          <option value="AE">United Arab Emirates</option>
-                          <option value="GB">United Kingdom</option>
-                          <option value="US">United States</option>
-                          <option value="UY">Uruguay</option>
-                          <option value="UZ">Uzbekistan</option>
-                          <option value="VU">Vanuatu</option>
-                          <option value="VA">Vatican City</option>
-                          <option value="VE">Venezuela</option>
-                          <option value="VN">Vietnam</option>
-                          <option value="WF">Wallis & Futuna</option>
-                          <option value="EH">Western Sahara</option>
-                          <option value="YE">Yemen</option>
-                          <option value="ZM">Zambia</option>
-                          <option value="ZW">Zimbabwe</option>
-                          <option value="AX">Åland Islands</option>
-                        </select>
-                      </div>
-                    </div>
-                    
-                    
-                    <fieldset
-                      data-drupal-selector="edit-feedback-wrapper"
-                      id="edit-feedback-wrapper"
-                      class="js-form-item form-item js-form-wrapper form-wrapper"
-                    >
-                      <legend>
-                        <span class="fieldset-legend"></span>
-                      </legend>
-                      <div class="fieldset-wrapper">
-                        <div class="wrap-feedback">
-                          <div
-                            class="js-form-item form-item js-form-type-textarea form-item-feedback js-form-item-feedback"
-                          >
-                            <label for="edit-feedback--2">Your Message</label>
-                            <div>
-                              <textarea
-                                data-drupal-selector="edit-feedback"
-                                id="edit-feedback--2"
-                                name="message"
-                                rows="5"
-                                cols="60"
-                                class="form-textarea"
-                              ></textarea>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-                    <div class="submit-btn">
-                        <button class="button" type="submit">Get An Estimate</button>
-                      <!--<input-->
-                      <!--  data-drupal-selector="edit-submit"-->
-                      <!--  type="submit"-->
-                      <!--  id="edit-submit"-->
-                      <!--  name="op"-->
-                      <!--  value="Get An Estimate"-->
-                      <!--  class="button js-form-submit form-submit"-->
-                      <!--/>-->
-                      <div class="submit-btn-text">
-                        
-                        
-                        <div class="dis">
-                          <strong>Disclaimer:</strong> This is an indicative
-                          cost based on the reports/ information shared with us.
-                          Final estimate will be shared once patient is
-                          physically evaluated.
-                        </div>
-                      </div>
-                      
-                      <input
-                        data-drupal-selector="edit-get-an-estimate-form"
-                        type="hidden"
-                        name="form_id"
-                        value="get_an_estimate_form"
-                      />
-                      <div class="messages-status"></div>
-                    </div>
-                  </form>
-                </div>
+                
                 
                  <div class="views-element-container">
                   <div
@@ -4406,7 +4245,9 @@ body {
                         <div class="row ">
                             <div class="col-12">
                                 <h3 class="subtitle text-center mb-4">Cost Advantage:  India vs Western Countries </h3>
-                                <h4 class="subtitle text-center ">Save upto 50% cost compared to US costs</h4>
+                                <h4 class="subtitle text-center p-1 m-1">● Save upto 50% cost compared to US costs</h4>
+                                <h4 class="subtitle text-center p-1 m-1">● No waiting time</h4>
+                                <h4 class="subtitle text-center p-1 m-1">● Internationally trained Doctors</h4>
                             </div>
                             
                             <div class="col-lg-4 mb-4">
@@ -4526,8 +4367,8 @@ body {
                                         <i class="fas fa-language"></i>
                                     </div>
                                     <div>
-                                        <h4 class="benefit-title">English-Speaking Staff</h4>
-                                        <p class="mb-0">English is widely spoken in Indian medical facilities, eliminating language barriers for international patients from English-speaking countries.</p>
+                                        <h4 class="benefit-title">Multilingual-Speaking Staff</h4>
+                                        <p class="mb-0">English is widely spoken along with other languages like French, Spanish, Burmese, Russian and many      more.</p>
                                     </div>
                                 </div>
                             </div>
@@ -4846,6 +4687,447 @@ body {
         </div>
     </section>
                 
+    <div class="get-an-estimate" id=form>
+      <form id="contact-form" class="get-an-estimate-form" accept-charset='UTF-8' action='#' method='POST'>
+        <h2 class="heading2 mb-4" style ="font-size: 2rem; font-weight: 700;">
+          Get A Personalised Treatment Plan 
+        </h2>
+        <div class="first-wrap">
+          <div
+            class="js-form-item form-item js-form-type-textfield form-item-int-name js-form-item-int-name"
+          >
+            <label class="form-required" for="edit-int-name"
+              >Name of the Patient</label
+            >
+            <input
+              data-drupal-selector="edit-int-name"
+              type="text"
+              id="edit-int-name"
+              name="patientName"
+              value=""
+              size="60"
+              maxlength="40"
+              class="form-text"
+              required
+            />
+          </div>
+          <div
+            class="js-form-item form-item js-form-type-tel form-item-age js-form-item-age"
+          >
+            <label
+              for="edit-age"
+              >Age</label
+            >
+            <input
+              data-drupal-selector="edit-age"
+              type="tel"
+              id="edit-age"
+              name="PatientAge"
+              value=""
+              size="30"
+              maxlength="3"
+              class="form-tel required"
+            />
+          </div>
+          <div
+            class="js-form-item form-item js-form-type-select form-item-gender js-form-item-gender"
+          >
+            <label for="edit-gender"
+              >Gender</label
+            >
+            <select
+              data-drupal-selector="edit-gender"
+              id="edit-gender"
+              name="gender"
+              class="form-select"
+            >
+              <option value="0">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="second-wrap">
+          <div
+            class="js-form-item form-item js-form-type-tel form-item-int-country-code js-form-item-int-country-code"
+          >
+            <label class="form-required" for="edit-int-country-code"
+              >Country Code</label
+            >
+            <input
+              data-drupal-selector="edit-int-country-code"
+              type="tel"
+              id="edit-int-country-code"
+              name="countryCode"
+              value=""
+              size="30"
+              maxlength="5"
+              class="form-tel"
+              required
+            />
+          </div>
+          <div
+            class="js-form-item form-item js-form-type-tel form-item-int-mobile-number js-form-item-int-mobile-number"
+          >
+            <label
+              class="form-required"
+              for="edit-int-mobile-number"
+              >Contact No</label
+            >
+            <input
+              data-drupal-selector="edit-int-mobile-number"
+              type="tel"
+              id="edit-int-mobile-number"
+              name="patientNumber"
+              value=""
+              size="30"
+              maxlength="128"
+              class="form-tel"
+              oninput="limitNumberLength(this, 9+1)"
+              required
+            />
+          </div>
+          <div
+            class="js-form-item form-item js-form-type-select form-item-country js-form-item-country"
+          >
+            <label class="form-required" for="edit-country"
+              >Country</label
+            >
+            <select
+              data-drupal-selector="edit-country"
+              id="edit-country"
+              name="country"
+              class="form-select"
+            >
+              <option value="0">Please select Country</option>
+              <option value="AF">Afghanistan</option>
+              <option value="AL">Albania</option>
+              <option value="DZ">Algeria</option>
+              <option value="AS">American Samoa</option>
+              <option value="AD">Andorra</option>
+              <option value="AO">Angola</option>
+              <option value="AI">Anguilla</option>
+              <option value="AQ">Antarctica</option>
+              <option value="AG">Antigua & Barbuda</option>
+              <option value="AR">Argentina</option>
+              <option value="AM">Armenia</option>
+              <option value="AW">Aruba</option>
+              <option value="AC">Ascension Island</option>
+              <option value="AU">Australia</option>
+              <option value="AT">Austria</option>
+              <option value="AZ">Azerbaijan</option>
+              <option value="BS">Bahamas</option>
+              <option value="BH">Bahrain</option>
+              <option value="BD">Bangladesh</option>
+              <option value="BB">Barbados</option>
+              <option value="BY">Belarus</option>
+              <option value="BE">Belgium</option>
+              <option value="BZ">Belize</option>
+              <option value="BJ">Benin</option>
+              <option value="BM">Bermuda</option>
+              <option value="BT">Bhutan</option>
+              <option value="BO">Bolivia</option>
+              <option value="BA">Bosnia & Herzegovina</option>
+              <option value="BW">Botswana</option>
+              <option value="BV">Bouvet Island</option>
+              <option value="BR">Brazil</option>
+              <option value="IO">
+                British Indian Ocean Territory
+              </option>
+              <option value="VG">British Virgin Islands</option>
+              <option value="BN">Brunei</option>
+              <option value="BG">Bulgaria</option>
+              <option value="BF">Burkina Faso</option>
+              <option value="BI">Burundi</option>
+              <option value="KH">Cambodia</option>
+              <option value="CM">Cameroon</option>
+              <option value="CA">Canada</option>
+              <option value="IC">Canary Islands</option>
+              <option value="CV">Cape Verde</option>
+              <option value="BQ">Caribbean Netherlands</option>
+              <option value="KY">Cayman Islands</option>
+              <option value="CF">Central African Republic</option>
+              <option value="EA">Ceuta & Melilla</option>
+              <option value="TD">Chad</option>
+              <option value="CL">Chile</option>
+              <option value="CN">China</option>
+              <option value="CX">Christmas Island</option>
+              <option value="CP">Clipperton Island</option>
+              <option value="CC">Cocos (Keeling) Islands</option>
+              <option value="CO">Colombia</option>
+              <option value="KM">Comoros</option>
+              <option value="CG">Congo - Brazzaville</option>
+              <option value="CD">Congo - Kinshasa</option>
+              <option value="CK">Cook Islands</option>
+              <option value="CR">Costa Rica</option>
+              <option value="HR">Croatia</option>
+              <option value="CU">Cuba</option>
+              <option value="CW">Curaçao</option>
+              <option value="CY">Cyprus</option>
+              <option value="CZ">Czechia</option>
+              <option value="CI">Côte d’Ivoire</option>
+              <option value="DK">Denmark</option>
+              <option value="DG">Diego Garcia</option>
+              <option value="DJ">Djibouti</option>
+              <option value="DM">Dominica</option>
+              <option value="DO">Dominican Republic</option>
+              <option value="EC">Ecuador</option>
+              <option value="EG">Egypt</option>
+              <option value="SV">El Salvador</option>
+              <option value="GQ">Equatorial Guinea</option>
+              <option value="ER">Eritrea</option>
+              <option value="EE">Estonia</option>
+              <option value="SZ">Eswatini</option>
+              <option value="ET">Ethiopia</option>
+              <option value="FK">Falkland Islands</option>
+              <option value="FO">Faroe Islands</option>
+              <option value="FJ">Fiji</option>
+              <option value="FI">Finland</option>
+              <option value="FR">France</option>
+              <option value="GF">French Guiana</option>
+              <option value="PF">French Polynesia</option>
+              <option value="TF">
+                French Southern Territories
+              </option>
+              <option value="GA">Gabon</option>
+              <option value="GM">Gambia</option>
+              <option value="GE">Georgia</option>
+              <option value="DE">Germany</option>
+              <option value="GH">Ghana</option>
+              <option value="GI">Gibraltar</option>
+              <option value="GR">Greece</option>
+              <option value="GL">Greenland</option>
+              <option value="GD">Grenada</option>
+              <option value="GP">Guadeloupe</option>
+              <option value="GU">Guam</option>
+              <option value="GT">Guatemala</option>
+              <option value="GG">Guernsey</option>
+              <option value="GN">Guinea</option>
+              <option value="GW">Guinea-Bissau</option>
+              <option value="GY">Guyana</option>
+              <option value="HT">Haiti</option>
+              <option value="HM">Heard & McDonald Islands</option>
+              <option value="HN">Honduras</option>
+              <option value="HK">Hong Kong SAR China</option>
+              <option value="HU">Hungary</option>
+              <option value="IS">Iceland</option>
+              <option value="IN">India</option>
+              <option value="ID">Indonesia</option>
+              <option value="IR">Iran</option>
+              <option value="IQ">Iraq</option>
+              <option value="IE">Ireland</option>
+              <option value="IM">Isle of Man</option>
+              <option value="IL">Israel</option>
+              <option value="IT">Italy</option>
+              <option value="JM">Jamaica</option>
+              <option value="JP">Japan</option>
+              <option value="JE">Jersey</option>
+              <option value="JO">Jordan</option>
+              <option value="KZ">Kazakhstan</option>
+              <option value="KE">Kenya</option>
+              <option value="KI">Kiribati</option>
+              <option value="XK">Kosovo</option>
+              <option value="KW">Kuwait</option>
+              <option value="KG">Kyrgyzstan</option>
+              <option value="LA">Laos</option>
+              <option value="LV">Latvia</option>
+              <option value="LB">Lebanon</option>
+              <option value="LS">Lesotho</option>
+              <option value="LR">Liberia</option>
+              <option value="LY">Libya</option>
+              <option value="LI">Liechtenstein</option>
+              <option value="LT">Lithuania</option>
+              <option value="LU">Luxembourg</option>
+              <option value="MO">Macao SAR China</option>
+              <option value="MG">Madagascar</option>
+              <option value="MW">Malawi</option>
+              <option value="MY">Malaysia</option>
+              <option value="MV">Maldives</option>
+              <option value="ML">Mali</option>
+              <option value="MT">Malta</option>
+              <option value="MH">Marshall Islands</option>
+              <option value="MQ">Martinique</option>
+              <option value="MR">Mauritania</option>
+              <option value="MU">Mauritius</option>
+              <option value="YT">Mayotte</option>
+              <option value="MX">Mexico</option>
+              <option value="FM">Micronesia</option>
+              <option value="MD">Moldova</option>
+              <option value="MC">Monaco</option>
+              <option value="MN">Mongolia</option>
+              <option value="ME">Montenegro</option>
+              <option value="MS">Montserrat</option>
+              <option value="MA">Morocco</option>
+              <option value="MZ">Mozambique</option>
+              <option value="MM">Myanmar (Burma)</option>
+              <option value="NA">Namibia</option>
+              <option value="NR">Nauru</option>
+              <option value="NP">Nepal</option>
+              <option value="NL">Netherlands</option>
+              <option value="AN">Netherlands Antilles</option>
+              <option value="NC">New Caledonia</option>
+              <option value="NZ">New Zealand</option>
+              <option value="NI">Nicaragua</option>
+              <option value="NE">Niger</option>
+              <option value="NG">Nigeria</option>
+              <option value="NU">Niue</option>
+              <option value="NF">Norfolk Island</option>
+              <option value="MP">Northern Mariana Islands</option>
+              <option value="KP">North Korea</option>
+              <option value="MK">North Macedonia</option>
+              <option value="NO">Norway</option>
+              <option value="OM">Oman</option>
+              <option value="QO">Outlying Oceania</option>
+              <option value="PK">Pakistan</option>
+              <option value="PW">Palau</option>
+              <option value="PS">Palestinian Territories</option>
+              <option value="PA">Panama</option>
+              <option value="PG">Papua New Guinea</option>
+              <option value="PY">Paraguay</option>
+              <option value="PE">Peru</option>
+              <option value="PH">Philippines</option>
+              <option value="PN">Pitcairn Islands</option>
+              <option value="PL">Poland</option>
+              <option value="PT">Portugal</option>
+              <option value="PR">Puerto Rico</option>
+              <option value="QA">Qatar</option>
+              <option value="RO">Romania</option>
+              <option value="RU">Russia</option>
+              <option value="RW">Rwanda</option>
+              <option value="RE">Réunion</option>
+              <option value="WS">Samoa</option>
+              <option value="SM">San Marino</option>
+              <option value="SA">Saudi Arabia</option>
+              <option value="SN">Senegal</option>
+              <option value="RS">Serbia</option>
+              <option value="SC">Seychelles</option>
+              <option value="SL">Sierra Leone</option>
+              <option value="SG">Singapore</option>
+              <option value="SX">Sint Maarten</option>
+              <option value="SK">Slovakia</option>
+              <option value="SI">Slovenia</option>
+              <option value="SB">Solomon Islands</option>
+              <option value="SO">Somalia</option>
+              <option value="ZA">South Africa</option>
+              <option value="GS">
+                South Georgia & South Sandwich Islands
+              </option>
+              <option value="KR">South Korea</option>
+              <option value="SS">South Sudan</option>
+              <option value="ES">Spain</option>
+              <option value="LK">Sri Lanka</option>
+              <option value="BL">St. Barthélemy</option>
+              <option value="SH">St. Helena</option>
+              <option value="KN">St. Kitts & Nevis</option>
+              <option value="LC">St. Lucia</option>
+              <option value="MF">St. Martin</option>
+              <option value="PM">St. Pierre & Miquelon</option>
+              <option value="VC">St. Vincent & Grenadines</option>
+              <option value="SD">Sudan</option>
+              <option value="SR">Suriname</option>
+              <option value="SJ">Svalbard & Jan Mayen</option>
+              <option value="SE">Sweden</option>
+              <option value="CH">Switzerland</option>
+              <option value="SY">Syria</option>
+              <option value="ST">São Tomé & Príncipe</option>
+              <option value="TW">Taiwan</option>
+              <option value="TJ">Tajikistan</option>
+              <option value="TZ">Tanzania</option>
+              <option value="TH">Thailand</option>
+              <option value="TL">Timor-Leste</option>
+              <option value="TG">Togo</option>
+              <option value="TK">Tokelau</option>
+              <option value="TO">Tonga</option>
+              <option value="TT">Trinidad & Tobago</option>
+              <option value="TA">Tristan da Cunha</option>
+              <option value="TN">Tunisia</option>
+              <option value="TR">Turkey</option>
+              <option value="TM">Turkmenistan</option>
+              <option value="TC">Turks & Caicos Islands</option>
+              <option value="TV">Tuvalu</option>
+              <option value="UM">U.S. Outlying Islands</option>
+              <option value="VI">U.S. Virgin Islands</option>
+              <option value="UG">Uganda</option>
+              <option value="UA">Ukraine</option>
+              <option value="AE">United Arab Emirates</option>
+              <option value="GB">United Kingdom</option>
+              <option value="US">United States</option>
+              <option value="UY">Uruguay</option>
+              <option value="UZ">Uzbekistan</option>
+              <option value="VU">Vanuatu</option>
+              <option value="VA">Vatican City</option>
+              <option value="VE">Venezuela</option>
+              <option value="VN">Vietnam</option>
+              <option value="WF">Wallis & Futuna</option>
+              <option value="EH">Western Sahara</option>
+              <option value="YE">Yemen</option>
+              <option value="ZM">Zambia</option>
+              <option value="ZW">Zimbabwe</option>
+              <option value="AX">Åland Islands</option>
+            </select>
+          </div>
+        </div>
+        
+        
+        <fieldset
+          data-drupal-selector="edit-feedback-wrapper"
+          id="edit-feedback-wrapper"
+          class="js-form-item form-item js-form-wrapper form-wrapper"
+        >
+          <legend>
+            <span class="fieldset-legend"></span>
+          </legend>
+          <div class="fieldset-wrapper">
+            <div class="wrap-feedback">
+              <div
+                class="js-form-item form-item js-form-type-textarea form-item-feedback js-form-item-feedback"
+              >
+                <label for="edit-feedback--2">Your Message</label>
+                <div>
+                  <textarea
+                    data-drupal-selector="edit-feedback"
+                    id="edit-feedback--2"
+                    name="message"
+                    rows="5"
+                    cols="60"
+                    class="form-textarea"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="submit-btn">
+            <button class="button" type="submit">Get An Estimate</button>
+          <!--<input-->
+          <!--  data-drupal-selector="edit-submit"-->
+          <!--  type="submit"-->
+          <!--  id="edit-submit"-->
+          <!--  name="op"-->
+          <!--  value="Get An Estimate"-->
+          <!--  class="button js-form-submit form-submit"-->
+          <!--/>-->
+          <div class="submit-btn-text">
+            
+            
+            <div class="dis">
+              <strong>Disclaimer:</strong> This is an indicative
+              cost based on the reports/ information shared with us.
+              Final estimate will be shared once patient is
+              physically evaluated.
+            </div>
+          </div>
+          
+          <input
+            data-drupal-selector="edit-get-an-estimate-form"
+            type="hidden"
+            name="form_id"
+            value="get_an_estimate_form"
+          />
+          <div class="messages-status"></div>
+        </div>
+      </form>
+    </div>
                 
                 
                 
@@ -5762,15 +6044,15 @@ body {
         }
       }
       
-      // Ensure the modal is shown when page loads
-      window.addEventListener('load', function() {
-        // If there's a showModal parameter in the URL, or if no parameter is specified, show the modal
-        var openModal = getUrlParameter('showModal');
-        if (openModal === 'true' || openModal === '' || !openModal) {
-          // Small delay to ensure DOM is fully loaded
-          setTimeout(showTreatmentModal, 300);
-        }
-      });
+     
+      // window.addEventListener('load', function() {
+     
+      //   var openModal = getUrlParameter('showModal');
+      //   if (openModal === 'true' || openModal === '' || !openModal) {
+          
+      //     setTimeout(showTreatmentModal, 300);
+      //   }
+      // });
       
       // Also use the traditional DOMContentLoaded to be thorough
       document.addEventListener('DOMContentLoaded', function() {
