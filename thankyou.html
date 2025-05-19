@@ -4,102 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Meta refresh for redirection -->
+    <meta http-equiv="refresh" content="10;url=index.html">
     <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f7fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.thank-you-container {
-    text-align: center;
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 400px;
-}
-
-.thank-you-container h1 {
-    font-size: 36px;
-    color: #0CA854;
-    margin-bottom: 20px;
-}
-
-.thank-you-container p {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 40px;
-}
-
-.thank-you-container button {
-    background-color: #0CA854;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.thank-you-container button:hover {
-    background-color: #0CA854;
-}
-
-.thank-you-image {
-    width: 300px; /* Adjust the size as needed */
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-@media only screen and (max-width: 600px) {
-    .thank-you-image {
-        width: 200px; 
-  }
-}
-
+        :root {
+            --primary-purple: #6D0107;    /* Deep red instead of blue */
+            --light-purple: #8B0D16;      /* Lighter red instead of light blue */
+            --dark-purple: #5A0106;       /* Darker red instead of dark blue */
+            --primary-brown: #5B5959;     /* Gray */
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 100vh;
+        }
+        
+        .thank-you-container {
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            text-align: center;
+            border-top: 5px solid var(--primary-purple);
+            margin: 15px;
+        }
+        
+        .thank-you-icon {
+            font-size: 80px;
+            color: var(--primary-purple);
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: var(--primary-purple);
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        p {
+            color: var(--primary-brown);
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        
+        .redirect-info {
+            font-size: 16px;
+            color: var(--light-purple);
+            margin-top: 30px;
+        }
+        
+        .countdown {
+            font-weight: bold;
+            font-size: 20px;
+            color: var(--dark-purple);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-purple);
+            border-color: var(--primary-purple);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dark-purple);
+            border-color: var(--dark-purple);
+        }
+        
+        .progress {
+            height: 10px;
+            margin-top: 20px;
+        }
+        
+        .progress-bar {
+            background-color: var(--primary-purple);
+        }
     </style>
-    
-    <!--Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11468631248"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'AW-11468631248');
-    </script>
-    
-    <!-- Event snippet for DMT_Conversions_19/10/24 conversion page -->
-    <script>
-      gtag('event', 'conversion', {'send_to': 'AW-11468631248/L7f8CJ3nld8ZENDZ1dwq'});
-    </script>
-    
-    <!-- Event snippet for Whatsapp_Outbound_DMT_03Nov24 conversion page -->
-    <script>
-      gtag('event', 'conversion', {'send_to': 'AW-11468631248/Ba9OCOGZ6eQZENDZ1dwq'});
-    </script>
-
 </head>
 <body>
-    <div class="thank-you-container">
-        <img src="assets/thank-you.jpg" alt="Thank You" class="thank-you-image">
-        <h1>THANK YOU</h1>
-        <p>Thank You For Reaching Us. We Shall Get Back To You Shortly !!!</p>
-        <button onclick="window.location.href='index'">BACK TO HOME</button>
+    <div class="container">
+        <div class="thank-you-container">
+            <div class="thank-you-icon">
+                <i class="bi bi-check-circle-fill"></i>
+                <!-- Using simple check mark if Bootstrap icons aren't loaded -->
+                ✓
+            </div>
+            <h1>Thank You!</h1>
+            <p>Your submission has been received successfully. We appreciate your time.</p>
+            <div class="redirect-info">
+                <p>You will be redirected to the homepage in <span id="countdown" class="countdown">10</span> seconds.</p>
+                <div class="progress">
+                    <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <a href="index.html" class="btn btn-primary">Return to Homepage</a>
+            </div>
+        </div>
     </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     
+    <!-- Countdown script -->
     <script>
-        location.href="https://api.whatsapp.com/send?phone=919643452714&text=Hello%2C%20Artemis%20Hospital";
+        // Countdown timer
+        let seconds = 10;
+        const countdownDisplay = document.getElementById('countdown');
+        const progressBar = document.getElementById('progress-bar');
+        
+        // Update every second
+        const timer = setInterval(function() {
+            seconds--;
+            
+            // Update text and progress bar
+            countdownDisplay.textContent = seconds;
+            progressBar.style.width = (100 - (seconds * 10)) + '%';
+            
+            // When countdown reaches 0, redirect
+            if (seconds <= 0) {
+                clearInterval(timer);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
     </script>
 </body>
 </html>
